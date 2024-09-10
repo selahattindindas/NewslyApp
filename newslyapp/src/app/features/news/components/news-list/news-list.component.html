@@ -1,1 +1,4 @@
-<p>news-list works!</p>
+<div *ngFor="let item of news"  class="content-container">
+  <h1>{{ item.title }}</h1>
+  <div [innerHTML]="item.content" class="content-content"></div>
+</div>

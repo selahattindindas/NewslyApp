@@ -1,0 +1,10 @@
+{
+  "news": [
+  ],
+  "categories": [
+    { "id": 1, "name": "Teknoloji" },
+    { "id": 2, "name": "Spor" },
+    { "id": 3, "name": "Ekonomi" },
+    { "id": 4, "name": "Sağlık" }
+  ]
+}

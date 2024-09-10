@@ -1,0 +1,16 @@
+::ng-deep .content-container h1 {
+    font-size: 2em;
+    color: aliceblue;
+}
+
+::ng-deep .content-container .content-content p,
+::ng-deep .content-container .content-content li {
+    color: aliceblue;
+    font-size: 1.3em;
+    line-height: 1.6;
+}
+
+::ng-deep .content-container .content-content img {
+    width: 400px;
+    height: 200px;
+}
