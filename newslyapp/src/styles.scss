@@ -1,0 +1,21 @@
+body {
+  transition: background-color 0.5s ease, color 0.5s ease; 
+}
+
+body.light-theme {
+  background-color: #eeeff0;
+  color: black;
+}
+
+body.dark-theme {
+  background-color: #2d2a2e;
+  color: white !important;
+}
+
+body.dark-theme p {
+  color: #c7cbd1;
+}
+
+body.dark-theme span {
+  color: #565758;
+}

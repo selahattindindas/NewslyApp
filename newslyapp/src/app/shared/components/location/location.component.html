@@ -1,0 +1,12 @@
+<div *ngIf="latitude && longitude">
+    <p>Your latitude: {{ latitude }}</p>
+    <p>Your longitude: {{ longitude }}</p>
+  </div>
+  
+  <div *ngIf="errorMessage">
+    <p>Error: {{ errorMessage }}</p>
+  </div>
+  
+  <p *ngIf="!latitude && !errorMessage">Fetching location...</p>
+
+  <app-theme-switcher></app-theme-switcher>

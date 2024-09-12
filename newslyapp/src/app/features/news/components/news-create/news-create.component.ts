@@ -88,6 +88,4 @@ export class NewsCreateComponent implements OnInit {
       this.news.content = this.editorInstance.root.innerHTML;
     }
   }
-
-
 }

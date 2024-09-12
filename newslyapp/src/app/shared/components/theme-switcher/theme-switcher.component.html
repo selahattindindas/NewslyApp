@@ -1,1 +1,10 @@
-<p>theme-switcher works!</p>
+<div class="theme-switcher">
+  <label class="switch">
+    <input type="checkbox" name="theme" (change)="toggleTheme()" [checked]="isDarkTheme">
+    <span class="slider"></span>
+  </label>
+  <span class="theme-labels">
+    <span class="label-dark" *ngIf="isDarkTheme">Koyu Tema</span>
+    <span class="label-light" *ngIf="!isDarkTheme">Açık Tema</span>
+  </span>
+</div>
