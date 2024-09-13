@@ -1,12 +1,19 @@
-<div *ngIf="latitude && longitude">
-    <p>Your latitude: {{ latitude }}</p>
-    <p>Your longitude: {{ longitude }}</p>
+<div class="location-container">
+  <div *ngIf="city">
+    <p>Bulunduğunuz şehir: {{ city }}</p>
   </div>
-  
-  <div *ngIf="errorMessage">
-    <p>Error: {{ errorMessage }}</p>
-  </div>
-  
-  <p *ngIf="!latitude && !errorMessage">Fetching location...</p>
 
+  <div *ngIf="errorMessage">
+    <p class="error-message">Hata: {{ errorMessage }}</p>
+  </div>
+</div>
+<div class="alert-btn">
+  <button class="btn-success" (click)="triggerSuccessAlert()">Başarı Bildirimi Göster</button>
+  <button class="btn-danger" (click)="triggerErrorAlert()">Hata Bildirimi Göster</button>
+  <button class="btn-warning" (click)="triggerWarningAlert()">Uyarı Bildirimi Göster</button>
+  <button class="btn-info" (click)="triggerInfoAlert()">Bilgi Bildirimi Göster</button>
+</div>
+<div class="theme">
   <app-theme-switcher></app-theme-switcher>
+</div>
+

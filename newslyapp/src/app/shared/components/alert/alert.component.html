@@ -1,0 +1,11 @@
+<div *ngIf="isVisible" class="alert" [ngClass]="{
+  'alert-success': type === AlertType.Success,
+  'alert-danger': type === AlertType.Error,
+  'alert-warning': type === AlertType.Warning,
+  'alert-info': type === AlertType.Info,
+  'slide-in': animationClass === 'slide-in',
+  'slide-out': animationClass === 'slide-out'
+}" role="alert">
+  <img *ngIf="icon" [src]="icon" class="alert-icon" />
+  <span class="alert-message">{{ message }}</span>
+</div>
