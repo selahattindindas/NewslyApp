@@ -1,0 +1,40 @@
+$position-values: (
+    static,
+    relative,
+    absolute,
+    fixed,
+    sticky
+);
+
+$spacing-values: (
+    0px,
+    5px,
+    10px,
+    15px,
+    20px,
+    25px,
+    50px,
+    100px
+);
+
+@mixin generate-position-classes($property, $values) {
+    @each $value in $values {
+        .#{$property}-#{$value} {
+            #{$property}: $value;
+        }
+    }
+}
+
+@mixin generate-spacing-classes($property, $values) {
+    @each $value in $values {
+        .#{$property}-#{$value} {
+            #{$property}: $value;
+        }
+    }
+}
+
+@include generate-position-classes(position, $position-values);
+@include generate-spacing-classes(top, $spacing-values);
+@include generate-spacing-classes(bottom, $spacing-values);
+@include generate-spacing-classes(left, $spacing-values);
+@include generate-spacing-classes(right, $spacing-values);

@@ -1,0 +1,53 @@
+$spacing-values: (
+    5px,
+    10px,
+    15px,
+    20px,
+    25px
+);
+
+// Mixin for generating spacing classes
+@mixin generate-spacing-classes($property, $values) {
+    @each $value in $values {
+        .#{$property}-#{$value} {
+            #{$property}: $value;
+        }
+    }
+}
+
+// Padding classes
+@include generate-spacing-classes(padding-bottom, $spacing-values);
+@include generate-spacing-classes(padding-top, $spacing-values);
+@include generate-spacing-classes(padding-left, $spacing-values);
+@include generate-spacing-classes(padding-right, $spacing-values);
+@include generate-spacing-classes(padding, $spacing-values);
+
+// Margin classes
+@include generate-spacing-classes(margin-bottom, $spacing-values);
+@include generate-spacing-classes(margin-top, $spacing-values);
+@include generate-spacing-classes(margin-left, $spacing-values);
+@include generate-spacing-classes(margin-right, $spacing-values);
+@include generate-spacing-classes(margin, $spacing-values);
+
+// Shortened class names
+@mixin generate-short-spacing-classes($property, $values) {
+    @each $value in $values {
+        .#{$property}-#{$value} {
+            #{$property}: $value;
+        }
+    }
+}
+
+// Shortened padding classes
+@include generate-short-spacing-classes(pb, $spacing-values); // padding-bottom
+@include generate-short-spacing-classes(pt, $spacing-values); // padding-top
+@include generate-short-spacing-classes(pl, $spacing-values); // padding-left
+@include generate-short-spacing-classes(pr, $spacing-values); // padding-right
+@include generate-short-spacing-classes(p, $spacing-values);  // padding
+
+// Shortened margin classes
+@include generate-short-spacing-classes(mb, $spacing-values); // margin-bottom
+@include generate-short-spacing-classes(mt, $spacing-values); // margin-top
+@include generate-short-spacing-classes(ml, $spacing-values); // margin-left
+@include generate-short-spacing-classes(mr, $spacing-values); // margin-right
+@include generate-short-spacing-classes(m, $spacing-values);  // margin

@@ -20,6 +20,6 @@ export class ThemeSwitcherComponent implements OnInit{
   toggleTheme() {
     const newTheme = this.isDarkTheme ? 'light' : 'dark';
     this.themeService.setTheme(newTheme);
-    this.isDarkTheme = !this.isDarkTheme; 
+    this.isDarkTheme = !this.isDarkTheme;
   }
 }

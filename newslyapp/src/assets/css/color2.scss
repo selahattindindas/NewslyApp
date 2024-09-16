@@ -1,0 +1,30 @@
+$colors: (
+  'white': #ffffff,
+  'black': #000000,
+  'red': #ff0000,
+  'green': #00ff00,
+  'blue': #0000ff,
+  'yellow': #ffff00,
+  'gray': #888888,
+  'dark-gray': #555555,
+  'light-gray': #cccccc
+);
+
+@mixin generate-background-classes($color-map) {
+  @each $name, $color in $color-map {
+    .bg-#{$name} {
+      background-color: $color;
+    }
+  }
+}
+
+@mixin generate-text-color-classes($color-map) {
+  @each $name, $color in $color-map {
+    .text-#{$name} {
+      color: $color;
+    }
+  }
+}
+
+@include generate-background-classes($colors);
+@include generate-text-color-classes($colors);

@@ -1,0 +1,165 @@
+// Display and Flexbox Mixins
+@mixin display-flex($direction: row, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+  }
+  
+  @mixin align-items($value) {
+    align-items: $value;
+  }
+  
+  @mixin justify-content($value) {
+    justify-content: $value;
+  }
+  
+  @mixin align-content($value) {
+    align-content: $value;
+  }
+  
+  @mixin align-self($value) {
+    align-self: $value;
+  }
+  
+  @mixin flex-grow($value) {
+    flex-grow: $value;
+  }
+  
+  @mixin flex-shrink($value) {
+    flex-shrink: $value;
+  }
+  
+  @mixin flex-basis($value) {
+    flex-basis: $value;
+  }
+  
+  // Flexbox Classes
+  .d-flex {
+    @include display-flex();
+  }
+  
+  .d-flex-row {
+    @include display-flex(row);
+  }
+  
+  .d-flex-column {
+    @include display-flex(column);
+  }
+  
+  .d-flex-wrap {
+    @include display-flex(row, wrap);
+  }
+  
+  .d-flex-nowrap {
+    @include display-flex(row, nowrap);
+  }
+  
+  // Alignment Classes
+  .align-items-start {
+    @include align-items(start);
+  }
+  
+  .align-items-center {
+    @include align-items(center);
+  }
+  
+  .align-items-end {
+    @include align-items(end);
+  }
+  
+  .justify-content-start {
+    @include justify-content(start);
+  }
+  
+  .justify-content-center {
+    @include justify-content(center);
+  }
+  
+  .justify-content-end {
+    @include justify-content(end);
+  }
+  
+  .justify-content-between {
+    @include justify-content(space-between);
+  }
+  
+  .justify-content-around {
+    @include justify-content(space-around);
+  }
+  
+  .justify-content-evenly {
+    @include justify-content(space-evenly);
+  }
+  
+  .align-content-start {
+    @include align-content(start);
+  }
+  
+  .align-content-center {
+    @include align-content(center);
+  }
+  
+  .align-content-end {
+    @include align-content(end);
+  }
+  
+  .align-content-between {
+    @include align-content(space-between);
+  }
+  
+  .align-content-around {
+    @include align-content(space-around);
+  }
+  
+  .align-content-evenly {
+    @include align-content(space-evenly);
+  }
+  
+  .align-self-auto {
+    @include align-self(auto);
+  }
+  
+  .align-self-start {
+    @include align-self(start);
+  }
+  
+  .align-self-center {
+    @include align-self(center);
+  }
+  
+  .align-self-end {
+    @include align-self(end);
+  }
+  
+  // Flexbox Sizing Classes
+  .flex-grow-1 {
+    @include flex-grow(1);
+  }
+  
+  .flex-shrink-1 {
+    @include flex-shrink(1);
+  }
+  
+  .flex-basis-auto {
+    @include flex-basis(auto);
+  }
+  
+  // Additional Flexbox Alignment Classes
+  .d-flex-end {
+    @include display-flex();
+    align-items: flex-end;
+  }
+  
+  .d-flex-start {
+    @include display-flex();
+    align-items: flex-start;
+  }
+  
+  .justify-content-flex-end {
+    @include justify-content(flex-end);
+  }
+  
+  .justify-content-flex-start {
+    @include justify-content(flex-start);
+  }
+  

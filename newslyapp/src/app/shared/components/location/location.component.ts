@@ -5,11 +5,12 @@ import { ThemeSwitcherComponent } from "../theme-switcher/theme-switcher.compone
 import { CityResponse } from '../../../core/models/city-response';
 import { AlertService } from '../../services/alert.service';
 import { AlertConfig, AlertType } from '../../models/alert-config';
+import { SliderComponent } from "../slider/slider.component";
 
 @Component({
   selector: 'app-location',
   standalone: true,
-  imports: [CommonModule, ThemeSwitcherComponent],
+  imports: [CommonModule, ThemeSwitcherComponent, SliderComponent],
   templateUrl: './location.component.html',
   styleUrls: ['./location.component.scss']
 })

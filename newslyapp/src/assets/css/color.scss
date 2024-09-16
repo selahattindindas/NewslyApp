@@ -1,0 +1,79 @@
+$themes: (
+  light: (
+    background: #eeeef0,
+    primary: #3498db,
+    secondary: #2ecc71,
+    danger: #e74c3c,
+    warning: #f1c40f,
+    info: #1abc9c,
+    light: #ecf0f1,
+    dark: #2c3e50,
+    text: #2c3e50, 
+    p: #333333, 
+    span: #666666,
+    a: #1e90ff, 
+    h1: #ffffff,
+    h2: #ffffff, 
+  ),
+  dark: (
+    background: #2d2a2e,
+    primary: #1e1e1e,
+    secondary: #3c3c3c,
+    danger: #ff6f61,
+    warning: #ffb74d,
+    info: #64b5f6,
+    light: #424242,
+    dark: #000000,
+    text: #ecf0f1, 
+    p: #ffffff, 
+    span: #bbbbbb, 
+    a: #add8e6, 
+    h1: #ffffff, 
+    h2: #ffffff, 
+  )
+);
+
+@mixin theme-colors($theme) {
+  $colors: map-get($themes, $theme);
+
+  body.#{$theme}-theme {
+    background-color: map-get($colors, background);
+  }
+
+  @each $name, $color in $colors {
+    @if $name != background {
+      .#{$theme}-color-#{$name} {
+        color: $color;
+      }
+
+      .#{$theme}-bg-#{$name} {
+        background-color: $color;
+      }
+    }
+  }
+
+  body.#{$theme}-theme {
+    p {
+      color: map-get($colors, p);
+    }
+
+    span {
+      color: map-get($colors, span);
+    }
+
+    a {
+      color: map-get($colors, a);
+      text-decoration: none; 
+      &:hover {
+        text-decoration: underline; 
+      }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: map-get($colors, h1);
+    }
+  }
+}
+
+@include theme-colors(light);
+@include theme-colors(dark);

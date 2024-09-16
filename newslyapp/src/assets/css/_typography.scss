@@ -1,0 +1,100 @@
+// Font Size Helper Mixins
+@mixin font-size($size) {
+    font-size: $size;
+  }
+  
+  @mixin font-weight($weight) {
+    font-weight: $weight;
+  }
+  
+  @mixin line-height($height) {
+    line-height: $height;
+  }
+  
+  // Font Size Classes
+  .font-size-xs {
+    @include font-size(0.75rem); // 12px
+  }
+  
+  .font-size-sm {
+    @include font-size(0.875rem); // 14px
+  }
+  
+  .font-size-md {
+    @include font-size(1rem); // 16px
+  }
+  
+  .font-size-lg {
+    @include font-size(1.125rem); // 18px
+  }
+  
+  .font-size-xl {
+    @include font-size(1.25rem); // 20px
+  }
+  
+  .font-size-2xl {
+    @include font-size(1.5rem); // 24px
+  }
+  
+  .font-size-3xl {
+    @include font-size(1.875rem); // 30px
+  }
+  
+  .font-size-4xl {
+    @include font-size(2.25rem); // 36px
+  }
+  
+  // Font Weight Classes
+  .font-weight-light {
+    @include font-weight(300);
+  }
+  
+  .font-weight-normal {
+    @include font-weight(400);
+  }
+  
+  .font-weight-medium {
+    @include font-weight(500);
+  }
+  
+  .font-weight-semibold {
+    @include font-weight(600);
+  }
+  
+  .font-weight-bold {
+    @include font-weight(700);
+  }
+  
+  .font-weight-bolder {
+    @include font-weight(800);
+  }
+  
+  .font-weight-black {
+    @include font-weight(900);
+  }
+  
+  // Line Height Classes
+  .line-height-normal {
+    @include line-height(1.5);
+  }
+  
+  .line-height-tight {
+    @include line-height(1.25);
+  }
+  
+  .line-height-loose {
+    @include line-height(1.75);
+  }
+  
+  // Font Family Classes
+  $font-family-primary: 'Arial', sans-serif;
+  $font-family-secondary: 'Georgia', serif;
+  
+  .font-family-primary {
+    font-family: $font-family-primary;
+  }
+  
+  .font-family-secondary {
+    font-family: $font-family-secondary;
+  }
+  

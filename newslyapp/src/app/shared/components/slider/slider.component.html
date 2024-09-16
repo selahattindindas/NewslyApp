@@ -1,0 +1,16 @@
+<div class="slider-container">
+    <button class="prev-button" (click)="scrollPrev()">&#10094;</button>
+    <div class="slider" #sliderContainer>
+        <div class="slide" *ngFor="let slide of slides">
+            <div class="news-image">
+                <img [src]="slide.image" alt="News Image">
+            </div>
+            <div class="info">
+                <p>{{slide.author}}</p>
+                <p>{{slide.date}}</p>
+            </div>
+            <p class="news-description">{{slide.description | truncate}}</p>
+        </div>
+    </div>
+    <button class="next-button" (click)="scrollNext()">&#10095;</button>
+</div>

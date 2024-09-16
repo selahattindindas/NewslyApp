@@ -1,0 +1,58 @@
+$size-values: (
+    50px,
+    100px,
+    150px,
+    200px,
+    250px,
+    1200px,
+    auto
+);
+
+$border-radius-values: (
+    4px,
+    8px,
+    12px,
+    16px,
+    20px
+);
+
+$cursor-values: (
+    auto,
+    default,
+    pointer,
+    crosshair,
+    move,
+    text,
+    wait,
+    help,
+    not-allowed
+);
+
+@mixin generate-size-classes($property, $values) {
+    @each $value in $values {
+        .#{$property}-#{$value} {
+            #{$property}: $value;
+        }
+    }
+}
+
+@mixin generate-border-radius-classes($property, $values) {
+    @each $value in $values {
+        .#{$property}-#{$value} {
+            #{$property}: $value;
+        }
+    }
+}
+
+@mixin generate-cursor-classes($values) {
+    @each $value in $values {
+        .cursor-#{$value} {
+            cursor: $value;
+        }
+    }
+}
+
+@include generate-size-classes(width, $size-values);
+@include generate-size-classes(height, $size-values);
+@include generate-border-radius-classes(border-radius, $border-radius-values);
+@include generate-cursor-classes($cursor-values);

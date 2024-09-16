@@ -2,17 +2,16 @@ body {
   transition: background-color 0.5s ease, color 0.5s ease; 
 }
 
-body.light-theme {
-  background-color: #eeeff0;
-  color: black;
+.margin-auto {
+  margin: 0 auto;
 }
 
-body.dark-theme {
-  background-color: #2d2a2e;
-  color: white !important;
-}
+@import url('assets/css/color.scss');
+@import url('assets/css/_custom.scss');
+@import url('assets/css/_layout.scss');
+@import url('assets/css/_position.scss');
+@import url('assets/css/_typography.scss');
+@import url('assets/css/_utility.scss');
+@import url('assets/css/color2.scss');
 
-body.dark-theme p {
-  color: #c7cbd1;
-}
 

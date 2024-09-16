@@ -31,7 +31,8 @@
             ],
             "styles": [
               "node_modules/quill/dist/quill.snow.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/color.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
