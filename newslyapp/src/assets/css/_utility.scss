@@ -3,7 +3,12 @@ $spacing-values: (
     10px,
     15px,
     20px,
-    25px
+    25px,
+    30px,
+    35px,
+    40px,
+    45px,
+    50px,
 );
 
 // Mixin for generating spacing classes
@@ -33,7 +38,28 @@ $spacing-values: (
 @mixin generate-short-spacing-classes($property, $values) {
     @each $value in $values {
         .#{$property}-#{$value} {
-            #{$property}: $value;
+            // For short names, map them to long properties
+            @if $property == 'pb' {
+                padding-bottom: $value;
+            } @else if $property == 'pt' {
+                padding-top: $value;
+            } @else if $property == 'pl' {
+                padding-left: $value;
+            } @else if $property == 'pr' {
+                padding-right: $value;
+            } @else if $property == 'p' {
+                padding: $value;
+            } @else if $property == 'mb' {
+                margin-bottom: $value;
+            } @else if $property == 'mt' {
+                margin-top: $value;
+            } @else if $property == 'ml' {
+                margin-left: $value;
+            } @else if $property == 'mr' {
+                margin-right: $value;
+            } @else if $property == 'm' {
+                margin: $value;
+            }
         }
     }
 }
@@ -51,3 +77,59 @@ $spacing-values: (
 @include generate-short-spacing-classes(ml, $spacing-values); // margin-left
 @include generate-short-spacing-classes(mr, $spacing-values); // margin-right
 @include generate-short-spacing-classes(m, $spacing-values);  // margin
+
+// Mixin for generating custom combinations (e.g., padding: 10px 20px)
+@mixin generate-custom-combination-classes($property, $values) {
+    @each $topBottom in $values {
+        @each $leftRight in $values {
+            .#{$property}-#{$topBottom}-#{$leftRight} {
+                #{$property}: $topBottom $leftRight;
+            }
+        }
+    }
+}
+@include generate-custom-combination-classes(padding, $spacing-values);
+@include generate-custom-combination-classes(p, $spacing-values);
+@include generate-custom-combination-classes(margin, $spacing-values);
+@include generate-custom-combination-classes(m, $spacing-values);
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.ml-0 {
+    margin-left: 0;
+}
+
+.mr-0 {
+    margin-right: 0;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.pb-0 {
+    padding-bottom: 0;
+}
+
+.pt-0 {
+    padding-top: 0;
+}
+
+.pl-0 {
+    padding-left: 0;
+}
+
+.pr-0 {
+    padding-right: 0;
+}
+
+.p-0 {
+    padding: 0;
+}
+

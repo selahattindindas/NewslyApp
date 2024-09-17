@@ -38,3 +38,10 @@ $spacing-values: (
 @include generate-spacing-classes(bottom, $spacing-values);
 @include generate-spacing-classes(left, $spacing-values);
 @include generate-spacing-classes(right, $spacing-values);
+
+.inset-zero{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

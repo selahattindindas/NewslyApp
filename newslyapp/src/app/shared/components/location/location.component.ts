@@ -6,11 +6,12 @@ import { CityResponse } from '../../../core/models/city-response';
 import { AlertService } from '../../services/alert.service';
 import { AlertConfig, AlertType } from '../../models/alert-config';
 import { SliderComponent } from "../slider/slider.component";
+import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-location',
   standalone: true,
-  imports: [CommonModule, ThemeSwitcherComponent, SliderComponent],
+  imports: [CommonModule, ThemeSwitcherComponent, SliderComponent, CardComponent],
   templateUrl: './location.component.html',
   styleUrls: ['./location.component.scss']
 })

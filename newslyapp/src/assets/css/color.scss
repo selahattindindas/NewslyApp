@@ -8,12 +8,13 @@ $themes: (
     info: #1abc9c,
     light: #ecf0f1,
     dark: #2c3e50,
-    text: #2c3e50, 
-    p: #333333, 
+    text: #2c3e50,
+    p: #333333,
     span: #666666,
-    a: #1e90ff, 
+    a: #1e90ff,
     h1: #ffffff,
-    h2: #ffffff, 
+    h2: #ffffff,
+    bg-div: #fff,
   ),
   dark: (
     background: #2d2a2e,
@@ -24,12 +25,13 @@ $themes: (
     info: #64b5f6,
     light: #424242,
     dark: #000000,
-    text: #ecf0f1, 
-    p: #ffffff, 
-    span: #bbbbbb, 
-    a: #add8e6, 
-    h1: #ffffff, 
-    h2: #ffffff, 
+    text: #ecf0f1,
+    p: #ffffff,
+    span: #bbbbbb,
+    a: #add8e6,
+    h1: #ffffff,
+    h2: #ffffff,
+    bg-div: #181e25,
   )
 );
 
@@ -38,21 +40,7 @@ $themes: (
 
   body.#{$theme}-theme {
     background-color: map-get($colors, background);
-  }
 
-  @each $name, $color in $colors {
-    @if $name != background {
-      .#{$theme}-color-#{$name} {
-        color: $color;
-      }
-
-      .#{$theme}-bg-#{$name} {
-        background-color: $color;
-      }
-    }
-  }
-
-  body.#{$theme}-theme {
     p {
       color: map-get($colors, p);
     }
@@ -63,17 +51,23 @@ $themes: (
 
     a {
       color: map-get($colors, a);
-      text-decoration: none; 
+      text-decoration: none;
       &:hover {
-        text-decoration: underline; 
+        text-decoration: underline;
       }
     }
 
     h1, h2, h3, h4, h5, h6 {
       color: map-get($colors, h1);
     }
+
+    .theme-div {
+      color: map-get($colors, text);
+      background-color: map-get($colors, bg-div);
+    }
   }
 }
 
+// Apply the theme colors mixin for both light and dark themes
 @include theme-colors(light);
 @include theme-colors(dark);

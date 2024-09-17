@@ -1,19 +1,31 @@
 $size-values: (
+    24px,
+    30px,
+    40px,
+    42px,
     50px,
+    80px,
     100px,
     150px,
     200px,
     250px,
+    270px,
+    300px,
+    1000px,
     1200px,
     auto
 );
 
 $border-radius-values: (
     4px,
+    5px,
     8px,
+    10px,
     12px,
+    15px,
     16px,
-    20px
+    20px,
+    24px
 );
 
 $cursor-values: (
@@ -26,6 +38,13 @@ $cursor-values: (
     wait,
     help,
     not-allowed
+);
+
+$overflow-values: (
+    visible,
+    hidden,
+    scroll,
+    auto
 );
 
 @mixin generate-size-classes($property, $values) {
@@ -52,7 +71,32 @@ $cursor-values: (
     }
 }
 
+@mixin generate-overflow-classes($values) {
+    @each $value in $values {
+        .overflow-#{$value} {
+            overflow: $value;
+        }
+    }
+}
+
 @include generate-size-classes(width, $size-values);
 @include generate-size-classes(height, $size-values);
 @include generate-border-radius-classes(border-radius, $border-radius-values);
 @include generate-cursor-classes($cursor-values);
+@include generate-overflow-classes($overflow-values);
+
+.width-0{
+    width: 0;
+}
+
+.height-0{
+    height: 0;
+}
+
+.opacity-0{
+    opacity: 0;
+}
+
+.flex-1{
+    flex: 1;
+}

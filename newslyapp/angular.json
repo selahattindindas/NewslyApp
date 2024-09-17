@@ -30,9 +30,9 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/quill/dist/quill.snow.css",
               "src/styles.scss",
-              "src/assets/css/color.scss"
+              "node_modules/quill/dist/quill.snow.css",
+              "node_modules/keen-slider/keen-slider.min.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",

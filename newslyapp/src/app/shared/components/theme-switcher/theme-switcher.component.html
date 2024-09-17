@@ -1,10 +1,10 @@
-<div class="theme-switcher">
-  <label class="switch">
-    <input type="checkbox" (change)="toggleTheme()" [checked]="isDarkTheme">
-    <span class="slider"></span>
+<div class="d-flex align-items-center">
+  <label class="position-relative d-inline-block width-42px height-24px">
+    <input class="width-0 height-0 opacity-0" type="checkbox" (change)="toggleTheme()" [checked]="isDarkTheme">
+    <span class="slider inset-zero position-absolute cursor-pointer bg-light-gray border-radius-24px"></span>
   </label>
-  <span class="theme-labels">
-    <span class="label-dark" *ngIf="isDarkTheme">Koyu Tema</span>
-    <span class="label-light" *ngIf="!isDarkTheme">Açık Tema</span>
-  </span>
+  <div class="pl-10px">
+    <span *ngIf="isDarkTheme">Koyu Tema</span>
+    <span *ngIf="!isDarkTheme">Açık Tema</span>
+  </div>
 </div>

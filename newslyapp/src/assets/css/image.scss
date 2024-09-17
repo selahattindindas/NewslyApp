@@ -1,0 +1,68 @@
+$image-sizes: (
+    100%,
+    auto
+);
+
+$image-object-fit: (
+    contain,
+    cover,
+    fill,
+    none,
+    scale-down
+);
+
+$image-object-position: (
+    top left,
+    top center,
+    top right,
+    center left,
+    center center,
+    center right,
+    bottom left,
+    bottom center,
+    bottom right
+);
+
+@mixin generate-image-size-classes($property, $values) {
+    @each $value in $values {
+        @if $value == 100% {
+            .#{$property}-full {
+                #{$property}: $value;
+            }
+        } @else if $value == auto {
+            .#{$property}-auto {
+                #{$property}: $value;
+            }
+        } @else {
+            .#{$property}-#{$value} {
+                #{$property}: $value;
+            }
+        }
+    }
+}
+
+@mixin generate-object-fit-classes($values) {
+    @each $value in $values {
+        .object-fit-#{$value} {
+            object-fit: $value;
+        }
+    }
+}
+
+@mixin generate-object-position-classes($values) {
+    @each $value in $values {
+        .object-position-#{$value} {
+            object-position: $value;
+        }
+    }
+}
+
+// Include the image size classes
+@include generate-image-size-classes(width, $image-sizes);
+@include generate-image-size-classes(height, $image-sizes);
+
+// Include the object-fit classes
+@include generate-object-fit-classes($image-object-fit);
+
+// Include the object-position classes
+@include generate-object-position-classes($image-object-position);
