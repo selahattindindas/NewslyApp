@@ -27,43 +27,33 @@ export class SliderComponent implements AfterViewInit, OnDestroy {
   @ViewChild("sliderRef") sliderRef!: ElementRef<HTMLElement>;
   slider: KeenSliderInstance | undefined;
   pages: number[] = [];
-  currentPage: number = 0;
+  currentSlide: number = 0;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.slider = new KeenSlider(this.sliderRef.nativeElement, {
-        initial: 0,
+        initial: this.currentSlide,
         loop: true,
         drag: false,
-        slides: { perView: 3, spacing: 15 },
         breakpoints: {
-          "(min-width: 350px)": {
-            slides: { perView: 1, spacing: 5 },
+          "(min-width: 400px)": {
+            slides: { perView: 2, spacing: 5 },
           },
-          "(min-width: 600px)": {
-            slides: { perView: 2, spacing: 10 },
-          },
-          "(min-width: 1150px)": {
-            slides: { perView: 3, spacing: 15 },
+          "(min-width: 1000px)": {
+            slides: { perView: 3, spacing: 10 },
           },
         },
+        slides: { perView: 1 },
       });
-
-      this.slider.on('slideChanged', (s) => {
-        this.currentPage = s.track.details.rel;
+      this.slider.on("slideChanged", (slider) => {
+        this.currentSlide = slider.track.details.rel;
       });
-
-      this.pages = Array.from({ length: this.slider.track.details.slides.length }, (_, i) => i);
     }
   }
 
   ngOnDestroy(): void {
     this.slider?.destroy();
-  }
-
-  goToPage(index: number): void {
-    this.slider?.moveToIdx(index);
   }
 }

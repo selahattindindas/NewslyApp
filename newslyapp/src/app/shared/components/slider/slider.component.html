@@ -1,8 +1,8 @@
 <div class="width-full position-relative">
-    <ul>
+    <ul class="m-0 p-0">
         <div class="keen-slider" #sliderRef>
             <li class="width-300px keen-slider__slide" *ngFor="let data of slides">
-                <div class="padding-15px border-radius-15px">
+                <div class="padding-25px border-radius-15px">
                     <div class="width-full height-200px overflow-hidden">
                         <img class="border-radius-15px width-full height-full object-fit-cover" [src]="data.image">
                     </div>
@@ -15,18 +15,18 @@
                 </div>
             </li>
         </div>
-        <svg [ngClass]="'arrow arrow--left ' + (this.slides.length < 0 ? 'arrow--disabled' : '')"
-            (click)="slider?.prev()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <svg *ngIf="slider" [ngClass]="{
+                'arrow left-0': true,
+                'd-none': currentSlide === 0
+            }" (click)="slider.prev()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
         </svg>
-        <svg *ngIf="slider" [ngClass]="'arrow arrow--right ' + (this.slides.length < 0 ? 'arrow--disabled' : '')"
-            (click)="slider.next()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+
+        <svg *ngIf="slider" [ngClass]="{
+                'arrow right-0': true,
+                'd-none': slider.track.details.slides.length - 1 === currentSlide
+            }" (click)="slider.next()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
         </svg>
     </ul>
-
-    <div class="pagination">
-        <span *ngFor="let page of pages; let i = index" [ngClass]="{'active': i === currentPage}" (click)="goToPage(i)">
-        </span>
-    </div>
 </div>

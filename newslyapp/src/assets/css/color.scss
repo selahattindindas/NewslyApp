@@ -15,9 +15,11 @@ $themes: (
     h1: #ffffff,
     h2: #ffffff,
     bg-div: #fff,
+    arrow-bg: #eeeef0,
+    arrow-fill: #000000
   ),
   dark: (
-    background: #2d2a2e,
+    background: #12161b,
     primary: #1e1e1e,
     secondary: #3c3c3c,
     danger: #ff6f61,
@@ -32,6 +34,8 @@ $themes: (
     h1: #ffffff,
     h2: #ffffff,
     bg-div: #181e25,
+    arrow-bg: #2d2a2e,
+    arrow-fill: #ffffff
   )
 );
 
@@ -64,6 +68,10 @@ $themes: (
     .theme-div {
       color: map-get($colors, text);
       background-color: map-get($colors, bg-div);
+    }
+    .arrow {
+      background-color: map-get($colors, arrow-bg);
+      fill: map-get($colors, arrow-fill);
     }
   }
 }
