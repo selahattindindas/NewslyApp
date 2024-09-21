@@ -1,16 +1,30 @@
-<div class="width-full">
-    <ul class="d-flex-wrap justify-content-center p-0 m-0">
-        <li class="width-300px d-block mt-0 mr-35px mb-20px ml-0" *ngFor="let data of slides">
-            <div class="theme-div padding-15px border-radius-15px">
-                <div class="width-full height-200px overflow-hidden">
-                    <img class="border-radius-15px width-full height-full object-fit-cover" [src]="data.image">
-                </div>
-                <div class="d-flex justify-content-between font-size-xs font-weight-medium pt-20px letter-spacing-tight text-uppercase">
-                    <span>{{data.author}}</span>
-                    <span>{{data.date}}</span>
-                </div>
-                <p class="font-size-lg font-weight-bold">{{data.description | truncate}}</p>
+<div class="d-flex width-full">
+    <div class="left-column" style="width: 50%; float: left;">
+        <div class="mb-30px theme-div padding-15px border-radius-8px" *ngFor="let data of leftSlides"
+            style="width: 90%;">
+            <div class="width-full height-170px overflow-hidden">
+                <img class="border-radius-8px width-full height-full object-fit-cover cursor-pointer"
+                    [src]="data.image">
             </div>
-        </li>
-    </ul>
+            <div class="d-flex justify-content-between pt-20px letter-spacing-tight text-uppercase">
+                <span class="color-gray font-weight-semibold font-size-xs">{{data.author}}</span>
+                <span class="color-gray font-size-xxs font-weight-normal">{{data.date}}</span>
+            </div>
+            <p class="font-size-lg pt-20px pb-10px font-weight-bold cursor-pointer">{{data.description | truncate}}</p>
+        </div>
+    </div>
+    <div class="right-column" style="width: 50%; float: right;">
+        <div class="mb-30px theme-div padding-15px border-radius-8px" *ngFor="let data of rightSlides"
+        style="width: 90%;">
+            <div class="width-full height-170px overflow-hidden">
+                <img class="border-radius-8px width-full height-full object-fit-cover cursor-pointer"
+                    [src]="data.image">
+            </div>
+            <div class="d-flex justify-content-between pt-20px letter-spacing-tight text-uppercase">
+                <span class="color-gray font-weight-semibold font-size-xs">{{data.author}}</span>
+                <span class="color-gray font-size-xxs font-weight-normal">{{data.date}}</span>
+            </div>
+            <p class="font-size-lg pt-20px pb-10px font-weight-bold cursor-pointer">{{data.description | truncate}}</p>
+        </div>
+    </div>
 </div>

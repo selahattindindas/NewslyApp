@@ -1,1 +1,16 @@
-<p>sidebar works!</p>
+<div class="sidebar height-100vh bg-panel m-0 p-0" style="width: 245px;">
+    <div class="height-auto margin-auto pt-40px" style="width: 128px;">
+        <img class="width-full height-auto cursor-pointer" src="assets/img/common/logo.png">
+    </div>
+    <div class="mt-90px">
+        <ul class="m-0 p-0 list-style-none">
+            <li class="sidebar-category cursor-pointer font-weight-bold font-size-sm line-height-tight pl-50px pt-25px pb-25px text-dark-gray text-uppercase"
+                *ngFor="let category of categories">
+                {{category.name}}
+            </li>
+        </ul>
+        <div class="mt-80px pl-50px">
+            <app-theme-switcher></app-theme-switcher>
+        </div>
+    </div>
+</div>

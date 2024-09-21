@@ -20,12 +20,25 @@
 }
 
 // Font Size Classes
+
+.font-size-xxs{
+  @include font-size(8px); // 8px
+}
+
 .font-size-xs {
   @include font-size(10px); // 10px
 }
 
+.font-size-12px{
+  @include font-size(12px); // 12px
+}
+
 .font-size-sm {
   @include font-size(14px); // 14px
+}
+
+.font-size-15px {
+  @include font-size(15px); // 15px
 }
 
 .font-size-md {
@@ -124,8 +137,17 @@ $font-family-secondary: 'Inter', normal;
 }
 
 // Letter Spacing Classes
+
+.letter-spacing-custom{
+  @include letter-spacing(-1px);
+}
+
 .letter-spacing-tight {
   @include letter-spacing(-0.01em); // Adjust letter-spacing as needed
+}
+
+.letter-spacing-tighter {
+  @include letter-spacing(-0.1em); // -0.1em letter spacing
 }
 
 .letter-spacing-normal {
@@ -134,4 +156,12 @@ $font-family-secondary: 'Inter', normal;
 
 .letter-spacing-wide {
   @include letter-spacing(0.1em); // Adjust letter-spacing as needed
+}
+
+.letter-spacing-custom-tight {
+  @include letter-spacing(-0.01em); // New class with letter-spacing: -0.01em
+}
+
+.text-align-center{
+  text-align: center;
 }

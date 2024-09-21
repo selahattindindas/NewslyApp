@@ -1,10 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   transition: background-color 0.5s ease, color 0.5s ease; 
   font-family: 'Inter', sans-serif;
+  margin: 0;
+  line-height: 1.5;
+  text-align: left;
 }
 
 .margin-auto {
   margin: 0 auto;
+}
+.list-style-none{
+  list-style: none;
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 @import url('assets/css/color.scss');

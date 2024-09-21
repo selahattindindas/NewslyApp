@@ -1,1 +1,15 @@
-<p>layout works!</p>
+<div class="d-flex">
+    <div style="width: 245px;">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="margin-auto max-width-1024px">
+        <div class="flex-grow-1">
+            <div class="mb-35px">
+                <app-header></app-header>
+            </div>
+            <div>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

@@ -4,10 +4,12 @@ $colors: (
   'red': #ff0000,
   'green': #00ff00,
   'blue': #0000ff,
+  'orange': #ff7d19,
   'yellow': #ffff00,
   'gray': #888888,
   'dark-gray': #555555,
-  'light-gray': #cccccc
+  'light-gray': #cccccc,
+  'panel': #0c0f12,
 );
 
 @mixin generate-background-classes($color-map) {

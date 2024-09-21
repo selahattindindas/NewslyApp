@@ -4,21 +4,32 @@ $size-values: (
     40px,
     42px,
     50px,
+    75px,
     80px,
+    97px,
     100px,
     150px,
+    170px,
     200px,
     250px,
     270px,
     300px,
+    354px,
+    500px,
+    670px,
+    700px,
+    800px,
     1000px,
+    1024px,
     1200px,
-    auto
+    100vh,
+    auto,
 );
 
 $border-radius-values: (
     4px,
     5px,
+    6px,
     8px,
     10px,
     12px,
@@ -46,6 +57,33 @@ $overflow-values: (
     scroll,
     auto
 );
+
+$border-values: (
+    0,
+    none,
+    solid,
+    dashed,
+    dotted,
+    double
+);
+
+$border-width-values: (
+    0,
+    1px,
+    2px,
+    3px,
+    4px,
+    5px
+);
+
+$outline-values: (
+    none,
+    solid,
+    dashed,
+    dotted,
+    double
+);
+
 
 @mixin generate-size-classes($property, $values) {
     @each $value in $values {
@@ -79,11 +117,39 @@ $overflow-values: (
     }
 }
 
+@mixin generate-border-classes($property, $values) {
+    @each $value in $values {
+        .#{$property}-#{$value} {
+            #{$property}: $value;
+        }
+    }
+}
+
+@mixin generate-border-width-classes($values) {
+    @each $value in $values {
+        .border-width-#{$value} {
+            border-width: $value;
+        }
+    }
+}
+
+@mixin generate-outline-classes($property, $values) {
+    @each $value in $values {
+        .#{$property}-#{$value} {
+            #{$property}: $value;
+        }
+    }
+}
+
 @include generate-size-classes(width, $size-values);
 @include generate-size-classes(height, $size-values);
+@include generate-size-classes(max-width, $size-values);
 @include generate-border-radius-classes(border-radius, $border-radius-values);
 @include generate-cursor-classes($cursor-values);
 @include generate-overflow-classes($overflow-values);
+@include generate-border-classes(border, $border-values);
+@include generate-border-width-classes($border-width-values);
+@include generate-outline-classes(outline, $outline-values);
 
 .width-0{
     width: 0;
@@ -99,4 +165,8 @@ $overflow-values: (
 
 .flex-1{
     flex: 1;
+}
+
+.border-radius-50 {
+    border-radius: 50%;
 }

@@ -1,0 +1,22 @@
+span, i{
+    color: #787777;
+    cursor: pointer;
+}
+
+span{
+    margin-right: 15px;
+}
+
+i{
+    margin-right: 40px;
+    font-size: 20px;
+    transition: 0.3s;
+    &:hover{
+        transform: scale(1.2);
+        transition: 0.3s;
+    }
+
+    &:last-child{
+        margin: 0;
+    }
+}

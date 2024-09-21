@@ -10,13 +10,17 @@ $themes: (
     dark: #2c3e50,
     text: #2c3e50,
     p: #333333,
-    span: #666666,
+    text-gray: #333333,
     a: #1e90ff,
     h1: #ffffff,
     h2: #ffffff,
     bg-div: #fff,
     arrow-bg: #eeeef0,
-    arrow-fill: #000000
+    arrow-fill: #000000,
+    input-text: #333333,
+    theme-svg: #333333,
+    hr: rgba(0, 0, 0, .1),
+    span-hover: #000000,
   ),
   dark: (
     background: #12161b,
@@ -27,15 +31,19 @@ $themes: (
     info: #64b5f6,
     light: #424242,
     dark: #000000,
-    text: #ecf0f1,
-    p: #ffffff,
-    span: #bbbbbb,
+    text-gray: #ecf0f1,
+    p: #c7cbd1,
+    gray: #bbbbbb,
     a: #add8e6,
     h1: #ffffff,
     h2: #ffffff,
     bg-div: #181e25,
     arrow-bg: #2d2a2e,
-    arrow-fill: #ffffff
+    arrow-fill: #ffffff,
+    input-text: #5A6068,
+    theme-svg: #5A6068,
+    hr: #383838,
+    span-hover: #ffffff,
   )
 );
 
@@ -49,8 +57,8 @@ $themes: (
       color: map-get($colors, p);
     }
 
-    span {
-      color: map-get($colors, span);
+    .color-gray {
+      color: map-get($colors, text-gray);
     }
 
     a {
@@ -69,6 +77,29 @@ $themes: (
       color: map-get($colors, text);
       background-color: map-get($colors, bg-div);
     }
+
+    .hr-theme {
+      border-top: 1px solid map-get($colors, hr);
+    }
+
+    .theme-svg{
+      stroke: map-get($colors, theme-svg);
+    }
+
+    .bg-input {
+      background-color: map-get($colors, background);
+      color: map-get($colors, input-text);
+    }
+    
+    .span-hover{
+      transition: 0.5s;
+      &:hover{
+        color: map-get($colors, span-hover);
+        transition: 0.5s;
+      }
+      
+    }
+
     .arrow {
       background-color: map-get($colors, arrow-bg);
       fill: map-get($colors, arrow-fill);
