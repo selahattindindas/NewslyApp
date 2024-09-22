@@ -1,6 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { TruncatePipe } from '../../pipes/truncate.pipe';
+
+
+export interface Test{
+  id:number,
+  image: string,
+  author: string,
+  date: string,
+  description: string,
+  categoryId: number
+}
 
 @Component({
   selector: 'app-card',
@@ -9,25 +19,25 @@ import { TruncatePipe } from '../../pipes/truncate.pipe';
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
-export class CardComponent implements OnInit {
-  slides: { image: string, author: string, date: string, description: string }[] = [
-    { image: 'assets/img/test.jpg', author: 'Selahattin', date: '15 saat', description: 'fıçı içinde ölü bulundu:' },
-    { image: 'assets/img/test2.jpg', author: 'Selahattin', date: '15 saat', description: 'Mersinde bir profesör el ve ayakları bağlı halde fıçı içinde ölü bulundu: Oğlu gözaltına alindi ' },
-    { image: 'assets/img/test.jpg', author: 'Selahattin', date: '15 saat', description: 'Mersinde bir profesör el ve ayakları bağlı halde fıçı içinde ölü bulundu: Oğlu gözaltına alindi Mersinde bir profesör el ve ayakları bağlı halde fıçı içinde ölü bulundu:' },
-    { image: 'assets/img/test2.jpg', author: 'Selahattin', date: '15 saat', description: 'Mersinde bir profesör el ve ayakları bağlı halde fıçı içinde ölü bulundu: Oğlu gözaltına alindi' },
-    { image: 'assets/img/test.jpg', author: 'Selahattin', date: '15 saat', description: 'Mersinde bir profesör el ve ayakları bağlı halde fıçı içinde ölü bulundu: Oğlu gözaltına alindi Mersinde bir profesör el ve ayakları bağlı halde fıçı içinde ölü bulundu:' },
-    { image: 'assets/img/test2.jpg', author: 'Selahattin', date: '15 saat', description: 'Mersinde bir profesör el ve ayakları bağlı halde fıçı içinde ölü bulundu: Oğlu gözaltına alindi' },
-    { image: 'assets/img/test2.jpg', author: 'Selahattin', date: '15 saat', description: 'Mersinde bir profesör el ve ayakları bağlı halde fıçı içinde ölü bulundu: Oğlu gözaltına alindi Mersinde bir profesör el ve ayakları bağlı halde fıçı içinde ölü bulundu:' },
-    { image: 'assets/img/test.jpg', author: 'Selahattin', date: '15 saat', description: 'Mersinde bir profesör el ve ayakları bağlı halde fıçı içinde ölü bulundu: Oğlu gözaltına alindi' },
-    { image: 'assets/img/test.jpg', author: 'Selahattin', date: '15 saat', description: 'Mersinde bir profesör el ve ayakları bağlı halde fıçı içinde ölü bulundu: Oğlu gözaltına alindi Mersinde bir profesör el ve ayakları bağlı halde fıçı içinde ölü bulundu:' },
-  ];
 
-  leftSlides : any[] = [];
-  rightSlides : any[] = [];
+export class CardComponent implements OnChanges {
+  @Input() news: Test[] = []; 
+  leftSlides: Test[] = [];
+  rightSlides: Test[] = [];
 
-  ngOnInit(): void {
-    const midIndex = Math.ceil(this.slides.length / 2);
-    this.leftSlides = this.slides.slice(0, midIndex); 
-    this.rightSlides = this.slides.slice(midIndex);
+  constructor(){}
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['news']) {
+      this.updateSlides(); 
+    }
+  }
+
+  updateSlides() {
+    setTimeout(() => {
+      const midIndex = Math.ceil(this.news.length / 2);
+      this.leftSlides = this.news.slice(0, midIndex);
+      this.rightSlides = this.news.slice(midIndex);
+    }, 300); 
   }
 }

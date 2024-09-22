@@ -29,6 +29,10 @@
   @include font-size(10px); // 10px
 }
 
+.font-size-11px{
+  @include font-size(11px); // 11px
+}
+
 .font-size-12px{
   @include font-size(12px); // 12px
 }
@@ -95,6 +99,11 @@
 }
 
 // Line Height Classes
+
+.line-height-sm {
+  @include line-height(13px);
+}
+
 .line-height-normal {
   @include line-height(1.5);
 }
@@ -158,10 +167,18 @@ $font-family-secondary: 'Inter', normal;
   @include letter-spacing(0.1em); // Adjust letter-spacing as needed
 }
 
+.letter-spacing-spaced{
+  @include letter-spacing(.5px);
+}
+
 .letter-spacing-custom-tight {
   @include letter-spacing(-0.01em); // New class with letter-spacing: -0.01em
 }
 
 .text-align-center{
   text-align: center;
+}
+
+.text-decoration-none{
+  text-decoration: none;
 }

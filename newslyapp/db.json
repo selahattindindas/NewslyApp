@@ -1,10 +1,41 @@
 {
   "news": [
+    { "id": 1, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "15 saat", "description": "Mersin'de gizemli bir ölü bulundu.", "categoryId": 1 },
+    { "id": 2, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "14 saat", "description": "Yerli bilim insanlarından önemli bir keşif.", "categoryId": 2 },
+    { "id": 3, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "13 saat", "description": "Döviz kurlarındaki dalgalanma sürüyor.", "categoryId": 3 },
+    { "id": 4, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "12 saat", "description": "Yeni yaşam trendleri: Minimalizm.", "categoryId": 4 },
+    { "id": 5, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "11 saat", "description": "Şampiyon takım yeni sezonu açtı.", "categoryId": 5 },
+    { "id": 6, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "10 saat", "description": "Gizemli bir iş insanının ölümü.", "categoryId": 1 },
+    { "id": 7, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "9 saat", "description": "Uzay keşiflerinde yeni bir adım.", "categoryId": 2 },
+    { "id": 8, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "8 saat", "description": "Borsa'da rekor kapanış.", "categoryId": 3 },
+    { "id": 9, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "7 saat", "description": "Sürdürülebilir yaşam üzerine yeni projeler.", "categoryId": 4 },
+    { "id": 10, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "6 saat", "description": "Ülkemizin yeni futbol yıldızı.", "categoryId": 5 },
+    { "id": 11, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "5 saat", "description": "İstanbul'da yeni bir tarih keşfi.", "categoryId": 1 },
+    { "id": 12, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "4 saat", "description": "Teknolojideki son gelişmeler.", "categoryId": 2 },
+    { "id": 13, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "3 saat", "description": "Ekonomi verileri açıklandı.", "categoryId": 3 },
+    { "id": 14, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "2 saat", "description": "Doğanın korunması için yeni adımlar.", "categoryId": 4 },
+    { "id": 15, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "1 saat", "description": "Spor dünyasında büyük değişimler.", "categoryId": 5 },
+    { "id": 16, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "1 gün", "description": "Muzik dünyasında yeni bir trend.", "categoryId": 1 },
+    { "id": 17, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "1 gün", "description": "Yapay zeka ile ilgili yeni gelişmeler.", "categoryId": 2 },
+    { "id": 18, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "1 gün", "description": "Ekonomik kriz uyarıları gelmeye devam ediyor.", "categoryId": 3 },
+    { "id": 19, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "1 gün", "description": "Sağlıklı yaşam ipuçları.", "categoryId": 4 },
+    { "id": 20, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "1 gün", "description": "Spor etkinliklerinde artış.", "categoryId": 5 },
+    { "id": 21, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "1 gün", "description": "Küresel ısınma etkileri.", "categoryId": 1 },
+    { "id": 22, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "1 gün", "description": "Bilim dünyasındaki yenilikler.", "categoryId": 2 },
+    { "id": 23, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "1 gün", "description": "Hisse senedi yatırımları üzerine tavsiyeler.", "categoryId": 3 },
+    { "id": 24, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "1 gün", "description": "Yaz tatili için öneriler.", "categoryId": 4 },
+    { "id": 25, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "1 gün", "description": "Futbolun geleceği hakkında görüşler.", "categoryId": 5 },
+    { "id": 26, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "1 gün", "description": "Yeni yazılım güncellemeleri.", "categoryId": 2 },
+    { "id": 27, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "1 gün", "description": "Finansal okuryazarlık için ipuçları.", "categoryId": 3 },
+    { "id": 28, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "1 gün", "description": "Doğa gezileri için en iyi yerler.", "categoryId": 4 },
+    { "id": 29, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "1 gün", "description": "Yerli takımların başarıları.", "categoryId": 5 },
+    { "id": 30, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "1 gün", "description": "Gizli kalmış tarihsel olaylar.", "categoryId": 1 }
   ],
   "categories": [
-    { "id": 1, "name": "Teknoloji" },
-    { "id": 2, "name": "Spor" },
-    { "id": 3, "name": "Ekonomi" },
-    { "id": 4, "name": "Sağlık" }
+    { "id": 1, "name": "Gündem" },
+    { "id": 2, "name": "Bilim & Teknoloji" },
+    { "id": 3, "name": "Finans" },
+    { "id": 4, "name": "Yaşam" },
+    { "id": 5, "name" : "Spor"}
   ]
 }

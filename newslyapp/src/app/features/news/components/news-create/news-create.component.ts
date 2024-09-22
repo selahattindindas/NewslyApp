@@ -14,6 +14,7 @@ export interface News {
 export interface Category {
   id : number,
   name: string,
+  urlFriendlyName: string
 }
 
 export const quillModules: QuillModules = {

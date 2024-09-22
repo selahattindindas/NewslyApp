@@ -4,9 +4,11 @@
     </div>
     <div class="mt-90px">
         <ul class="m-0 p-0 list-style-none">
-            <li class="sidebar-category cursor-pointer font-weight-bold font-size-sm line-height-tight pl-50px pt-25px pb-25px text-dark-gray text-uppercase"
+            <li class="sidebar-category cursor-pointer font-weight-bold font-size-sm line-height-tight pl-50px pt-25px pb-25px text-uppercase"
                 *ngFor="let category of categories">
-                {{category.name}}
+                <a class="text-decoration-none text-dark-gray" (click)="onCategorySelect(category.name)">
+                    {{ category.name }}
+                  </a>
             </li>
         </ul>
         <div class="mt-80px pl-50px">

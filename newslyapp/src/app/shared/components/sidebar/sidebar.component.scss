@@ -9,18 +9,18 @@
     transition: 0.5s;
     &:hover {
         background-color: #232629;
-        color: #757474;
-        transition: 0.5s;
+        a {
+            color: #838282;
+            transition: 0.5s;
+        }
     }
 
     &:active {
         background-color: #232629;
-        color: #e4e4e4;
-        transition: 0.5s;
-    }
-    &:focus{
-        background-color: #232629;
-        color: #e4e4e4;
-        transition: 0.5s;
+        a {
+            color: #e4e4e4;
+            transition: 0.5s;
+        }
+
     }
 }

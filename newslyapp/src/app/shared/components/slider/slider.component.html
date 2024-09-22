@@ -2,17 +2,17 @@
     <ul class="m-0 p-0">
         <p class="pl-25px font-size-3xl font-weight-bolder">Ne Oldu?</p>
         <div class="keen-slider" #sliderRef>   
-            <li class="width-full keen-slider__slide" *ngFor="let data of slides">
+            <li class="width-full keen-slider__slide" *ngFor="let news of news">
                 <div class="margin-25px cursor-pointer">
                     <div class="width-full height-200px overflow-hidden">
-                        <img class="border-radius-6px width-full height-full object-fit-cover" [src]="data.image">
+                        <img class="border-radius-6px width-full height-full object-fit-cover" [src]="news.image">
                     </div>
                     <div
                         class="d-flex justify-content-between pt-20px letter-spacing-tight text-uppercase">
-                        <span class="color-gray font-weight-semibold font-size-xs">{{data.author}}</span>
-                        <span class="color-gray font-size-xxs font-weight-normal">{{data.date}}</span>
+                        <span class="color-gray font-weight-semibold font-size-xs">{{news.author}}</span>
+                        <span class="color-gray font-size-xxs font-weight-normal">{{news.date}}</span>
                     </div>
-                    <p class="font-size-lg pt-20px pb-10px font-weight-bold">{{data.description | truncate}}</p>
+                    <p class="font-size-lg pt-20px pb-10px font-weight-bold">{{news.description | truncate}}</p>
                 </div>
             </li>
         </div>
