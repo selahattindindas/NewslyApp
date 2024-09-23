@@ -1,26 +1,24 @@
 .sidebar {
     position: fixed;
-    top: 0;  
+    top: 0;
     left: 0;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; 
 }
+
 .sidebar-category {
     transition: 0.5s;
+
     &:hover {
         background-color: #232629;
-        a {
-            color: #838282;
-            transition: 0.5s;
-        }
+        color: #838282;
+        transition: 0.5s;
     }
+}
 
-    &:active {
-        background-color: #232629;
-        a {
-            color: #e4e4e4;
-            transition: 0.5s;
-        }
-
-    }
+.active {
+    background-color: #232629;
+    color: #e4e4e4;
+    transition: 0.5s;
 }

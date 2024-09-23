@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { catchError, map, Observable } from 'rxjs';
+import { catchError, map, Observable, of } from 'rxjs';
 import { Category, News } from './components/news-create/news-create.component';
 import { Test } from '../../shared/components/card/card.component';
 
@@ -40,13 +40,12 @@ export class NewsService {
   }
 
   
-  getCategoryIdByName(name: string): Observable<{ categoryId: number}> {
+  getCategoryIdByName(name: string): Observable<{ categoryId: number } | null> {
     return this.http.get<Category[]>(`${this.url}/categories`).pipe(
       map(categories => {
         const category = categories.find(cat => cat.name.toLowerCase() === name?.toLowerCase());
-        return { categoryId: category ? category.id : 1 }; 
+        return category ? { categoryId: category.id } : null; 
       }),
-    );
+     );
   }
-  
 }

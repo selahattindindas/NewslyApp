@@ -65,6 +65,10 @@ $themes: (
       color: map-get($colors, h1);
     }
 
+    .theme {
+      background-color: map-get($colors, background);
+    }
+
     .theme-div {
       color: map-get($colors, text);
       background-color: map-get($colors, bg-div);

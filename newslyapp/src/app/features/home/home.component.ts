@@ -28,11 +28,15 @@ export class HomeComponent implements OnInit {
   }
 
   fetchData(categoryName: string) {
-    this.newsService.getCategoryIdByName(categoryName).subscribe(response  => {
-      const id = response.categoryId
-      this.newsService.getNewsByCategoryId(id).subscribe(data => {
-        this.news = data; 
-      });
+    this.newsService.getCategoryIdByName(categoryName).subscribe(response => {
+      if (response) {
+        const id = response.categoryId;
+        this.newsService.getNewsByCategoryId(id).subscribe(data => {
+          this.news = data; 
+        });
+      } else {
+        this.router.navigate(['/not-found']);
+      }
     });
   }
 }

@@ -54,7 +54,9 @@ export class SliderComponent implements AfterViewInit, OnDestroy, OnChanges {
 
   updateSlider(): void {
     this.slider?.destroy();
-    this.initializeSlider(); 
+    setTimeout(() => {
+      this.initializeSlider(); 
+    }, 100);
   }
   
 
