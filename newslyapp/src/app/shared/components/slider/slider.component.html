@@ -3,7 +3,7 @@
         <p class="pl-25px font-size-3xl font-weight-bolder">Ne Oldu?</p>
         <div class="keen-slider" #sliderRef>   
             <li class="width-full keen-slider__slide" *ngFor="let news of news">
-                <div class="margin-25px cursor-pointer">
+                <div class="margin-25px cursor-pointer" [routerLink]="[news.id, news.title]">
                     <div class="width-full height-200px overflow-hidden">
                         <img class="border-radius-6px width-full height-full object-fit-cover" [src]="news.image">
                     </div>

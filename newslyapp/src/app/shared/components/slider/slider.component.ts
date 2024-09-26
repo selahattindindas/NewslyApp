@@ -3,11 +3,12 @@ import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, Inject, Input,
 import KeenSlider, { KeenSliderInstance } from 'keen-slider';
 import { TruncatePipe } from '../../pipes/truncate.pipe';
 import { NewsList } from '../../../features/news/components/news-create/news-create.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-slider',
   standalone: true,
-  imports: [CommonModule, TruncatePipe],
+  imports: [CommonModule, TruncatePipe, RouterLink],
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.scss']
 })

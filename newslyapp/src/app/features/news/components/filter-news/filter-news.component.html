@@ -1,0 +1,11 @@
+<div class="d-flex">
+    <div class="card" style="float: left;">
+        <p *ngIf="searchTerm" class="ml-30px font-weight-medium line-height-tight font-size-13px text-italic"><strong>{{
+                searchTerm }}</strong> ile ilgili sonuçlar</p>
+        <hr class="mt-20px mb-20px" style="border: 0.1px solid #DCDCDC;">
+        <app-news-container [news]="filteredNews"></app-news-container>
+    </div>
+    <div class="popular mt-40px" style="float: right;">
+        <app-popular-news [news]="news"></app-popular-news>
+    </div>
+</div>

@@ -4,11 +4,12 @@ import { NewsService } from '../../news.service';
 import { isPlatformBrowser } from '@angular/common';
 import { News, NewsList } from '../news-create/news-create.component';
 import { StringHelper } from '../../../../shared/utils/string-helper';
+import { MoreNewsComponent } from '../more-news/more-news.component';
 
 @Component({
   selector: 'app-news-detail',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, MoreNewsComponent],
   templateUrl: './news-detail.component.html',
   styleUrls: ['./news-detail.component.scss']
 })

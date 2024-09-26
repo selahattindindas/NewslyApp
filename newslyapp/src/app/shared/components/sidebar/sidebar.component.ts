@@ -5,11 +5,12 @@ import { NewsService } from '../../../features/news/news.service';
 import { Category } from '../../../features/news/components/news-create/news-create.component';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { StringHelper } from '../../utils/string-helper';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [CommonModule, ThemeSwitcherComponent, RouterLink, RouterLinkActive],
+  imports: [CommonModule, ThemeSwitcherComponent, RouterLink, RouterLinkActive, FooterComponent],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })

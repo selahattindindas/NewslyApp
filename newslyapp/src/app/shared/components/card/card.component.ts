@@ -14,22 +14,13 @@ import { NewsList } from '../../../features/news/components/news-create/news-cre
 
 export class CardComponent implements OnChanges {
   @Input() news: NewsList[] = []; 
-  leftSlides: NewsList[] = [];
-  rightSlides: NewsList[] = [];
 
   constructor(){}
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['news']) {
-      this.updateSlides(); 
     }
   }
 
-  updateSlides() {
-    setTimeout(() => {
-      const midIndex = Math.ceil(this.news.length / 2);
-      this.leftSlides = this.news.slice(0, midIndex);
-      this.rightSlides = this.news.slice(midIndex);
-    }, 300); 
-  }
+
 }

@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute, RouterOutlet } from '@angular/router';
-import { CardComponent } from '../../../../shared/components/card/card.component';
 import { NewsService } from '../../news.service';
 import { SidebarComponent } from '../../../../shared/components/sidebar/sidebar.component';
 import { SliderComponent } from '../../../../shared/components/slider/slider.component';
@@ -8,17 +7,19 @@ import { PopularNewsComponent } from '../../../popular-news/popular-news.compone
 import { Category, NewsList } from '../news-create/news-create.component';
 import { CommonModule } from '@angular/common';
 import { StringHelper } from '../../../../shared/utils/string-helper';
+import { FooterComponent } from "../../../../shared/components/footer/footer.component";
+import { NewsContainerComponent } from '../news-container/news-container.component';
 
 @Component({
   selector: 'app-news-category',
   standalone: true,
-  imports: [SliderComponent, CardComponent, PopularNewsComponent, RouterOutlet, SidebarComponent, CommonModule],
+  imports: [SliderComponent, NewsContainerComponent, PopularNewsComponent, RouterOutlet, SidebarComponent, CommonModule, FooterComponent],
   templateUrl: './news-category.component.html',
   styleUrls: ['./news-category.component.scss']
 })
 export class NewsCategoryComponent {
   selectedCategory!: string; 
-  news: NewsList[] = [];
+  @Input() news: NewsList[] = [];
   categories: Category[] = [];
 
   constructor(private route: ActivatedRoute, private newsService: NewsService) {}

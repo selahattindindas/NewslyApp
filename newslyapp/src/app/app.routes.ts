@@ -5,6 +5,7 @@ import { LayoutComponent } from './shared/components/layout/layout.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { NewsDetailComponent } from './features/news/components/news-detail/news-detail.component';
 import { NewsCategoryComponent } from './features/news/components/news-category/news-category.component';
+import { FilterNewsComponent } from './features/news/components/filter-news/filter-news.component';
 
 export const routes: Routes = [
     {
@@ -16,6 +17,10 @@ export const routes: Routes = [
                 path: '',
                 redirectTo: 'gundem',
                 pathMatch: 'full'
+            },
+            {
+                path:'search',
+                component:FilterNewsComponent
             },
             {
                 path: ':categoryName',
