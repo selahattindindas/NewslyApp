@@ -4,6 +4,7 @@ import { ThemeSwitcherComponent } from '../theme-switcher/theme-switcher.compone
 import { NewsService } from '../../../features/news/news.service';
 import { Category } from '../../../features/news/components/news-create/news-create.component';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { StringHelper } from '../../utils/string-helper';
 
 @Component({
   selector: 'app-sidebar',
@@ -26,5 +27,9 @@ export class SidebarComponent implements OnInit{
     this.newsService.getCategories().subscribe((response) =>{
       this.categories = response;
     })
+  }
+
+  getFormattedCategory(category: Category): string {
+    return StringHelper.convertToSlug(category.name); 
   }
 }

@@ -12,13 +12,14 @@ $themes: (
     p: #333333,
     text-gray: #333333,
     a: #1e90ff,
-    h1: #ffffff,
-    h2: #ffffff,
+    h1: #333333,
+    h2: #333333,
     bg-div: #fff,
     arrow-bg: #eeeef0,
     arrow-fill: #000000,
     input-text: #333333,
     theme-svg: #333333,
+    gray-span: #333333,
     hr: rgba(0, 0, 0, .1),
     span-hover: #000000,
   ),
@@ -35,13 +36,14 @@ $themes: (
     p: #c7cbd1,
     gray: #bbbbbb,
     a: #add8e6,
-    h1: #ffffff,
-    h2: #ffffff,
+    h1: #c7cbd1,
+    h2: #c7cbd1,
     bg-div: #181e25,
     arrow-bg: #2d2a2e,
     arrow-fill: #ffffff,
     input-text: #5A6068,
     theme-svg: #5A6068,
+    gray-span: #5A6068,
     hr: #383838,
     span-hover: #ffffff,
   )
@@ -63,6 +65,10 @@ $themes: (
 
     h1, h2, h3, h4, h5, h6 {
       color: map-get($colors, h1);
+    }
+
+    .gray-span{
+      color: map-get($colors, gray-span);
     }
 
     .theme {

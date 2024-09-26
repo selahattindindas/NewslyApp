@@ -1,0 +1,13 @@
+::ng-deep .content img {
+    border-radius: 8px;
+    width: 100%;
+    object-fit: cover;
+}
+
+::ng-deep .content p{
+    font-size: 17px;
+    line-height: 34px;
+    font-weight: 400;
+    letter-spacing: -.005em;
+    margin-bottom: 1rem;
+}

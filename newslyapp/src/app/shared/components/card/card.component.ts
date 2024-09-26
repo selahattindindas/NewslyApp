@@ -1,29 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { TruncatePipe } from '../../pipes/truncate.pipe';
-
-
-export interface Test{
-  id:number,
-  image: string,
-  author: string,
-  date: string,
-  description: string,
-  categoryId: number
-}
+import { RouterLink } from '@angular/router';
+import { NewsList } from '../../../features/news/components/news-create/news-create.component';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [CommonModule, TruncatePipe],
+  imports: [CommonModule, TruncatePipe, RouterLink],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
 
 export class CardComponent implements OnChanges {
-  @Input() news: Test[] = []; 
-  leftSlides: Test[] = [];
-  rightSlides: Test[] = [];
+  @Input() news: NewsList[] = []; 
+  leftSlides: NewsList[] = [];
+  rightSlides: NewsList[] = [];
 
   constructor(){}
 

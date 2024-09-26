@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input  } from '@angular/core';
 import { TruncatePipe } from '../../shared/pipes/truncate.pipe';
-import { Test } from '../../shared/components/card/card.component';
+import { NewsList } from '../news/components/news-create/news-create.component';
 
 @Component({
   selector: 'app-popular-news',
@@ -11,5 +11,5 @@ import { Test } from '../../shared/components/card/card.component';
   styleUrl: './popular-news.component.scss'
 })
 export class PopularNewsComponent {
-  @Input() news: Test[] = [];
+  @Input() news: NewsList[] = [];
 }

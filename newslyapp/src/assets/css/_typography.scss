@@ -25,6 +25,10 @@
   @include font-size(8px); // 8px
 }
 
+.font-size-9px{
+  @include font-size(9px); // 9px
+}
+
 .font-size-xs {
   @include font-size(10px); // 10px
 }
@@ -63,6 +67,10 @@
 
 .font-size-3xl {
   @include font-size(30px); // 30px
+}
+
+.font-size-32px{
+  @include font-size(32px); // 32px
 }
 
 .font-size-4xl {
@@ -116,6 +124,10 @@
   @include line-height(1.75);
 }
 
+.line-height-xxl{
+  @include line-height(42px);
+}
+
 // Font Family Classes
 $font-family-primary: 'Inter', normal;
 $font-family-secondary: 'Inter', normal;
@@ -151,6 +163,9 @@ $font-family-secondary: 'Inter', normal;
   @include letter-spacing(-1px);
 }
 
+.letter-spacing-medium{
+  @include letter-spacing(-.005em);
+}
 .letter-spacing-tight {
   @include letter-spacing(-0.01em); // Adjust letter-spacing as needed
 }

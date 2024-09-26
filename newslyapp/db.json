@@ -1,41 +1,283 @@
 {
   "news": [
-    { "id": 1, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "15 saat", "description": "Mersin'de gizemli bir ölü bulundu.", "categoryId": 1 },
-    { "id": 2, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "14 saat", "description": "Yerli bilim insanlarından önemli bir keşif.", "categoryId": 2 },
-    { "id": 3, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "13 saat", "description": "Döviz kurlarındaki dalgalanma sürüyor.", "categoryId": 3 },
-    { "id": 4, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "12 saat", "description": "Yeni yaşam trendleri: Minimalizm.", "categoryId": 4 },
-    { "id": 5, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "11 saat", "description": "Şampiyon takım yeni sezonu açtı.", "categoryId": 5 },
-    { "id": 6, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "10 saat", "description": "Gizemli bir iş insanının ölümü.", "categoryId": 1 },
-    { "id": 7, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "9 saat", "description": "Uzay keşiflerinde yeni bir adım.", "categoryId": 2 },
-    { "id": 8, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "8 saat", "description": "Borsa'da rekor kapanış.", "categoryId": 3 },
-    { "id": 9, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "7 saat", "description": "Sürdürülebilir yaşam üzerine yeni projeler.", "categoryId": 4 },
-    { "id": 10, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "6 saat", "description": "Ülkemizin yeni futbol yıldızı.", "categoryId": 5 },
-    { "id": 11, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "5 saat", "description": "İstanbul'da yeni bir tarih keşfi.", "categoryId": 1 },
-    { "id": 12, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "4 saat", "description": "Teknolojideki son gelişmeler.", "categoryId": 2 },
-    { "id": 13, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "3 saat", "description": "Ekonomi verileri açıklandı.", "categoryId": 3 },
-    { "id": 14, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "2 saat", "description": "Doğanın korunması için yeni adımlar.", "categoryId": 4 },
-    { "id": 15, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "1 saat", "description": "Spor dünyasında büyük değişimler.", "categoryId": 5 },
-    { "id": 16, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "1 gün", "description": "Muzik dünyasında yeni bir trend.", "categoryId": 1 },
-    { "id": 17, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "1 gün", "description": "Yapay zeka ile ilgili yeni gelişmeler.", "categoryId": 2 },
-    { "id": 18, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "1 gün", "description": "Ekonomik kriz uyarıları gelmeye devam ediyor.", "categoryId": 3 },
-    { "id": 19, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "1 gün", "description": "Sağlıklı yaşam ipuçları.", "categoryId": 4 },
-    { "id": 20, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "1 gün", "description": "Spor etkinliklerinde artış.", "categoryId": 5 },
-    { "id": 21, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "1 gün", "description": "Küresel ısınma etkileri.", "categoryId": 1 },
-    { "id": 22, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "1 gün", "description": "Bilim dünyasındaki yenilikler.", "categoryId": 2 },
-    { "id": 23, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "1 gün", "description": "Hisse senedi yatırımları üzerine tavsiyeler.", "categoryId": 3 },
-    { "id": 24, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "1 gün", "description": "Yaz tatili için öneriler.", "categoryId": 4 },
-    { "id": 25, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "1 gün", "description": "Futbolun geleceği hakkında görüşler.", "categoryId": 5 },
-    { "id": 26, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "1 gün", "description": "Yeni yazılım güncellemeleri.", "categoryId": 2 },
-    { "id": 27, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "1 gün", "description": "Finansal okuryazarlık için ipuçları.", "categoryId": 3 },
-    { "id": 28, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "1 gün", "description": "Doğa gezileri için en iyi yerler.", "categoryId": 4 },
-    { "id": 29, "image": "assets/img/test.jpg", "author": "Selahattin", "date": "1 gün", "description": "Yerli takımların başarıları.", "categoryId": 5 },
-    { "id": 30, "image": "assets/img/test2.jpg", "author": "Selahattin", "date": "1 gün", "description": "Gizli kalmış tarihsel olaylar.", "categoryId": 1 }
+    {
+      "id": "1",
+      "image": "assets/img/test.jpg",
+      "author": "Selahattin",
+      "date": "15 saat",
+      "title": "Mersin'de gizemli bir ölü bulundu.",
+      "categoryName": "Gündem"
+  },
+  {
+      "id": "2",
+      "image": "assets/img/test2.jpg",
+      "author": "Selahattin",
+      "date": "14 saat",
+      "title": "Yerli bilim insanlarından önemli bir keşif.",
+      "categoryName": "Bilim & Teknoloji"
+  },
+  {
+      "id": "3",
+      "image": "assets/img/test.jpg",
+      "author": "Selahattin",
+      "date": "13 saat",
+      "title": "Döviz kurlarındaki dalgalanma sürüyor.",
+      "categoryName": "Finans"
+  },
+  {
+      "id": "4",
+      "image": "assets/img/test2.jpg",
+      "author": "Selahattin",
+      "date": "12 saat",
+      "title": "Yeni yaşam trendleri: Minimalizm.",
+      "categoryName": "Yaşam"
+  },
+  {
+      "id": "5",
+      "image": "assets/img/test.jpg",
+      "author": "Selahattin",
+      "date": "11 saat",
+      "title": "Şampiyon takım yeni sezonu açtı.",
+      "categoryName": "Spor"
+  },
+  {
+      "id": "6",
+      "image": "assets/img/test2.jpg",
+      "author": "Selahattin",
+      "date": "10 saat",
+      "title": "Gizemli bir iş insanının ölümü.",
+      "categoryName": "Gündem"
+  },
+  {
+      "id": "7",
+      "image": "assets/img/test.jpg",
+      "author": "Selahattin",
+      "date": "9 saat",
+      "title": "Uzay keşiflerinde yeni bir adım.",
+      "categoryName": "Bilim & Teknoloji"
+  },
+  {
+      "id": "8",
+      "image": "assets/img/test2.jpg",
+      "author": "Selahattin",
+      "date": "8 saat",
+      "title": "Borsa'da rekor kapanış.",
+      "categoryName": "Finans"
+  },
+  {
+      "id": "9",
+      "image": "assets/img/test.jpg",
+      "author": "Selahattin",
+      "date": "7 saat",
+      "title": "Sürdürülebilir yaşam üzerine yeni projeler.",
+      "categoryName": "Yaşam"
+  },
+  {
+      "id": "10",
+      "image": "assets/img/test2.jpg",
+      "author": "Selahattin",
+      "date": "6 saat",
+      "title": "Ülkemizin yeni futbol yıldızı.",
+      "categoryName": "Spor"
+  },
+  {
+      "id": "11",
+      "image": "assets/img/test.jpg",
+      "author": "Selahattin",
+      "date": "5 saat",
+      "title": "İstanbul'da yeni bir tarih keşfi.",
+      "categoryName": "Gündem"
+  },
+  {
+      "id": "12",
+      "image": "assets/img/test2.jpg",
+      "author": "Selahattin",
+      "date": "4 saat",
+      "title": "Teknolojideki son gelişmeler.",
+      "categoryName": "Bilim & Teknoloji"
+  },
+  {
+      "id": "13",
+      "image": "assets/img/test.jpg",
+      "author": "Selahattin",
+      "date": "3 saat",
+      "title": "Ekonomi verileri açıklandı.",
+      "categoryName": "Finans"
+  },
+  {
+      "id": "14",
+      "image": "assets/img/test2.jpg",
+      "author": "Selahattin",
+      "date": "2 saat",
+      "title": "Doğanın korunması için yeni adımlar.",
+      "categoryName": "Yaşam"
+  },
+  {
+      "id": "15",
+      "image": "assets/img/test.jpg",
+      "author": "Selahattin",
+      "date": "1 saat",
+      "title": "Spor dünyasında büyük değişimler.",
+      "categoryName": "Spor"
+  },
+  {
+      "id": "16",
+      "image": "assets/img/test2.jpg",
+      "author": "Selahattin",
+      "date": "1 gün",
+      "title": "Muzik dünyasında yeni bir trend.",
+      "categoryName": "Gündem"
+  },
+  {
+      "id": "17",
+      "image": "assets/img/test.jpg",
+      "author": "Selahattin",
+      "date": "1 gün",
+      "title": "Yapay zeka ile ilgili yeni gelişmeler.",
+      "categoryName": "Bilim & Teknoloji"
+  },
+  {
+      "id": "18",
+      "image": "assets/img/test2.jpg",
+      "author": "Selahattin",
+      "date": "1 gün",
+      "title": "Ekonomik kriz uyarıları gelmeye devam ediyor.",
+      "categoryName": "Finans"
+  },
+  {
+      "id": "19",
+      "image": "assets/img/test.jpg",
+      "author": "Selahattin",
+      "date": "1 gün",
+      "title": "Sağlıklı yaşam ipuçları.",
+      "categoryName": "Yaşam"
+  },
+  {
+      "id": "20",
+      "image": "assets/img/test2.jpg",
+      "author": "Selahattin",
+      "date": "1 gün",
+      "title": "Spor etkinliklerinde artış.",
+      "categoryName": "Spor"
+  },
+  {
+      "id": "21",
+      "image": "assets/img/test.jpg",
+      "author": "Selahattin",
+      "date": "1 gün",
+      "title": "Küresel ısınma etkileri.",
+      "categoryName": "Gündem"
+  },
+  {
+      "id": "22",
+      "image": "assets/img/test2.jpg",
+      "author": "Selahattin",
+      "date": "1 gün",
+      "title": "Bilim dünyasındaki yenilikler.",
+      "categoryName": "Bilim & Teknoloji"
+  },
+  {
+      "id": "23",
+      "image": "assets/img/test.jpg",
+      "author": "Selahattin",
+      "date": "1 gün",
+      "title": "Hisse senedi yatırımları üzerine tavsiyeler.",
+      "categoryName": "Finans"
+  },
+  {
+      "id": "24",
+      "image": "assets/img/test2.jpg",
+      "author": "Selahattin",
+      "date": "1 gün",
+      "title": "Yaz tatili için öneriler.",
+      "categoryName": "Yaşam"
+  },
+  {
+      "id": "25",
+      "image": "assets/img/test.jpg",
+      "author": "Selahattin",
+      "date": "1 gün",
+      "title": "Futbolun geleceği hakkında görüşler.",
+      "categoryName": "Spor"
+  },
+  {
+      "id": "26",
+      "image": "assets/img/test2.jpg",
+      "author": "Selahattin",
+      "date": "1 gün",
+      "title": "Yeni yazılım güncellemeleri.",
+      "categoryName": "Bilim & Teknoloji"
+  },
+  {
+      "id": "27",
+      "image": "assets/img/test.jpg",
+      "author": "Selahattin",
+      "date": "1 gün",
+      "title": "Finansal okuryazarlık için ipuçları.",
+      "categoryName": "Finans"
+  },
+  {
+      "id": "28",
+      "image": "assets/img/test2.jpg",
+      "author": "Selahattin",
+      "date": "1 gün",
+      "title": "Doğa gezileri için en iyi yerler.",
+      "categoryName": "Yaşam"
+  },
+  {
+      "id": "29",
+      "image": "assets/img/test.jpg",
+      "author": "Selahattin",
+      "date": "1 gün",
+      "title": "Yerli takımların başarıları.",
+      "categoryName": "Spor"
+  },
+  {
+      "id": "30",
+      "image": "assets/img/test2.jpg",
+      "author": "Selahattin",
+      "date": "1 gün",
+      "title": "Gizli kalmış tarihsel olaylar.",
+      "categoryName": "Gündem"
+  },
+    {
+      "id": "31",
+      "image": "https://static.bundle.app/news/uxr5nqpu.fn0.jpg",
+      "author": "Selahattin",
+      "title": "Şanlıurfa'da Atatürk Baraj Göleti'nde oluşan hortum görüntülendi",
+      "content": "<p><img src=\"https://static.bundle.app/news/uxr5nqpu.fn0.jpg\"></p><p><span>Suudi Arabistan&#39;ın ulusal gününün 94. yıl dönümü dolayısıyla bir otelde düzenlenen resepsiyona, Milli Savunma Bakanı Yaşar Güler, Genelkurmay Başkanı Orgeneral Metin Gürak, Ankara Valisi Vasip Şahin, Diyanet İşleri Başkanı Ali Erbaş, Suudi Arabistan&#39;ın Ankara Büyükelçisi Fahad bin Assaad Abu Al-Nasr, yabancı misyon temsilcileri ve çok sayıda davetli katıldı.</span></p><p><span>İki ülkenin milli marşlarını okunmasının ardından etkinliğin açılışında konuşan Bakan Güler, dost ve kardeş ülke Suudi Arabistan&#39;ın Milli Günü&#39;nü kutladı ve Suudi Arabistan&#39;ın Orta Doğu&#39;nun kalbinde yer alan ve pek çok alanda büyük gelişim kaydeden önemli bir güç olduğunu söyledi.</span></p><p><span>Güler, sadece coğrafi sınırlarıyla değil, aynı zamanda bölgesel ve uluslararası siyasetteki etkisiyle de Suudi Arabistan&#39;ın kritik bir rol oynadığına işaret ederek, İslam dünyasının önde gelen ülkelerinden biri olarak kutsal topraklara ev sahipliği yapan Suudi Arabistan&#39;ın Türkiye için de çok özel bir yere sahip olduğunu ifade etti.</span></p><p><span>Güler, &quot;İki ülke tarihten gelen köklü bağları sayesinde pek çok konuda ortak değerleri paylaşmaktadır. İlişkilerimiz bu bağların bir tezahürü olarak güçlü işbirliği zemininde ve samimi bir iletişimle her geçen gün daha da ilerlemektedir.&quot; diye konuştu.</span></p><p><span>Ülke liderleri arasındaki samimi diyaloğun da ilişkilerin gelişimine büyük bir ivme kazandırdığına dikkati çeken Güler, son dönemde farklı seviyelerdeki karşılıklı ziyaret ve görüşmelerin, yakalanan ivmenin devam ettirilmesi bakımından ilişkilere müstesna katkılar sunduğunu kaydetti.</span></p><p><span>Güler, muhtelif alanlarda işbirliğini sürdürdüklerine ve özellikle ekonomik ilişkilerin ve ticaret hacminin gün geçtikçe yüksek seviyelere çıktığına işaret ederek, enerji, lojistik ve ulaştırma alanında yürütülen projelerin iki ülkenin de gücüne güç kattığını anlattı.</span></p><p><span>Milli Savunma Bakanlığı olarak savunma ve güvenlik alanında Suudi Arabistan&#39;la verimli icraatlar ve tecrübe paylaşımları yaptıklarını aktaran Güler, askeri eğitim faaliyetleriyle muhtelif tatbikatlarının bu alandaki dayanışmalarının en somut göstergesi olduğunu söyledi.</span></p><p><span>Güler, savunma sanayisi ve teknolojileri alanında geliştirilen ortak projeler ve imzalanan çeşitli antlaşmaların iki ülkenin refahına katkılar sağlarken ikili münasebetlerin geleceğine dair umutları da pekiştirdiğini ifade etti.</span></p><p><span>Tüm bu işbirliği faaliyetlerinin her iki milletin refahını artırma hedefi doğrultusunda büyük bir potansiyele sahip olduklarını ortaya koyduğunu vurgulayan Güler, bu yönüyle yeni ve daha büyük işbirliklerine de zemin hazırladığını dile getirdi.</span></p><p><span>Güler, esasında ilişkileri daha üst seviyelere taşımanın iki ülkenin çıkarlarına büyük katkı sağlamasının yanı sıra şu anki hassas gelişmeler dikkate alındığında bölgesel güvenlik ve barış açısından da bir gereklilik haline geldiğinin altını çizdi.</span></p><p><strong>&quot;Türkiye ve Suudi Arabistan, bölgede daha etkili inisiyatifler üstlenebilir&quot;</strong></p><p><span>Bugün Orta Doğu&#39;nun büyük bir zulme tanıklık ettiğini, bölgede barışa ve huzura ihtiyacın her zamankinden daha acil bir hal aldığını vurgulayan Güler, &quot;Türkiye ve Suudi Arabistan olarak ortak hedefler doğrultusunda dayanışmamızı ve birlikte çalışabilirliğimizi artırarak bölgemizde daha etkili inisiyatifler üstlenebiliriz. Bu çerçevede temel hedefimiz birbirimize duyduğumuz ve tarihi geçmişimizden aldığımız ilham ve motivasyonla ilişkilerimizi her alanda çok daha güçlü bir seviyeye ulaştırmaktır.&quot; diye konuştu.</span></p><p><span>Güler, Suudi Arabistan&#39;ın Ankara Büyükelçisi Abu Al-Nasr&#39;ın vazifesine başladığı günden itibaren iki ülke arasındaki dostluğun geliştirilmesi ve değerli projelerin hayata geçirilebilmesi için yüksek bir özveriyle çalıştığını belirterek, Abu Al-Nasr&#39;a teşekkürlerini sunduğunu ve ilişkilerin ilerletilmesine yönelik karşılıklı gayretlerini sürdürdüklerini ifade etti.</span></p><p><span>Suudi Arabistan&#39;ın Ankara Büyükelçisi Abu Al-Nasr da ülkesinin çabalarının, kuruluşundan bu yana yalnızca iç gelişimiyle sınırlı kalmadığına işaret ederek, aynı zamanda dost ve kardeş ülkelerle ilişkileri de güçlendirmeye çalıştıklarına dikkati çekti.</span></p><p><span>Abu Al-Nasr, Suudi Arabistan ile Türkiye arasındaki tarihi ilişkilerin iki ülke liderlerinin karşılıklı ziyaretleriyle taçlandığını ve üst düzey karşılıklı temaslarla devam ettiğini anlattı.</span></p><p><span>Temmuzda Suudi Arabistan&#39;dan bakan düzeyinde 4 yetkilinin Türkiye&#39;yi ziyaret ettiğini anımsatan Abu Al-Nasr, bu ziyaretlerin, iki ülke arasındaki işbirliğini çeşitli alanlarda güçlendiren olumlu sonuçlar verdiğini ve Suudi-Türk Koordinasyon Konseyi çerçevesinde ortak proje ve girişimlerin geliştirilerek hayata geçirilmesinin altını çizdiğini ifade etti.</span></p><p><span>Abu Al-Nasr, ülkesinin, 2030 vizyonu doğrultusunda sürdürülebilir kalkınmayı ulusal önceliklerinin en başına koyduğunu kaydederek, uluslararası kuruluşlardaki ve ittifaklardaki üyelikleriyle ülkeler arası ilişkilerde kalkınma sürecini yeniden canlandırmak, işbirliği ve anlayışı desteklemek için çalıştıklarını dile getirdi.</span></p><p><span>Büyükelçi Abu Al-Nasr, 2030&#39;da Expo Fuarı&#39;na ve 2034 Dünya Kupası&#39;na ev sahipliği yapma yolunda ilerlediklerini söyledi.</span></p><p><strong>&quot;Suudi Arabistan ile Türkiye bölgenin en büyük iki ekonomisi&quot;</strong></p><p><span>Ekim 2023&#39;te Türkiye Cumhuriyeti&#39;nin 100. yılını kutladıklarını anımsatan Abu Al-Nasr, &quot;Suudi Arabistan ile Türkiye&#39;nin, bölgenin en büyük iki ekonomisi ve G20 üyelikleri göz önünde bulundurulduğunda, sahip oldukları devasa potansiyeller, işbirliğini derinleştirmek, ortaklıkları artırmak, mevcut fırsatları değerlendirmek ve daha adil ve eşit bir dünyayı oluşturmak için altın bir fırsat sunmaktadır.&quot; dedi.</span></p><p><span>Abu Al-Nasr, bunun İslam dünyasında, bölgede ve uluslararası arenada her iki ülkenin yerini daha da güçlendireceğini vurgulayarak, iki ülke arasında siyasi koordinasyonun da söz konusu olduğuna değindi.</span></p><p><span>Büyükelçi Abu Al-Nasr, özellikle 11 Kasım 2023&#39;teki İslam İşbirliği Teşkilatı ve Arap Birliği Ortak Olağanüstü Zirvesi&#39;nin ardından oluşturulan Gazze Temas Grubu aracılığıyla Gazze konusunda sağlanan koordinasyonun buna örnek olduğuna işaret etti.</span></p><p><span>İki ülke arasındaki ticaret hacminin 2023&#39;te 6,8 milyar dolara ulaştığını aktaran Abu Al-Nasr, ilerleyen dönemde ikili ticaret düzeyini daha da artırmayı hedeflediklerini dile getirdi.</span></p><p><span>Abu Al-Nasr, 2023&#39;te Suudi Arabistan&#39;dan Türkiye&#39;ye gelen turist sayısının 800 bini aştığını kaydederek, Türk vatandaşlarına turizm ve umre ziyaretlerinde kolaylık sağlayan vize uygulamasını kısa süre önce başlattıklarını, İstanbul ve Ankara&#39;da havalimanlarında &quot;Mekke Yolu&quot; girişimiyle Türk hacı adaylarına da kolaylık sunulduğunu anlattı.</span></p><p><strong>&quot;Suudi Arabistan-Türkiye ilişkileri tarihi&quot;</strong></p><p><span>Resepsiyonun ardından AA muhabirine konuşan Abu Al-Nasr, bugün ülkesinin 94. Milli Günü&#39;nü kutladıklarını belirterek, &quot;Türkiye&#39;deki dostlarımız, kardeşlerimiz ve yetkililerimizden oluşan büyük bir kalabalığın bugün bizimle birlikte olmasından büyük mutluluk duyuyoruz. Hepinizin bildiği gibi, Suudi Arabistan-Türkiye ilişkilerinin elbette tarihi ve kökleri sağlam. Son dönemde bir ivme yakaladı.&quot; dedi.</span></p><p><span>Abu Al-Nasr, şubatta iki ülkeden çok sayıda bakanın ve yetkilinin katıldığı Türkiye-Suudi Arabistan İş ve Yatırım Forumu&#39;nu İstanbul&#39;da düzenlediklerini hatırlatarak, iki ülke arasında yatırım ve ticaret imkanları ve bunların nasıl geliştirilebileceğinin ele alındığını söyledi.</span></p><p><span>Son dönemde Suudi Arabistan ile Türkiye ilişkilerinin ivme kazanmasına işaret eden Abu Al-Nasr, siyasi, ekonomi ve kültürel etkileşim gibi her alanda güçlü bir işbirliği bulunduğuna ve bunun artarak devam etmesini dilediklerine dikkati çekti.</span></p>",
+      "categoryName": "Gündem"
+    },
+    {
+      "id": "32",
+      "author": "Selahattin",
+      "image": "https://fotolifeakademi.com/uploads/2020/04/dusuk-isikta-fotograf-cekme.jpg",
+      "title": "Deneme",
+      "content": "<p><img src=\"https://fotolifeakademi.com/uploads/2020/04/dusuk-isikta-fotograf-cekme.jpg\"></p>",
+      "categoryName": "Bilim & Teknoloji"
+    }
   ],
   "categories": [
-    { "id": 1, "name": "Gündem" },
-    { "id": 2, "name": "Bilim & Teknoloji" },
-    { "id": 3, "name": "Finans" },
-    { "id": 4, "name": "Yaşam" },
-    { "id": 5, "name" : "Spor"}
+    {
+      "id": "1",
+      "name": "Gündem"
+    },
+    {
+      "id": "2",
+      "name": "Bilim & Teknoloji"
+
+    },
+    {
+      "id": "3",
+      "name": "Finans"
+    },
+    {
+      "id": "4",
+      "name": "Yaşam"
+    },
+    {
+      "id": "5",
+      "name": "Spor"
+    }
   ]
 }

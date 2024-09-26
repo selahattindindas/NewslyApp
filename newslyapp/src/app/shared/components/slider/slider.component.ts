@@ -1,8 +1,8 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, Inject, Input, OnChanges, SimpleChanges, PLATFORM_ID, ViewChild, OnDestroy } from '@angular/core';
 import KeenSlider, { KeenSliderInstance } from 'keen-slider';
-import { Test } from '../card/card.component';
 import { TruncatePipe } from '../../pipes/truncate.pipe';
+import { NewsList } from '../../../features/news/components/news-create/news-create.component';
 
 @Component({
   selector: 'app-slider',
@@ -15,7 +15,7 @@ export class SliderComponent implements AfterViewInit, OnDestroy, OnChanges {
   @ViewChild("sliderRef") sliderRef!: ElementRef<HTMLElement>;
   slider: KeenSliderInstance | undefined;
   currentSlide: number = 0;
-  @Input() news: Test[] = [];
+  @Input() news: NewsList[] = [];
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object, private cdref: ChangeDetectorRef) { }
 

@@ -5,7 +5,7 @@
             <img [src]="news.image" class="width-30px height-30px object-fit-contain border-radius-50">
             <span class="color-gray text-uppercase font-weight-medium letter-spacing-tighter font-size-xs">{{news.author}}</span>
         </div>
-        <p class="font-size-xl font-weight-bolder line-height-normal mb-40px">{{news.description | truncate}}</p>
+        <p class="font-size-xl font-weight-bolder line-height-normal mb-40px">{{news.title | truncate}}</p>
         <hr *ngIf="!last" class="mt-20px mb-20px deneme hr-theme border-0">
     </div>
 </div>

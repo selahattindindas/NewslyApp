@@ -6,15 +6,26 @@ import Quill from 'quill';
 import { NewsService } from '../../news.service';
 
 export interface News {
+  image: string,
   title : string,
   content : string,
   categoryId: number,
+  author: string,
+}
+
+export interface NewsList{
+  id: string, 
+  image: string,
+  title : string,
+  date: string,
+  content : string,
+  categoryName: string,
+  author: string,
 }
 
 export interface Category {
   id : number,
-  name: string,
-  urlFriendlyName: string
+  name: string
 }
 
 export const quillModules: QuillModules = {
@@ -42,9 +53,11 @@ export class NewsCreateComponent implements OnInit {
   categories!: Category[];
   editorInstance!: Quill;
   news: News = {
+    image: '',
     title: '',
     content: '',
-    categoryId: 0 
+    categoryId: 1,
+    author: '',
   };
 
   constructor(private newsService: NewsService) { }
@@ -59,13 +72,23 @@ export class NewsCreateComponent implements OnInit {
     })
   }
 
+  extractImageFromContent(content: string): string {
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = content;
+    const imgTag = tempDiv.querySelector('img');
+    return imgTag ? imgTag.src : '';
+  }
+
   onSubmit() {
+    this.news.image = this.extractImageFromContent(this.news.content);
     this.news.content = this.removeEmptyParagraphs(this.news.content);
     this.newsService.addNews(this.news).subscribe(() => {
       this.news = {
+        image: this.news.image,
         title: this.news.title,
         content: this.news.content,
         categoryId: this.news.categoryId,
+        author: 'Selahattin',
       };
     });
   }

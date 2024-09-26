@@ -1,51 +1,44 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { catchError, map, Observable, of } from 'rxjs';
-import { Category, News } from './components/news-create/news-create.component';
-import { Test } from '../../shared/components/card/card.component';
+import { catchError, Observable } from 'rxjs';
+import { Category, News, NewsList } from './components/news-create/news-create.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NewsService {
-  
+
   url = environment.baseUrl;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   addNews(newsItem: News): Observable<News> {
     return this.http.post<News>(`${this.url}/news`, newsItem).pipe(
       catchError(error => {
-        throw error; 
+        throw error;
       })
     );
   }
 
-  getNews(): Observable<News[]> {
-    return this.http.get<News[]>(`${this.url}/news`);
+  getNews(): Observable<NewsList[]> {
+    return this.http.get<NewsList[]>(`${this.url}/news`);
   }
 
-  getNewsByCategoryId(id: number): Observable<Test[]> {
-    return this.http.get<Test[]>(`${this.url}/news?categoryId=${id}`).pipe(
+  getNewsById(id: number): Observable<NewsList> {
+    return this.http.get<NewsList>(`${this.url}/news/${id}`).pipe(
       catchError(error => {
-        console.error('Error fetching news by category', error);
-        throw error; 
+        throw error;
       })
     );
   }
 
-  getCategories():Observable<Category[]> {
+  getCategories(): Observable<Category[]> {
     return this.http.get<Category[]>(`${this.url}/categories`)
   }
 
-  
-  getCategoryIdByName(name: string): Observable<{ categoryId: number } | null> {
-    return this.http.get<Category[]>(`${this.url}/categories`).pipe(
-      map(categories => {
-        const category = categories.find(cat => cat.name.toLowerCase() === name?.toLowerCase());
-        return category ? { categoryId: category.id } : null; 
-      }),
-     );
+  getNewsByCategoryName(categoryName: string): Observable<NewsList[]> {
+    const encodedCategoryName = encodeURIComponent(categoryName);
+    return this.http.get<NewsList[]>(`${this.url}/news?categoryName=${encodedCategoryName}`);
   }
 }

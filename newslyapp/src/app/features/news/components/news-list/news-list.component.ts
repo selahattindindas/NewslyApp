@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NewsService } from '../../news.service';
 import { CommonModule } from '@angular/common';
-import { News } from '../news-create/news-create.component';
+import { News, NewsList } from '../news-create/news-create.component';
 
 @Component({
   selector: 'app-news-list',
@@ -11,7 +11,7 @@ import { News } from '../news-create/news-create.component';
   styleUrl: './news-list.component.scss'
 })
 export class NewsListComponent {
-  news!: News[];
+  news!: NewsList[];
   constructor(private newsService: NewsService) {}
 
   ngOnInit(): void {
