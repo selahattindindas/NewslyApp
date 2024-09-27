@@ -7,7 +7,7 @@
             <div *ngFor="let category of categories">
                 <a class="text-decoration-none text-dark-gray font-weight-bold font-size-sm text-uppercase">
                     <li class="sidebar-category cursor-pointer pl-50px pt-25px pb-25px line-height-tight"
-                        [routerLink]="[getFormattedCategory(category)]" routerLinkActive="active">
+                        [routerLink]="[category.slug]" routerLinkActive="active">
                         {{ category.name }}
                     </li>
                 </a>

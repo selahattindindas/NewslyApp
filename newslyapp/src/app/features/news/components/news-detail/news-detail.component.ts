@@ -5,6 +5,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { News, NewsList } from '../news-create/news-create.component';
 import { StringHelper } from '../../../../shared/utils/string-helper';
 import { MoreNewsComponent } from '../more-news/more-news.component';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-news-detail',
@@ -14,43 +15,40 @@ import { MoreNewsComponent } from '../more-news/more-news.component';
   styleUrls: ['./news-detail.component.scss']
 })
 export class NewsDetailComponent implements OnInit {
-  title!: string; 
   news!: NewsList;
+  slug!: string;
 
   constructor(
     private route: ActivatedRoute,
     private newsService: NewsService,
     private router: Router,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private titleService: Title
   ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      const idParam = params.get('id'); 
-      const titleParam = params.get('title'); 
-      this.title = titleParam ? titleParam : ''; 
-
+      this.slug = params.get('title') as string; 
       if (isPlatformBrowser(this.platformId)) {
-        document.title = this.title; 
-      }
-
-      if (idParam) {
-        this.getNewsById(Number(idParam));
+        this.getNews();
       }
     });
   }
 
-  getNewsById(id: number): void {
-    this.newsService.getNewsById(id).subscribe(
-      data => {
-        if (data.title === this.title) {
-          this.news = data;
-        } else {
-          this.router.navigate(['/not-found']);
-        }
+  getNews(): void { 
+    this.newsService.getNewsBySlug(this.slug).subscribe({
+      next: (data: NewsList) => {
+        this.news = data;
+        this.setTitle(this.news.title);
       },
-     
-    );
+      error: () => {
+        this.router.navigate(['/not-found']);
+      }
+    });
+  }
+
+  setTitle(title: string): void {
+    this.titleService.setTitle(title); 
   }
 
   getFormattedCategory(): string {

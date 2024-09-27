@@ -1,6 +1,6 @@
 export class StringHelper {
-    static convertToSlug(value: string): string {
-      return value
+    static convertToSlug(title: string, id?: number): string {
+      const slugTitle = title
         .toLowerCase()
         .replace(/[çÇ]/g, 'c')
         .replace(/[ğĞ]/g, 'g')
@@ -10,5 +10,7 @@ export class StringHelper {
         .replace(/[üÜ]/g, 'u')
         .replace(/[^a-z0-9]+/g, '-') 
         .replace(/^-+|-+$/g, '');
+
+        return id ? `${slugTitle}-p-${id}` : slugTitle;
     }
   }

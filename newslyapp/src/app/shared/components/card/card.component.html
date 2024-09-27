@@ -1,5 +1,5 @@
 <div class="news-card mb-30px theme-div padding-15px border-radius-8px" *ngFor="let data of news"
-    style="width: 90%;" [routerLink]="[data.id, data.title]">
+    style="width: 90%;" [routerLink]="['', data.categorySlug, data.slug]">
     <div class="width-full height-170px overflow-hidden">
         <img class="border-radius-8px width-full height-full object-fit-cover cursor-pointer" [src]="data.image">
     </div>

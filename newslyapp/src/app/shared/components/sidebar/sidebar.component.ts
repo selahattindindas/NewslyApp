@@ -29,8 +29,4 @@ export class SidebarComponent implements OnInit{
       this.categories = response;
     })
   }
-
-  getFormattedCategory(category: Category): string {
-    return StringHelper.convertToSlug(category.name); 
-  }
 }

@@ -8,6 +8,8 @@ import { NewsCategoryComponent } from './features/news/components/news-category/
 import { FilterNewsComponent } from './features/news/components/filter-news/filter-news.component';
 
 export const routes: Routes = [
+    { path: 'create', component: NewsCreateComponent },
+    { path: 'not-found', component: NotFoundComponent, title: "Sayfa Bulunamadı!"},
     {
         path: '',
         component: LayoutComponent,
@@ -23,18 +25,24 @@ export const routes: Routes = [
                 component:FilterNewsComponent
             },
             {
-                path: ':categoryName',
+                path: ':categoryName', 
                 component: NewsCategoryComponent,
                 title: 'NewslyApp',
+                children: [
+                    {
+                        path: '', 
+                        component: NewsListComponent
+                    },
+                    {
+                        path: ':title', 
+                        component: NewsDetailComponent,
+                    }
+                ]
             },
-            {
-                path: ':categoryName/:id/:title',
-                component: NewsDetailComponent,
-            }
         ]
     },
-    { path: 'create', component: NewsCreateComponent },
+    
     { path: 'news-list', component: NewsListComponent },
     { path: '**', component: NotFoundComponent },
-    { path: 'not-found', component: NotFoundComponent}
+   
 ];

@@ -1,4 +1,18 @@
-<div *ngFor="let item of news"  class="content-container">
-  <h1>{{ item.title }}</h1>
-  <div [innerHTML]="item.content" class="content-content"></div>
+<div *ngIf="news.length > 0">
+  <div class="theme-div border-radius-6px padding-30px mb-35px">
+      <app-slider [news]="news"></app-slider>
+  </div>
+  <div class="d-flex">
+      <div class="card" style="float: left;">
+          <app-news-container [news]="news"></app-news-container>
+      </div>
+      <div class="popular">
+          <div style="float: right;">
+              <div class="mb-40px">
+                  <app-footer></app-footer>
+              </div>
+              <app-popular-news [news]="news" ></app-popular-news>
+          </div>
+      </div>
+  </div>
 </div>
