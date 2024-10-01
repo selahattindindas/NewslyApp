@@ -1,0 +1,19 @@
+.sidebar-wrapper {
+    width: 245px; 
+    transition: width 0.5s ease-in-out; 
+    
+    @media (max-width: 1283px) {
+      width: 0;
+      overflow: hidden; 
+    }
+  }
+.content{
+  @media (max-width: 1283px){
+    margin: 0 10px;
+  }
+
+  @media(max-width:500px){
+    margin: 0;
+  }
+}
+  

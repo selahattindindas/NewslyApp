@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, HostListener, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { NewsList } from '../news-create/news-create.component';
 import { CardComponent } from "../../../../shared/components/card/card.component";
 
@@ -9,12 +9,17 @@ import { CardComponent } from "../../../../shared/components/card/card.component
   templateUrl: './news-container.component.html',
   styleUrl: './news-container.component.scss'
 })
-export class NewsContainerComponent implements OnChanges {
+export class NewsContainerComponent implements OnChanges, OnInit {
   @Input() news: NewsList[] = []; 
   leftSide: NewsList[] = []; 
   rightSide: NewsList[] = []
-
+  isMobile: boolean = false; 
+  
   constructor(){}
+
+  ngOnInit(): void {
+    this.checkScreenSize();
+  }
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['news']) {
@@ -28,5 +33,16 @@ export class NewsContainerComponent implements OnChanges {
       this.leftSide = this.news.slice(0, midIndex);
       this.rightSide = this.news.slice(midIndex);
     }, 300); 
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkScreenSize(); 
+  }
+
+  checkScreenSize() {
+    if (typeof window !== 'undefined') {
+      this.isMobile = window.innerWidth < 768;
+    }
   }
 }

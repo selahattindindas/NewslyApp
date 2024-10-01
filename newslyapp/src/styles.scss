@@ -33,3 +33,40 @@ body {
 @import url('assets/css/image.scss');
 
 
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  width: 245px;
+  height: 100%;
+  transform: translateX(-100%); 
+  transition: transform 0.5s ease-in-out;
+
+  @media (min-width: 1283px) {
+    transform: translateX(0); 
+    width: 245px;
+  }
+
+  @media (max-width: 500px) {
+    width: 101%;
+    padding-right: 20%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    overflow-x: hidden;
+
+    &.open {
+      transform: translateX(0);
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    &:not(.open) {
+      transform: translateX(-100%);
+      background: transparent; 
+    }
+  }
+}

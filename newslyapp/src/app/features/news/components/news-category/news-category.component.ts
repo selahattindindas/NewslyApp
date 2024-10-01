@@ -23,7 +23,7 @@ export class NewsCategoryComponent {
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      this.categoryName = params['categoryName'];
+      this.categoryName = params['nameSlug'];
     });
   }
 }

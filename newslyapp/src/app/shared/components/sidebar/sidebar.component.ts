@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ThemeSwitcherComponent } from '../theme-switcher/theme-switcher.component';
 import { NewsService } from '../../../features/news/news.service';
 import { Category } from '../../../features/news/components/news-create/news-create.component';
@@ -17,6 +17,8 @@ import { FooterComponent } from "../footer/footer.component";
 
 export class SidebarComponent implements OnInit{
   categories! : Category[];
+  @Output() closeSideNav = new EventEmitter<void>();
+  @Input() isSidebarOpen: boolean = false;
   
   constructor(private newsService: NewsService, private router: Router){}
 
@@ -28,5 +30,15 @@ export class SidebarComponent implements OnInit{
     this.newsService.getCategories().subscribe((response) =>{
       this.categories = response;
     })
+  }
+
+  navigateToCategory(category: Category) {
+    const slug = StringHelper.convertToSlug(category.name);
+    this.router.navigate([`${slug}`]);
+    this.onClose();
+  }
+
+  onClose() {
+    this.closeSideNav.emit();
   }
 }

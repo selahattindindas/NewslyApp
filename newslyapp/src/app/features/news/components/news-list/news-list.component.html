@@ -1,9 +1,9 @@
-<div *ngIf="news.length > 0">
-  <div class="theme-div border-radius-6px padding-30px mb-35px">
+<div class="news-list" *ngIf="news.length > 0">
+  <div class="theme-div border-radius-6px padding-30px mb-35px responsive-slider">
       <app-slider [news]="news"></app-slider>
   </div>
   <div class="d-flex">
-      <div class="card" style="float: left;">
+      <div class="card">
           <app-news-container [news]="news"></app-news-container>
       </div>
       <div class="popular">

@@ -6,13 +6,11 @@ import Quill from 'quill';
 import { NewsService } from '../../news.service';
 
 export interface News {
-  id: number;
   image: string;
   title: string;
   content: string;
   categoryId: number;
   author: string;
-  slug?: string;
 }
 
 export interface NewsList{
@@ -22,15 +20,12 @@ export interface NewsList{
   date: string,
   content : string,
   categoryName: string,
-  categorySlug: string,
   author: string,
-  slug: string,
 }
 
 export interface Category {
   id : number,
   name: string,
-  slug: string,
 }
 
 export const quillModules: QuillModules = {
@@ -58,7 +53,6 @@ export class NewsCreateComponent implements OnInit {
   categories!: Category[];
   editorInstance!: Quill;
   news: News = {
-    id: 0,
     image: '',
     title: '',
     content: '',
@@ -88,10 +82,8 @@ export class NewsCreateComponent implements OnInit {
   onSubmit() {
     this.news.image = this.extractImageFromContent(this.news.content);
     this.news.content = this.removeEmptyParagraphs(this.news.content);
-    this.news.id = this.generateRandomId();
     this.newsService.addNews(this.news).subscribe(() => {
       this.news = {
-        id : this.news.id,
         image: this.news.image,
         title: this.news.title,
         content: this.news.content,
@@ -103,10 +95,6 @@ export class NewsCreateComponent implements OnInit {
 
   removeEmptyParagraphs(content: string): string {
     return content.replace(/<p>\s*<\/p>/g, '');
-  }
-
-  private generateRandomId(): number {
-    return Math.floor(Math.random() * 1000000); 
   }
   
   onEditorCreated(editor: Quill): void {

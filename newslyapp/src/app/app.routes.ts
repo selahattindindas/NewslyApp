@@ -13,7 +13,6 @@ export const routes: Routes = [
     {
         path: '',
         component: LayoutComponent,
-        title: 'NewslyApp',
         children: [
             {
                 path: '',
@@ -22,27 +21,25 @@ export const routes: Routes = [
             },
             {
                 path:'search',
-                component:FilterNewsComponent
+                component:FilterNewsComponent,
+                title: 'Newsly: Dünyadan Geri Kalma',
             },
             {
-                path: ':categoryName', 
+                path: ':nameSlug', 
                 component: NewsCategoryComponent,
-                title: 'NewslyApp',
                 children: [
                     {
                         path: '', 
                         component: NewsListComponent
                     },
                     {
-                        path: ':title', 
+                        path: ':titleSlugAndId', 
                         component: NewsDetailComponent,
                     }
                 ]
             },
         ]
     },
-    
-    { path: 'news-list', component: NewsListComponent },
-    { path: '**', component: NotFoundComponent },
+    { path: '**', component: NotFoundComponent, title: "Sayfa Bulunamadı!" },
    
 ];

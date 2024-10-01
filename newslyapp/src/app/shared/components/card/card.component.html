@@ -1,11 +1,13 @@
-<div class="news-card mb-30px theme-div padding-15px border-radius-8px" *ngFor="let data of news"
-    style="width: 90%;" [routerLink]="['', data.categorySlug, data.slug]">
-    <div class="width-full height-170px overflow-hidden">
-        <img class="border-radius-8px width-full height-full object-fit-cover cursor-pointer" [src]="data.image">
+<div>
+    <div class="news-card mb-30px theme-div padding-15px border-radius-8px" *ngFor="let data of news"
+    [style.width]="width" (click)="navigateToCategory(data)">
+        <div class="width-full height-170px overflow-hidden">
+            <img class="border-radius-8px width-full height-full object-fit-cover cursor-pointer" [src]="data.image">
+        </div>
+        <div class="d-flex justify-content-between pt-20px letter-spacing-tight text-uppercase">
+            <span class="color-gray font-weight-semibold font-size-xs">{{data.author}}</span>
+            <span class="color-gray font-size-xxs font-weight-normal">{{data.date}}</span>
+        </div>
+        <p class="font-size-lg pt-20px pb-10px font-weight-bold cursor-pointer">{{data.title | truncate}}</p>
     </div>
-    <div class="d-flex justify-content-between pt-20px letter-spacing-tight text-uppercase">
-        <span class="color-gray font-weight-semibold font-size-xs">{{data.author}}</span>
-        <span class="color-gray font-size-xxs font-weight-normal">{{data.date}}</span>
-    </div>
-    <p class="font-size-lg pt-20px pb-10px font-weight-bold cursor-pointer">{{data.title | truncate}}</p>
 </div>

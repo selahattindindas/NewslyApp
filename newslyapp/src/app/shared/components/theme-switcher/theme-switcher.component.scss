@@ -1,5 +1,5 @@
       .slider {
-        transition: .4s;
+        transition: 0.5s;
         
         &::before {
           position: absolute;
@@ -10,7 +10,7 @@
           left: 3px;
           bottom: 3px;
           background-color: white;
-          transition: .4s;
+          transition: 0.5s;
         }
       }
 

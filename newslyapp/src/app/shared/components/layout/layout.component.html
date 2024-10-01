@@ -1,11 +1,11 @@
 <div class="d-flex">
-    <div style="width: 245px;">
-        <app-sidebar></app-sidebar>
+    <div class="sidebar-wrapper" #sidenav [ngClass]="{'open': isSidebarOpen}">
+        <app-sidebar [isSidebarOpen]="isSidebarOpen" (closeSideNav)="toggleSidebar()"></app-sidebar>
     </div>
-    <div class="margin-auto width-1024px">
+    <div class="margin-auto width-full max-width-1024px">
         <div class="flex-grow-1">
-            <div class="mb-35px">
-                <app-header></app-header>
+            <div class="mb-35px content">
+                <app-header (toggleSidebar)="toggleSidebar()"></app-header>
             </div>
             <div class="mb-35px">
                 <router-outlet></router-outlet>

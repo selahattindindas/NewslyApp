@@ -1,9 +1,13 @@
 <div class="width-full position-relative">
     <ul class="m-0 p-0">
-        <p class="pl-25px font-size-3xl font-weight-bolder">Ne Oldu?</p>
+        <div class="d-flex justify-content-between align-items-center slider-text">
+            <p class="pl-25px font-size-3xl font-weight-bolder">Ne Oldu?</p>
+            <p class="pr-25px font-size-xs font-weight-bold text-uppercase letter-spacing-wide">{{getFormattedCategories()}} Haberleri</p>
+        </div>
+
         <div class="keen-slider" #sliderRef>   
             <li class="width-full keen-slider__slide" *ngFor="let news of news">
-                <div class="margin-25px cursor-pointer" [routerLink]="[news.slug]">
+                <div class="margin-25px cursor-pointer slider-content" (click)="navigateToCategory(news)">
                     <div class="width-full height-200px overflow-hidden">
                         <img class="border-radius-6px width-full height-full object-fit-cover" [src]="news.image">
                     </div>

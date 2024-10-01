@@ -3,7 +3,8 @@ import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, Inject, Input,
 import KeenSlider, { KeenSliderInstance } from 'keen-slider';
 import { TruncatePipe } from '../../pipes/truncate.pipe';
 import { NewsList } from '../../../features/news/components/news-create/news-create.component';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { StringHelper } from '../../utils/string-helper';
 
 @Component({
   selector: 'app-slider',
@@ -18,10 +19,14 @@ export class SliderComponent implements AfterViewInit, OnDestroy, OnChanges {
   currentSlide: number = 0;
   @Input() news: NewsList[] = [];
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, private cdref: ChangeDetectorRef) { }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private cdref: ChangeDetectorRef, private router:Router) { }
 
   ngAfterViewInit(): void {
     this.initializeSlider();
+  }
+
+  ngOnDestroy(): void {
+    this.slider?.destroy();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -38,10 +43,16 @@ export class SliderComponent implements AfterViewInit, OnDestroy, OnChanges {
         drag: false,
         breakpoints: {
           "(min-width: 400px)": {
-            slides: { perView: 2, spacing: 5 },
+            slides: { perView: 1, spacing: 5},
+            mode: "free-snap"
           },
-          "(min-width: 1000px)": {
-            slides: { perView: 3, spacing: 10 },
+          "(min-width: 500px)": {
+            slides: { perView: 2, spacing: 0},
+            mode: "free-snap"
+          },
+          "(min-width: 900px)": {
+            slides: { perView: 3, spacing: 15},
+            mode: "free-snap"
           },
         },
         slides: { perView: 1 },
@@ -60,8 +71,16 @@ export class SliderComponent implements AfterViewInit, OnDestroy, OnChanges {
     }, 100);
   }
   
+  navigateToCategory(news: NewsList) {
+    const categorySlug = StringHelper.convertToSlug(news.categoryName);
+    const newsSlug = StringHelper.convertToSlug(news.title, news.id);
+    this.router.navigate([`${categorySlug}/${newsSlug}`]);
+  }
 
-  ngOnDestroy(): void {
-    this.slider?.destroy();
+  getFormattedCategories(): string {
+    if (this.news.length > 0 && this.news[0].categoryName) { 
+      return StringHelper.convertSlugToCategoryName(this.news[0].categoryName);
+    }
+    return '';
   }
 }

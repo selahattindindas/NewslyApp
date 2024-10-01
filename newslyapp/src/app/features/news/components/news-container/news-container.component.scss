@@ -1,0 +1,22 @@
+.left-side, .right-side {
+    float: left;
+    width: 50%; 
+}
+
+.responsive-card {
+    @media (max-width: 767px) {
+        width: 100%; 
+    }
+}
+
+.left-side {
+    @media (max-width: 767px) {
+        padding-right: 8px;
+    }
+}
+
+.right-side {
+    @media (max-width: 767px) {
+        padding-left: 8px;
+    }
+}

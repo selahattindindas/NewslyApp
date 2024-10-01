@@ -2,7 +2,7 @@ import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { NewsService } from '../../news.service';
 import { isPlatformBrowser } from '@angular/common';
-import { News, NewsList } from '../news-create/news-create.component';
+import { NewsList } from '../news-create/news-create.component';
 import { StringHelper } from '../../../../shared/utils/string-helper';
 import { MoreNewsComponent } from '../more-news/more-news.component';
 import { Title } from '@angular/platform-browser';
@@ -10,13 +10,13 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-news-detail',
   standalone: true,
-  imports: [RouterLink, MoreNewsComponent],
+  imports: [RouterLink, MoreNewsComponent,],
   templateUrl: './news-detail.component.html',
   styleUrls: ['./news-detail.component.scss']
 })
 export class NewsDetailComponent implements OnInit {
   news!: NewsList;
-  slug!: string;
+  newsId!: number;
 
   constructor(
     private route: ActivatedRoute,
@@ -28,7 +28,11 @@ export class NewsDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      this.slug = params.get('title') as string; 
+      const slug = params.get('titleSlugAndId'); 
+      if(slug){
+        const parts = slug.split('-p-');
+        this.newsId = parts.length > 1 ? Number(parts[1]) : 0;
+      }
       if (isPlatformBrowser(this.platformId)) {
         this.getNews();
       }
@@ -36,7 +40,7 @@ export class NewsDetailComponent implements OnInit {
   }
 
   getNews(): void { 
-    this.newsService.getNewsBySlug(this.slug).subscribe({
+    this.newsService.getNewsById(this.newsId).subscribe({
       next: (data: NewsList) => {
         this.news = data;
         this.setTitle(this.news.title);
@@ -53,8 +57,13 @@ export class NewsDetailComponent implements OnInit {
 
   getFormattedCategory(): string {
     if (this.news && this.news.categoryName) {
-      return StringHelper.convertToSlug(this.news.categoryName);
+      return StringHelper.convertSlugToCategoryName(this.news.categoryName);
     }
     return '';
+  }
+
+  navigateToCategory() {
+    const categorySlug = StringHelper.convertToSlug(this.news.categoryName);
+    this.router.navigate([`${categorySlug}`]);
   }
 }

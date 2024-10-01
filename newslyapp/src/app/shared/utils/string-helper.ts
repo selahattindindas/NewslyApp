@@ -8,9 +8,23 @@ export class StringHelper {
         .replace(/[öÖ]/g, 'o')
         .replace(/[şŞ]/g, 's')
         .replace(/[üÜ]/g, 'u')
+        .replace(/'/g, '')
         .replace(/[^a-z0-9]+/g, '-') 
+        .replace(/\s+/g, '-')
         .replace(/^-+|-+$/g, '');
 
         return id ? `${slugTitle}-p-${id}` : slugTitle;
     }
+
+    static convertSlugToCategoryName(slug: string): string {
+      const mapping: { [key: string]: string } = {
+          'gundem': 'Gündem',
+          'spor': 'Spor',
+          'yasam': 'Yaşam',
+          'finans': 'Finans',
+          'bilim-teknoloji': 'Bilim & Teknoloji'
+      };
+
+      return mapping[slug] || slug; 
+  }
   }

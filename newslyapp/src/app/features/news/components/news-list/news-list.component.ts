@@ -7,6 +7,8 @@ import { NewsContainerComponent } from '../news-container/news-container.compone
 import { FooterComponent } from '../../../../shared/components/footer/footer.component';
 import { PopularNewsComponent } from '../../../popular-news/popular-news.component';
 import { ActivatedRoute, Router } from '@angular/router';
+import { StringHelper } from '../../../../shared/utils/string-helper';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-news-list',
@@ -19,24 +21,29 @@ export class NewsListComponent {
   news: NewsList[] = [];
   categoryName!: string;
 
-  constructor(private newsService: NewsService, private router: Router, private route: ActivatedRoute) {}
+  constructor(private newsService: NewsService, private router: Router, private route: ActivatedRoute, private titleService: Title) {}
 
   ngOnInit(): void {
     this.route.parent?.paramMap.subscribe(params => {
-      this.categoryName = params.get('categoryName') as string;
+      const slug = params.get('nameSlug') as string;
+      this.categoryName = StringHelper.convertSlugToCategoryName(slug);
       this.fetchCategoryAndNews(); 
     });
   }
   
   fetchCategoryAndNews() {
-    this.newsService.getNewsByCategory(this.categoryName).subscribe({
-      next: ({ category, newsList }) => {
-        this.categoryName = category.slug;
-        this.news = newsList;
+    this.newsService.getNewsByCategoryName(this.categoryName).subscribe({
+      next: (response) => {
+        this.news = response;
+        this.setTitle(this.categoryName + ' Haberleri & Son Dakika Haberleri - Newsly');
       },
       error: () => {
         this.router.navigate(['/not-found']);
       }
     });
+  }
+
+  setTitle(title: string): void {
+    this.titleService.setTitle(title); 
   }
 }

@@ -1,23 +1,22 @@
-<div class="sidebar height-100vh bg-panel m-0 p-0" style="width: 245px;">
-    <div class="height-auto margin-auto pt-40px" style="width: 128px;">
-        <img class="width-full height-auto cursor-pointer" src="assets/img/common/logo.png" routerLink="/">
-    </div>
-    <div class="mt-90px">
-        <ul class="m-0 p-0 list-style-none">
-            <div *ngFor="let category of categories">
-                <a class="text-decoration-none text-dark-gray font-weight-bold font-size-sm text-uppercase">
-                    <li class="sidebar-category cursor-pointer pl-50px pt-25px pb-25px line-height-tight"
-                        [routerLink]="[category.slug]" routerLinkActive="active">
-                        {{ category.name }}
-                    </li>
-                </a>
-            </div>
-        </ul>
-        <div class="mt-80px pl-50px">
-            <app-theme-switcher></app-theme-switcher>
+<div class="sidebar" [ngClass]="{'open': isSidebarOpen}" (click)="onClose()">
+    <div class="bg-panel" style="height: 100vh;">
+        <div class="height-auto margin-auto pt-40px" style="width: 110px;">
+            <img class="width-full height-auto cursor-pointer" src="assets/img/common/logo.png" routerLink="/">
         </div>
-        <div class="position-absolute bottom-10px d-none">
-            <app-footer></app-footer>
+        <div class="mt-90px">
+            <ul class="m-0 p-0 list-style-none">
+                <div *ngFor="let category of categories">
+                    <a class="text-decoration-none text-dark-gray font-weight-bold font-size-sm text-uppercase">
+                        <li class="sidebar-category cursor-pointer pl-50px pt-25px pb-25px line-height-tight"
+                            (click)="navigateToCategory(category)" routerLinkActive="active">
+                            {{ category.name }}
+                        </li>
+                    </a>
+                </div>
+            </ul>
+            <div class="mt-80px pl-50px">
+                <app-theme-switcher></app-theme-switcher>
+            </div>
         </div>
     </div>
 </div>
