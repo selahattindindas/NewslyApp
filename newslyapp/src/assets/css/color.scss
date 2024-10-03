@@ -22,6 +22,7 @@ $themes: (
     gray-span: #333333,
     hr: rgba(0, 0, 0, .1),
     span-hover: #000000,
+    default: #fff,
   ),
   dark: (
     background: #12161b,
@@ -46,6 +47,7 @@ $themes: (
     gray-span: #5A6068,
     hr: #383838,
     span-hover: #ffffff,
+    default: #000,
   )
 );
 
@@ -90,6 +92,11 @@ $themes: (
 
     .bg-input {
       background-color: map-get($colors, background);
+      color: map-get($colors, input-text);
+    }
+
+    .bg-input2{
+      background-color: map-get($colors, default);
       color: map-get($colors, input-text);
     }
     

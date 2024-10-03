@@ -3,17 +3,19 @@ import { SearchComponent } from "../search/search.component";
 import { LocationComponent } from "../location/location.component";
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from '../sidebar/sidebar.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [SearchComponent, LocationComponent, CommonModule, SidebarComponent],
+  imports: [SearchComponent, LocationComponent, CommonModule, SidebarComponent, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit{
   isDesktop: boolean = true; 
   @Output() toggleSidebar = new EventEmitter<void>();  
+  
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {

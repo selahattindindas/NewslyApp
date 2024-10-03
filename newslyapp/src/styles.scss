@@ -70,3 +70,31 @@ body {
     }
   }
 }
+.input-style{
+  border-radius: 6px;
+  border: none;
+  height: 74px;
+  font-weight: 600;
+  font-size: 18px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  letter-spacing: -.5px;
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  line-height: 1.5;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.search-div{
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.search-btn{
+  padding: 10px 15px;
+  height: 100%;
+}

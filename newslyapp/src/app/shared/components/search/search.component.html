@@ -1,14 +1,17 @@
-<div class="d-flex align-item-center">
-    <svg class="mr-20px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="search">
-        <g [ngClass]="{'theme-svg': true}" fill="none" fill-rule="evenodd" stroke="#200E32" stroke-linecap="round"
-            stroke-linejoin="round" stroke-width="1.5" transform="translate(2 2)">
-            <circle cx="9.767" cy="9.767" r="8.989"></circle>
-            <line x1="16.018" x2="19.542" y1="16.485" y2="20"></line>
-        </g>
-    </svg>
-    <input type="text" [(ngModel)]="searchTerm" placeholder="Haber ve konu ara" [ngClass]="{'has-content': searchTerm.length > 0}"
-        class="width-170px bg-input font-weight-semibold line-height-tight font-size-15px  border-none outline-none">
-    <div class="ml-5px" *ngIf="searchTerm">
-        <button class="bg-orange cursor-pointer border-none outline-none text-white height-24px pl-5px pr-5px button-animation" (click)="onSearch()">&rarr;</button>
+<div class="d-flex align-items-center">
+    <ng-container *ngIf="showSvg">
+        <svg class="mr-20px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="search">
+            <g [ngClass]="{'theme-svg': true}" fill="none" fill-rule="evenodd" stroke="#200E32" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="1.5" transform="translate(2 2)">
+                <circle cx="9.767" cy="9.767" r="8.989"></circle>
+                <line x1="16.018" x2="19.542" y1="16.485" y2="20"></line>
+            </g>
+        </svg>
+    </ng-container>
+    
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Haber ve konu ara" [ngClass]="inputClass"
+        class="width-170px bg-input font-weight-semibold line-height-tight font-size-15px border-none outline-none">
+    <div [ngClass]="searchDivClass" class="ml-5px" *ngIf="searchTerm">
+        <button [ngClass]="buttonClass" class="bg-orange cursor-pointer border-none outline-none text-white height-24px pl-5px pr-5px button-animation" (click)="onSearch()">&rarr;</button>
     </div>
 </div>

@@ -6,6 +6,7 @@ import { NewsList } from '../news-create/news-create.component';
 import { StringHelper } from '../../../../shared/utils/string-helper';
 import { MoreNewsComponent } from '../more-news/more-news.component';
 import { Title } from '@angular/platform-browser';
+import { SpinnerService } from '../../../../shared/services/spinner.service';
 
 @Component({
   selector: 'app-news-detail',
@@ -15,7 +16,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./news-detail.component.scss']
 })
 export class NewsDetailComponent implements OnInit {
-  news!: NewsList;
+  news?: NewsList;
   newsId!: number;
 
   constructor(
@@ -23,7 +24,8 @@ export class NewsDetailComponent implements OnInit {
     private newsService: NewsService,
     private router: Router,
     @Inject(PLATFORM_ID) private platformId: Object,
-    private titleService: Title
+    private titleService: Title,
+    private spinnerService: SpinnerService,
   ) { }
 
   ngOnInit(): void {
@@ -40,6 +42,8 @@ export class NewsDetailComponent implements OnInit {
   }
 
   getNews(): void { 
+    this.spinnerService.setLoading(true);
+    this.news = undefined;
     this.newsService.getNewsById(this.newsId).subscribe({
       next: (data: NewsList) => {
         this.news = data;
@@ -47,6 +51,9 @@ export class NewsDetailComponent implements OnInit {
       },
       error: () => {
         this.router.navigate(['/not-found']);
+      },
+      complete: () => {
+        this.spinnerService.setLoading(false); 
       }
     });
   }
@@ -63,7 +70,7 @@ export class NewsDetailComponent implements OnInit {
   }
 
   navigateToCategory() {
-    const categorySlug = StringHelper.convertToSlug(this.news.categoryName);
+    const categorySlug = StringHelper.convertToSlug(this.news?.categoryName || '');
     this.router.navigate([`${categorySlug}`]);
   }
 }

@@ -6,11 +6,12 @@ import { NewsService } from '../../news.service';
 import { MoreNewsComponent } from '../more-news/more-news.component';
 import { NewsContainerComponent } from '../news-container/news-container.component';
 import { PopularNewsComponent } from "../../../popular-news/popular-news.component";
+import { SearchComponent } from "../../../../shared/components/search/search.component";
 
 @Component({
   selector: 'app-filter-news',
   standalone: true,
-  imports: [NewsContainerComponent, CommonModule, MoreNewsComponent, PopularNewsComponent],
+  imports: [NewsContainerComponent, CommonModule, MoreNewsComponent, PopularNewsComponent, SearchComponent],
   templateUrl: './filter-news.component.html',
   styleUrl: './filter-news.component.scss'
 })
@@ -21,7 +22,7 @@ export class FilterNewsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private newsService: NewsService
+    private newsService: NewsService,
   ) {}
 
   ngOnInit(): void {

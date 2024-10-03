@@ -1,5 +1,8 @@
 <div class="d-flex">
     <div class="card">
+        <div class="position-relative mb-20px">
+            <app-search [showSvg]="false" [inputClass]="'input-style bg-input2'" [buttonClass]="'search-btn'" [searchDivClass]="'search-div'"></app-search>
+        </div>
         <p *ngIf="searchTerm" class="pl-30px font-weight-medium line-height-tight font-size-13px text-italic"><strong>{{
                 searchTerm }}</strong> ile ilgili sonuçlar</p>
         <hr class="mt-20px mb-20px" style="border: 0.1px solid #DCDCDC;">
@@ -7,7 +10,7 @@
     </div>
     <div class="popular">
         <div style="float: right;">
-            <div class="mt-40px max-width-270px">
+            <div class="max-width-270px">
                 <app-popular-news [news]="news"></app-popular-news>
             </div>
         </div>

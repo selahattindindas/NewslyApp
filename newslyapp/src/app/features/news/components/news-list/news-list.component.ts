@@ -9,6 +9,7 @@ import { PopularNewsComponent } from '../../../popular-news/popular-news.compone
 import { ActivatedRoute, Router } from '@angular/router';
 import { StringHelper } from '../../../../shared/utils/string-helper';
 import { Title } from '@angular/platform-browser';
+import { SpinnerService } from '../../../../shared/services/spinner.service';
 
 @Component({
   selector: 'app-news-list',
@@ -21,7 +22,13 @@ export class NewsListComponent {
   news: NewsList[] = [];
   categoryName!: string;
 
-  constructor(private newsService: NewsService, private router: Router, private route: ActivatedRoute, private titleService: Title) {}
+  constructor(
+    private newsService: NewsService, 
+    private router: Router,
+    private route: ActivatedRoute, 
+    private titleService: Title,
+    private spinnerService: SpinnerService 
+  ) {}
 
   ngOnInit(): void {
     this.route.parent?.paramMap.subscribe(params => {
@@ -32,6 +39,8 @@ export class NewsListComponent {
   }
   
   fetchCategoryAndNews() {
+    this.spinnerService.setLoading(true);
+    this.news = [];
     this.newsService.getNewsByCategoryName(this.categoryName).subscribe({
       next: (response) => {
         this.news = response;
@@ -39,6 +48,9 @@ export class NewsListComponent {
       },
       error: () => {
         this.router.navigate(['/not-found']);
+      },
+      complete: () => {
+        this.spinnerService.setLoading(false); 
       }
     });
   }
