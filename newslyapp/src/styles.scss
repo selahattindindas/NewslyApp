@@ -1,3 +1,12 @@
+@import url('assets/css/color.scss');
+@import url('assets/css/_custom.scss');
+@import url('assets/css/_layout.scss');
+@import url('assets/css/_position.scss');
+@import url('assets/css/_typography.scss');
+@import url('assets/css/_utility.scss');
+@import url('assets/css/color2.scss');
+@import url('assets/css/image.scss');
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +24,7 @@ body {
 .margin-auto {
   margin: 0 auto;
 }
+
 .list-style-none{
   list-style: none;
 }
@@ -22,16 +32,6 @@ body {
 .cursor-pointer{
   cursor: pointer;
 }
-
-@import url('assets/css/color.scss');
-@import url('assets/css/_custom.scss');
-@import url('assets/css/_layout.scss');
-@import url('assets/css/_position.scss');
-@import url('assets/css/_typography.scss');
-@import url('assets/css/_utility.scss');
-@import url('assets/css/color2.scss');
-@import url('assets/css/image.scss');
-
 
 .sidebar {
   position: fixed;

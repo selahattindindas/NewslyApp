@@ -85,6 +85,10 @@
   @include font-size(36px); // 36px
 }
 
+.font-size-80px{
+  @include font-size(80px); // 80px
+}
+
 // Font Weight Classes
 .font-weight-light {
   @include font-weight(300);
@@ -138,6 +142,10 @@
 
 .line-height-3xl{
   @include line-height(54px);
+}
+
+.line-height-4xl{
+  @include line-height(100px);
 }
 
 // Font Family Classes
@@ -196,6 +204,10 @@ $font-family-secondary: 'Inter', normal;
 
 .letter-spacing-spaced{
   @include letter-spacing(.5px);
+}
+
+.letter-spacing-2px{
+  @include letter-spacing(2px);
 }
 
 .letter-spacing-custom-tight {

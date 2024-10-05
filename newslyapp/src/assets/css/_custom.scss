@@ -20,6 +20,7 @@ $size-values: (
     270px,
     300px,
     354px,
+    450px,
     500px,
     670px,
     700px,
@@ -159,6 +160,10 @@ $outline-values: (
 
 .width-0{
     width: 0;
+}
+
+.width-50{
+    width: 50%;
 }
 
 .height-0{
