@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { TruncatePipe } from '../../pipes/truncate.pipe';
 import { Router, RouterLink } from '@angular/router';
-import { NewsList } from '../../../features/news/components/news-create/news-create.component';
 import { StringHelper } from '../../utils/string-helper';
+import { NewsList } from '../../models/news/list-news';
 
 @Component({
   selector: 'app-card',

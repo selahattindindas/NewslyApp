@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { firstValueFrom, Observable } from 'rxjs';
 import { CityResponse } from '../models/city-response';
+import { HttpClientService } from './http-client.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +10,13 @@ export class LocationService {
 
   private readonly nominatimUrl = 'https://nominatim.openstreetmap.org/reverse?format=jsonv2';
 
-  constructor(private http: HttpClient) {}
+  constructor(private httpClientService: HttpClientService) {}
 
-  getCityFromCoordinates(latitude: number, longitude: number): Observable<CityResponse> {
-    const url = `${this.nominatimUrl}&lat=${latitude}&lon=${longitude}`;
-    return this.http.get<CityResponse>(url);
+  async getCityFromCoordinates(latitude: number, longitude: number): Promise<CityResponse> {
+    const observable : Observable<CityResponse> =  this.httpClientService.get({
+      fullEndPoint: `${this.nominatimUrl}&lat=${latitude}&lon=${longitude}`
+    });
+    return await firstValueFrom(observable);
   }
 
   getCurrentPosition(): Promise<GeolocationPosition> {

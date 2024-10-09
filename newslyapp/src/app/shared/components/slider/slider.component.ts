@@ -2,9 +2,9 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, Inject, Input, OnChanges, SimpleChanges, PLATFORM_ID, ViewChild, OnDestroy } from '@angular/core';
 import KeenSlider, { KeenSliderInstance } from 'keen-slider';
 import { TruncatePipe } from '../../pipes/truncate.pipe';
-import { NewsList } from '../../../features/news/components/news-create/news-create.component';
 import { Router, RouterLink } from '@angular/router';
 import { StringHelper } from '../../utils/string-helper';
+import { NewsList } from '../../models/news/list-news';
 
 @Component({
   selector: 'app-slider',

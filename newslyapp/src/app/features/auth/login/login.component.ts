@@ -1,16 +1,36 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ThemeSwitcherComponent } from "../../../shared/components/theme-switcher/theme-switcher.component";
+import { FormsModule, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserAuthService } from '../../../core/services/user.auth.service';
+import { AlertService } from '../../../shared/services/alert.service';
+import { AlertConfig, AlertType } from '../../../shared/models/alert-config';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, ThemeSwitcherComponent],
+  imports: [CommonModule, FormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+  constructor(private router: Router, private userAuthService: UserAuthService, private alertService: AlertService) { };
 
-  constructor() {};
+  onSubmit(form: NgForm) {
+    if (form.valid) {
+      const email = form.value.email;
+      const password = form.value.password;
+
+      this.userAuthService.login(email, password).then(response => {
+        if (response.success) {
+          this.alertService.showAlert(new AlertConfig('Başarıyla Giriş Sağlandı', AlertType.Success));
+          this.router.navigate(['/admin']);
+        } else {
+          this.alertService.showAlert(new AlertConfig('E-posta veya şifre yanlış', AlertType.Error));
+        }
+
+      });
+    }
   }
+}
 
