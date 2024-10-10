@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SliderComponent } from '../../../../shared/components/slider/slider.component';
 import { NewsContainerComponent } from '../news-container/news-container.component';
-import { FooterComponent } from '../../../../shared/components/footer/footer.component';
 import { PopularNewsComponent } from '../popular-news/popular-news.component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { StringHelper } from '../../../../shared/utils/string-helper';
@@ -10,11 +9,12 @@ import { Title } from '@angular/platform-browser';
 import { SpinnerService } from '../../../../shared/services/spinner.service';
 import { NewsService } from '../../../news.service';
 import { NewsList } from '../../../../shared/models/news/list-news';
+import { UserFooterComponent } from '../../../../shared/layouts/user-layout/components/user-footer/user-footer.component';
 
 @Component({
   selector: 'app-news-list',
   standalone: true,
-  imports: [CommonModule, SliderComponent, NewsContainerComponent, FooterComponent, PopularNewsComponent],
+  imports: [CommonModule, SliderComponent, NewsContainerComponent, UserFooterComponent, PopularNewsComponent],
   templateUrl: './news-list.component.html',
   styleUrl: './news-list.component.scss'
 })

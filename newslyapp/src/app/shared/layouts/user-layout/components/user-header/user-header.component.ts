@@ -1,22 +1,20 @@
 import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
-import { SearchComponent } from "../search/search.component";
-import { LocationComponent } from "../location/location.component";
+import { SearchComponent } from "../../../../components/search/search.component";
+import { LocationComponent } from "../../../../components/location/location.component";
 import { CommonModule } from '@angular/common';
-import { SidebarComponent } from '../sidebar/sidebar.component';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
+  selector: 'user-header',
   standalone: true,
-  imports: [SearchComponent, LocationComponent, CommonModule, SidebarComponent, RouterLink],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  imports: [SearchComponent, LocationComponent, CommonModule, RouterLink],
+  templateUrl: './user-header.component.html',
+  styleUrl: './user-header.component.scss'
 })
-export class HeaderComponent implements OnInit{
+export class UserHeaderComponent implements OnInit{
   isDesktop: boolean = true; 
   @Output() toggleSidebar = new EventEmitter<void>();  
   
-
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.checkScreenSize();

@@ -12,6 +12,7 @@ $colors: (
   'panel': #15171a,
   '404' : #12161b,
   'off-white' : #c7cbd1,
+  'admin-footer': #2c2a29,
 );
 
 @mixin generate-background-classes($color-map) {
