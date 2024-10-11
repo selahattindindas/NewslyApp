@@ -7,7 +7,10 @@ export const AdminRoutes: Routes = [
         component: AdminLayoutComponent,
         title: 'Newsly: Admin Panel Ana Sayfa',
         children: [
-
+            {
+                path: '',
+                loadComponent: () => import('./dashboard/dashboard.component').then(m => m.DashboardComponent)
+            },
             {
                 path: 'news-create',
                 loadComponent: () => import('./news/news-create/news-create.component').then(m => m.NewsCreateComponent)

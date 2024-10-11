@@ -1,0 +1,10 @@
+.disabled {
+    @media (min-width: 1283px) {
+        display: none;
+    }
+}
+
+.toggle-sidebar {
+    font-size: 24px;
+    cursor: pointer;
+  }

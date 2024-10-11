@@ -13,6 +13,7 @@ $colors: (
   '404' : #12161b,
   'off-white' : #c7cbd1,
   'admin-footer': #2c2a29,
+  'lavender': #9799b5,
 );
 
 @mixin generate-background-classes($color-map) {

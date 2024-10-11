@@ -2,12 +2,14 @@
     <div class="sidebar-wrapper">
         <admin-sidebar></admin-sidebar>
     </div>
-    <div class="margin-auto width-full max-width-1024px">
-        <div class="mb-35px header">
-            <router-outlet></router-outlet>
+    <div class="flex-grow-1">
+        <div class="mb-35px ">
+            <admin-header></admin-header>
         </div>
-        <div class="mb-20px content footer">
-            <admin-footer></admin-footer>
+        <div class="margin-auto width-full max-width-1024px">
+            <div class="mb-35px">
+                <router-outlet></router-outlet>
+            </div>
         </div>
     </div>
 </div>

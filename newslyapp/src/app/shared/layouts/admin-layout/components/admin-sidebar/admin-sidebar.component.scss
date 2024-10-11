@@ -3,10 +3,11 @@
     top: 0;
     left: 0;
     z-index: 10;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.15);
     overflow-y: auto;
     width: 245px;
     height: 100%;
+    min-height: 100vh;
     transform: translateX(0);
   
     @media (min-width: 1283px) {
@@ -46,4 +47,12 @@
         background: transparent;
       }
     }
+
+    .active {
+      background: linear-gradient(to right, #616ae9, #8584f6);
+      border-radius: 5px;
+      color: #e4e4e4;
+      transition: background 0.5s, color 0.5s;
+    }
   }
+
