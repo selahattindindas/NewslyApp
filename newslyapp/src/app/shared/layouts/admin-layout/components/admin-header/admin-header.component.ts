@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { SearchComponent } from "../../../../components/search/search.component";
 
 @Component({
@@ -9,5 +9,9 @@ import { SearchComponent } from "../../../../components/search/search.component"
   styleUrl: './admin-header.component.scss'
 })
 export class AdminHeaderComponent {
+  @Output() toggleSidebar = new EventEmitter<void>();  
 
+  openSidenav() {
+    this.toggleSidebar.emit();
+ }
 }

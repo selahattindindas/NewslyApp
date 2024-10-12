@@ -1,0 +1,132 @@
+.list-header{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+    .custom-button {
+        display: flex;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.5s, color 0.5s;
+        font-size: 14px;
+    
+        &:hover {
+            .icon-container {
+                background-color: #4040a6;
+                color: white;
+            }
+    
+            .button-text {
+                background-color: white;
+                color: #4040a6;
+            }
+        }
+    
+        .icon-container {
+            background-color: white; 
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px; 
+            color: #4040a6; 
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+            transition: background-color 0.5s, color 0.5s;
+        }
+    
+        .button-text {
+            background-color: #4040a6;
+            color: white; 
+            border-top-right-radius: 8px; 
+            border-bottom-right-radius: 8px; 
+            text-align: center;
+            padding: 14.5px 25px;
+            font-weight: 800;
+            transition: background-color 0.5s, color 0.5s;
+        }
+    }
+}
+
+.list-body{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    .table-container{
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+
+        table{
+            white-space: nowrap; 
+            border-collapse: collapse; 
+            border-spacing: 0;
+    
+            th{
+                padding-bottom: 20px;
+                transition: padding 0.5s ease;
+
+                @media (max-width: 768px) {
+                    padding: 0 0.625em 20px 0.625em; 
+                  }
+            }
+        
+            tbody > tr{
+                border-top: 1px solid #5e5b7b;
+            }
+
+            td{
+                padding: 20px 0;
+                transition: padding 0.5s ease;
+
+                @media (max-width: 768px) {
+                    padding: 20px 0.625em; 
+                  }
+            }
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 30px;
+
+    .page-numbers {
+        display: flex;
+        align-items: center;
+        margin: 0 10px; 
+        flex-wrap: wrap; 
+
+        span {
+            display: inline-block;
+            padding: 5px 10px; 
+            margin: 0 5px; 
+            border: 1px solid #8584f6; 
+            color: #c7cbd1;
+            border-radius: 5px; 
+            cursor: pointer; 
+            transition: background-color 0.3s; 
+
+            &.active {
+                background-color: #8584f6; 
+                color: white; 
+            }
+
+            &:hover {
+                background-color: rgba(133, 132, 246, 0.3); 
+            }
+        }
+    }
+
+    i {
+        cursor: pointer;
+        font-size: 20px;
+        color: #ccc;
+
+        &.disabled {
+            opacity: 0.5; 
+            pointer-events: none; 
+        }
+    }
+}
+
+

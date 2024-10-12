@@ -1,12 +1,12 @@
 .disabled {
 
-    @media (min-width: 1283px) {
+    @media (min-width: 1300px) {
         display: none;
     }
 }
 
 .deskop-header{
-    @media (max-width: 1283px) {
+    @media (max-width: 1300px) {
         background-color: #1e2023;
         height: 60px;
     }

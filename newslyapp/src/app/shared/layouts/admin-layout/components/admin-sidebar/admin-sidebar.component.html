@@ -1,54 +1,57 @@
-<div class="sidebar" style="background-color: #211d52">
-    <div class="ml-20px mr-20px">
-        <div class="height-auto pt-40px width-full">
-            <img class="width-full height-auto cursor-pointer" src="assets/img/admin/admin-logo.png"
-                [routerLink]="['/admin']">
-        </div>
-        <div class="mt-100px">
-            <ul class="m-0 p-0 list-style-none">
-                <a class="text-decoration-none text-lavender font-weight-medium font-size-md">
-                    <li class="cursor-pointer pl-15px pt-20px pb-20px mb-5px mt-5px line-height-tight"
-                        [routerLink]="['news-create']" routerLinkActive="active">
-                        <i class="fa-regular fa-newspaper pr-5px"></i>
-                        Haber İşlemleri
-                    </li>
-                </a>
-                <a class="text-decoration-none text-lavender font-weight-medium font-size-md">
-                    <li class="cursor-pointer pl-15px pt-20px pb-20px mb-5px mt-5px line-height-tight"
-                        [routerLink]="['news-update']" routerLinkActive="active">
-                        <i class="fa-solid fa-fire pr-5px"></i>
-                        Popüler Haberler
-                    </li>
-                </a>
-                <a class="text-decoration-none text-lavender font-weight-medium font-size-md">
-                    <li class="cursor-pointer pl-15px pt-20px pb-20px mb-5px mt-5px line-height-tight"
-                        routerLink="/admin/data-analysis" routerLinkActive="active">
-                        <i class="fa-solid fa-chart-pie pr-5px"></i>
-                        Veri Analizi
-                    </li>
-                </a>
-                <a class="text-decoration-none text-lavender font-weight-medium font-size-md">
-                    <li class="cursor-pointer pl-15px pt-20px pb-20px mb-5px mt-5px line-height-tight"
-                        routerLink="/admin/news-comments" routerLinkActive="active">
-                        <i class="fa-solid fa-comment pr-5px"></i>
-                        Haber Yorumları
-                    </li>
-                </a>
-                <a class="text-decoration-none text-lavender font-weight-medium font-size-md">
-                    <li class="cursor-pointer pl-15px pt-20px pb-20px mb-5px mt-5px line-height-tight"
-                        routerLink="/admin/features" routerLinkActive="active">
-                        <i class="fa-solid fa-list-check pr-5px"></i>
-                        Özellikler
-                    </li>
-                </a>
-                <a class="text-decoration-none text-lavender font-weight-medium font-size-md">
-                    <li class="cursor-pointer pl-15px pt-20px pb-20px mb-5px mt-5px line-height-tight"
-                        routerLink="/admin/settings" routerLinkActive="active">
-                        <i class="fa-solid fa-gear pr-5px"></i>
-                        Genel Ayarlar
-                    </li>
-                </a>
-            </ul>
+<div class="sidebar" [ngClass]="{'open': isSidebarOpen}" (click)="onClose()">
+    <div class="height-100vh" style="background-color: #211d52">
+        <div class="ml-20px mr-20px">
+            <div class="height-auto pt-40px width-full">
+                <img class="width-full height-auto cursor-pointer" src="assets/img/admin/admin-logo.png"
+                    [routerLink]="['/admin']">
+            </div>
+            <div class="mt-100px">
+                <ul class="m-0 p-0 list-style-none">
+                    <a class="text-decoration-none text-lavender font-weight-medium font-size-md">
+                        <li class="cursor-pointer pl-15px pt-20px pb-20px mb-5px mt-5px line-height-tight"
+                            [routerLink]="['news']" routerLinkActive="active">
+                            <i class="fa-regular fa-newspaper pr-5px"></i>
+                            Haber İşlemleri
+                        </li>
+                    </a>
+                    <a class="text-decoration-none text-lavender font-weight-medium font-size-md">
+                        <li class="cursor-pointer pl-15px pt-20px pb-20px mb-5px mt-5px line-height-tight"
+                            [routerLink]="['news-update']" routerLinkActive="active">
+                            <i class="fa-solid fa-fire pr-5px"></i>
+                            Popüler Haberler
+                        </li>
+                    </a>
+                    <a class="text-decoration-none text-lavender font-weight-medium font-size-md">
+                        <li class="cursor-pointer pl-15px pt-20px pb-20px mb-5px mt-5px line-height-tight"
+                            routerLink="/admin/data-analysis" routerLinkActive="active">
+                            <i class="fa-solid fa-chart-pie pr-5px"></i>
+                            Veri Analizi
+                        </li>
+                    </a>
+                    <a class="text-decoration-none text-lavender font-weight-medium font-size-md">
+                        <li class="cursor-pointer pl-15px pt-20px pb-20px mb-5px mt-5px line-height-tight"
+                            routerLink="/admin/news-comments" routerLinkActive="active">
+                            <i class="fa-solid fa-comment pr-5px"></i>
+                            Haber Yorumları
+                        </li>
+                    </a>
+                    <a class="text-decoration-none text-lavender font-weight-medium font-size-md">
+                        <li class="cursor-pointer pl-15px pt-20px pb-20px mb-5px mt-5px line-height-tight"
+                            routerLink="/admin/features" routerLinkActive="active">
+                            <i class="fa-solid fa-list-check pr-5px"></i>
+                            Özellikler
+                        </li>
+                    </a>
+                    <a class="text-decoration-none text-lavender font-weight-medium font-size-md">
+                        <li class="cursor-pointer pl-15px pt-20px pb-20px mb-5px mt-5px line-height-tight"
+                            routerLink="/admin/settings" routerLinkActive="active">
+                            <i class="fa-solid fa-gear pr-5px"></i>
+                            Genel Ayarlar
+                        </li>
+                    </a>
+                </ul>
+            </div>
         </div>
     </div>
+
 </div>

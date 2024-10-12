@@ -2,13 +2,13 @@
     width: 245px; 
     transition: width 0.5s ease-in-out; 
     
-    @media (max-width: 1283px) {
+    @media (max-width: 1300px) {
       width: 0;
       overflow: hidden; 
     }
   }
 .header{
-  @media (max-width: 1283px){
+  @media (max-width: 1300px){
     margin: 0 40px;
   }
 
@@ -18,7 +18,7 @@
 }
 
 .content{
-  @media (max-width: 1283px){
+  @media (max-width: 1300px){
     margin: 0 10px;
   }
 }
