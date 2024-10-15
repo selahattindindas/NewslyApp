@@ -1,27 +1,6 @@
-<form (ngSubmit)="onSubmit()" #newsForm="ngForm">
-  <div>
-    <label for="category">Kategori</label>
-    <select id="category" [(ngModel)]="news.categoryId" name="categoryId" required>
-      <option *ngFor="let category of categories" [value]="category.id">
-        {{ category.name }}
-      </option>
-    </select>
-  </div>
-
-  <div>
-    <label for="title">Haber Başlığı</label>
-    <input id="title" [(ngModel)]="news.title" type="text" name="title">
-  </div>
-
-  <div>
-    <label for="editor">Haber İçeriği</label>
-    <quill-editor
-    [modules]="quillModules"
-    (onEditorCreated)="onEditorCreated($event)"
-    [(ngModel)]="news.content"
-    name="content"
-  ></quill-editor>
-  </div>
-
-  <button type="submit">Kaydet</button>
-</form>
+ <div class="text-off-white mb-30px">
+  <h1>Haber Oluştur</h1>
+ </div>
+<div>
+  <app-form-editor (itemSubmit)="onSubmit($event)" [btnTitle]="'+ Ekle'"></app-form-editor>
+</div>

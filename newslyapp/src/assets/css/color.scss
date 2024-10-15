@@ -57,7 +57,7 @@ $themes: (
   body.#{$theme}-theme {
     background-color: map-get($colors, background);
 
-    p {
+    .theme-text {
       color: map-get($colors, p);
     }
 
@@ -65,7 +65,7 @@ $themes: (
       color: map-get($colors, text-gray);
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    .title {
       color: map-get($colors, h1);
     }
 

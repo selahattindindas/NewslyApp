@@ -1,11 +1,11 @@
 <div class="theme-div padding-30px border-radius-8px width-full max-width-300px" >
-    <p class="font-weight-bolder font-size-3xl letter-spacing-custom mb-35px">Popüler</p>
+    <p class="theme-text font-weight-bolder font-size-3xl letter-spacing-custom mb-35px">Popüler</p>
     <div *ngFor="let news of news; let last = last" class="cursor-pointer popular-card" (click)="navigateToCategory(news)">
         <div class="d-flex align-items-center mb-25px" style="gap: 10px;">
             <img src="assets/img/test3.jpg" class="width-30px height-30px object-fit-contain border-radius-50">
             <span class="color-gray text-uppercase font-weight-medium letter-spacing-tighter font-size-xs">{{news.author}}</span>
         </div>
-        <p class="font-size-xl font-weight-bolder line-height-normal mb-40px">{{news.title | truncate}}</p>
+        <p class="theme-text font-size-xl font-weight-bolder line-height-normal mb-40px">{{news.title | truncate}}</p>
         <hr *ngIf="!last" class="mt-20px mb-20px deneme hr-theme border-0">
     </div>
 </div>

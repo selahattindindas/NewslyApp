@@ -3,7 +3,7 @@
         <div class="position-relative mb-20px">
             <app-search [showSvg]="false" [inputClass]="'input-style bg-input2'" [buttonClass]="'search-btn'" [searchDivClass]="'search-div'"></app-search>
         </div>
-        <p *ngIf="searchTerm" class="pl-30px font-weight-medium line-height-tight font-size-13px text-italic"><strong>{{
+        <p *ngIf="searchTerm" class="theme-text pl-30px font-weight-medium line-height-tight font-size-13px text-italic"><strong class="theme-text">{{
                 searchTerm }}</strong> ile ilgili sonuçlar</p>
         <hr class="mt-20px mb-20px" style="border: 0.1px solid #DCDCDC;">
         <app-news-container [news]="filteredNews"></app-news-container>

@@ -1,0 +1,149 @@
+$primary-color: #8584f6;
+$secondary-color: #c7cbd1;
+$border-color: #5e5b7b;
+$font-family: 'Inter', sans-serif;
+$tertiary-color: #9799b5;
+
+.create-form {
+  display: flex;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
+}
+
+::ng-deep .ql-toolbar.ql-snow,
+::ng-deep .ql-container {
+  font-family: 'Inter', sans-serif;
+}
+
+::ng-deep .ql-toolbar.ql-snow,
+::ng-deep .ql-container.ql-snow {
+  border: 1px solid $border-color;
+}
+
+::ng-deep .ql-snow.ql-toolbar button:hover .ql-stroke {
+  stroke: $primary-color;
+}
+
+::ng-deep .ql-snow.ql-toolbar button:hover .ql-fill {
+  fill: $primary-color;
+}
+
+::ng-deep .ql-container {
+  font-size: 17px;
+  line-height: 34px;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+::ng-deep .ql-editor {
+  min-height: 100px;
+}
+
+::ng-deep .ql-snow {
+
+  .ql-fill {
+    fill: $tertiary-color;
+  }
+
+  .ql-stroke {
+    fill: none;
+    stroke: $tertiary-color;
+  }
+}
+
+::ng-deep .ql-editor.ql-blank::before {
+  color: $secondary-color;
+}
+
+::ng-deep .ql-snow.ql-toolbar button.ql-active {
+  color: $primary-color;
+
+  .ql-fill {
+    fill: $primary-color;
+  }
+
+  .ql-stroke {
+    stroke: $primary-color;
+  }
+}
+
+::ng-deep .ql-snow.ql-toolbar button {
+  padding: 0;
+}
+
+::ng-deep .ql-toolbar.ql-snow .ql-formats{
+  transition: margin 0.5s;
+  &:first-child {
+    margin-left: 15px;
+  }
+
+  @media (max-width: 400px) {
+    margin: 0;
+  }
+}
+
+p {
+  color: $secondary-color;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  flex: 1;
+  transition: margin 0.5s;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: 600px) {
+    margin: 20px 0 0 0;
+  }
+}
+.quill-editor{
+  padding-top: 40px;
+  transition: padding 0.5s;
+
+  @media (max-width: 600px) {
+    padding-top: 20px;
+  }
+}
+
+input[type=text] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid $border-color;
+  outline: none;
+  padding: 10px;
+  color: $secondary-color;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.form-control-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 17px;
+  color: $tertiary-color;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.btn-create {
+  background-color: transparent;
+  border: 2px solid $primary-color;
+  color: white;
+  padding: 8px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}

@@ -46,7 +46,7 @@ export class NewsService {
 
   async updateNews(newsItem: UpdateNews): Promise<UpdateNews>{
     const observable : Observable<UpdateNews> = this.httpClientService.put({
-      controller: 'news'
+      controller: `news/${newsItem.id}`,
     }, newsItem)
 
     return await firstValueFrom(observable);

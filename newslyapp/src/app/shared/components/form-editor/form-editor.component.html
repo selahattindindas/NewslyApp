@@ -1,0 +1,21 @@
+<form class="bg-indigo padding-25px border-radius-15px text-off-white" (ngSubmit)="onSubmit()" #newsForm="ngForm">
+  <div class="create-form">
+    <div class="form-group">
+      <label class="form-control-label" for="category">Kategori</label>
+      <app-dropdopwn [(ngModel)]="news.categoryName" [value]="news?.categoryName" [options]="categories"
+        name="categoryName"></app-dropdopwn>
+    </div>
+    <div class="form-group">
+      <label class="form-control-label" for="title">Haber Başlığı</label>
+      <input id="title" [(ngModel)]="news.title" type="text" name="title">
+    </div>
+  </div>
+  <div class="quill-editor">
+    <label class="form-control-label" for="editor">Haber İçeriği</label>
+    <quill-editor class="width-full pt-10px" [modules]="quillModules" (onEditorCreated)="onEditorCreated($event)"
+      [(ngModel)]="news.content" name="content" placeholder="Buraya metin ekle..."></quill-editor>
+  </div>
+  <div class="d-flex justify-content-end pt-25px">
+    <button class="btn-create" type="submit">{{btnTitle}}</button>
+  </div>
+</form>

@@ -15,6 +15,7 @@ $colors: (
   'admin-footer': #2c2a29,
   'lavender': #9799b5,
   'indigo': #110d3e,
+  'admin-card': #8584f6
 );
 
 @mixin generate-background-classes($color-map) {

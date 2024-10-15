@@ -1,0 +1,13 @@
+<div class="custom-dropdown">
+  <div class="dropdown-toggle" (click)="toggleDropdown()">
+    {{ selectedOption || 'Seçin' }}
+    <span class="arrow">
+      <i class="fa-solid fa-sort"></i>
+    </span>
+  </div>
+  <ul class="dropdown-menu" *ngIf="isDropdownOpen">
+    <li *ngFor="let option of options" (click)="selectOption(option)">
+      {{ option.name }}
+    </li>
+  </ul>
+</div>

@@ -13,6 +13,7 @@ export const AdminRoutes: Routes = [
             },
             {
                 path: 'news',
+                title: 'Newsly: Admin Panel Haberler',
                 children : [
                     {
                         path: '',
@@ -20,16 +21,16 @@ export const AdminRoutes: Routes = [
                     },
                     {
                         path: 'create',
-                        loadComponent: () => import('./news/news-create/news-create.component').then(m => m.NewsCreateComponent)
+                        loadComponent: () => import('./news/news-create/news-create.component').then(m => m.NewsCreateComponent),
+                        title: 'Newsly: Admin Panel Haber Ekle'
                     },
                     {
                         path: 'edit/:id',
-                        loadComponent: () => import('./news/news-update/news-update.component').then(m => m.NewsUpdateComponent)
+                        loadComponent: () => import('./news/news-update/news-update.component').then(m => m.NewsUpdateComponent),
+                        title: 'Newsly: Admin Panel Haber Ayarları'
                     },
                 ]
             },
-           
         ]
     },
-    
 ]
