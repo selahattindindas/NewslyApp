@@ -28,7 +28,7 @@
                             <td>{{ news.title | truncate:32 }}</td>
                             <td>{{ news.author }}</td>
                             <td>{{ news.categoryName }}</td>
-                            <td>{{ news.date }}</td>
+                            <td>{{ news.date | timeAgo }}</td>
                             <td class="text-align-center">
                                 <i class="fa-solid fa-gear font-size-xl pr-5px cursor-pointer" [routerLink]="['edit', news.id]"></i>
                                 <i class="fa-solid fa-ban font-size-xl pl-5px cursor-pointer" (click)="deleteNews(news.id)"></i>

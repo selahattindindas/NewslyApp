@@ -12,8 +12,9 @@ $tertiary-color: #9799b5;
   }
 }
 
+::ng-deep .ql-container,
 ::ng-deep .ql-toolbar.ql-snow,
-::ng-deep .ql-container {
+::ng-deep .ql-font-monospace {
   font-family: 'Inter', sans-serif;
 }
 
@@ -41,6 +42,10 @@ $tertiary-color: #9799b5;
   min-height: 100px;
 }
 
+::ng-deep .ql-editor p {
+  padding-bottom: 1rem;
+}
+
 ::ng-deep .ql-snow {
 
   .ql-fill {
@@ -51,6 +56,10 @@ $tertiary-color: #9799b5;
     fill: none;
     stroke: $tertiary-color;
   }
+}
+
+::ng-deep .ql-snow .ql-editor img {
+  width: 100%;
 }
 
 ::ng-deep .ql-editor.ql-blank::before {
@@ -112,7 +121,8 @@ p {
   }
 }
 
-input[type=text] {
+input[type=text],
+select {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid $border-color;
@@ -121,6 +131,13 @@ input[type=text] {
   color: $secondary-color;
   font-size: 17px;
   font-weight: 700;
+
+  option{
+    background-color: $primary-color;
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+  }
 }
 
 .form-control-label {

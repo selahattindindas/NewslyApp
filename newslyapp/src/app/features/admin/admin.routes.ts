@@ -31,6 +31,11 @@ export const AdminRoutes: Routes = [
                     },
                 ]
             },
+            ...Array(5).fill(null).map((_, i) => ({
+                path: ['popular-news', 'data-analysis', 'news-comments', 'features', 'settings'][i],
+                loadComponent: () => import('./test/test.component').then(m => m.TestComponent),
+                title: 'Çok Yakında'
+            })),
         ]
     },
 ]

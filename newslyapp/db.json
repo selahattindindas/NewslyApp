@@ -6,9 +6,7 @@
       "author": "Selahattin",
       "date": "15 saat",
       "title": "Mersin'de gizemli bir ölü bulundu.",
-      "categoryName": "Gündem",
-      "categorySlug": "gundem",
-      "slug": "mersin-de-gizemli-bir-olu-bulundu"
+      "categoryName": "Gündem"
     },
     {
       "id": "2",
@@ -16,9 +14,7 @@
       "author": "Selahattin",
       "date": "14 saat",
       "title": "Yerli bilim insanlarından önemli bir keşif.",
-      "categoryName": "Bilim & Teknoloji",
-      "categorySlug": "bilim-teknoloji",
-      "slug": "yerli-bilim-insanlarindan-onemli-bir-kesif"
+      "categoryName": "Bilim & Teknoloji"
     },
     {
       "id": "3",
@@ -26,9 +22,7 @@
       "author": "Selahattin",
       "date": "13 saat",
       "title": "Döviz kurlarındaki dalgalanma sürüyor.",
-      "categoryName": "Finans",
-      "categorySlug": "finans",
-      "slug": "doviz-kurlarindaki-dalgalanma-suruyor"
+      "categoryName": "Finans"
     },
     {
       "id": "4",
@@ -36,9 +30,7 @@
       "author": "Selahattin",
       "date": "12 saat",
       "title": "Yeni yaşam trendleri: Minimalizm.",
-      "categoryName": "Yaşam",
-      "categorySlug": "yasam",
-      "slug": "yeni-yasam-trendleri-minimalizm"
+      "categoryName": "Yaşam"
     },
     {
       "id": "5",
@@ -46,9 +38,7 @@
       "author": "Selahattin",
       "date": "11 saat",
       "title": "Şampiyon takım yeni sezonu açtı.",
-      "categoryName": "Spor",
-      "categorySlug": "spor",
-      "slug": "sampiyon-takim-yeni-sezonu-acti"
+      "categoryName": "Spor"
     },
     {
       "id": "6",
@@ -56,9 +46,7 @@
       "author": "Selahattin",
       "date": "10 saat",
       "title": "Gizemli bir iş insanının ölümü.",
-      "categoryName": "Gündem",
-      "categorySlug": "gundem",
-      "slug": "gizemli-bir-is-insaninin-olumu"
+      "categoryName": "Gündem"
     },
     {
       "id": "7",
@@ -66,9 +54,7 @@
       "author": "Selahattin",
       "date": "9 saat",
       "title": "Uzay keşiflerinde yeni bir adım.",
-      "categoryName": "Bilim & Teknoloji",
-      "categorySlug": "bilim-teknoloji",
-      "slug": "uzay-kesiflerinde-yeni-bir-adim"
+      "categoryName": "Bilim & Teknoloji"
     },
     {
       "id": "8",
@@ -76,9 +62,7 @@
       "author": "Selahattin",
       "date": "8 saat",
       "title": "Borsa'da rekor kapanış.",
-      "categoryName": "Finans",
-      "categorySlug": "finans",
-      "slug": "borsada-rekor-kapanis"
+      "categoryName": "Finans"
     },
     {
       "id": "9",
@@ -86,9 +70,7 @@
       "author": "Selahattin",
       "date": "7 saat",
       "title": "Sürdürülebilir yaşam üzerine yeni projeler.",
-      "categoryName": "Yaşam",
-      "categorySlug": "yasam",
-      "slug": "surdurulebilir-yasam-uzerine-yeni-projeler"
+      "categoryName": "Yaşam"
     },
     {
       "id": "10",
@@ -96,9 +78,7 @@
       "author": "Selahattin",
       "date": "6 saat",
       "title": "Ülkemizin yeni futbol yıldızı.",
-      "categoryName": "Spor",
-      "categorySlug": "spor",
-      "slug": "ulkemizin-yeni-futbol-yildizi"
+      "categoryName": "Spor"
     },
     {
       "id": "11",
@@ -106,9 +86,7 @@
       "author": "Selahattin",
       "date": "5 saat",
       "title": "İstanbul'da yeni bir tarih keşfi.",
-      "categoryName": "Gündem",
-      "categorySlug": "gundem",
-      "slug": "istanbulda-yeni-bir-tarih-kesfi"
+      "categoryName": "Gündem"
     },
     {
       "id": "12",
@@ -116,9 +94,7 @@
       "author": "Selahattin",
       "date": "4 saat",
       "title": "Teknolojideki son gelişmeler.",
-      "categoryName": "Bilim & Teknoloji",
-      "categorySlug": "bilim-teknoloji",
-      "slug": "teknolojideki-son-gelismeler"
+      "categoryName": "Bilim & Teknoloji"
     },
     {
       "id": "13",
@@ -126,9 +102,7 @@
       "author": "Selahattin",
       "date": "3 saat",
       "title": "Ekonomi verileri açıklandı.",
-      "categoryName": "Finans",
-      "categorySlug": "finans",
-      "slug": "ekonomi-verileri-aciklandi"
+      "categoryName": "Finans"
     },
     {
       "id": "14",
@@ -136,9 +110,7 @@
       "author": "Selahattin",
       "date": "2 saat",
       "title": "Doğanın korunması için yeni adımlar.",
-      "categoryName": "Yaşam",
-      "categorySlug": "yasam",
-      "slug": "doganin-korunmasi-icin-yeni-adimlar"
+      "categoryName": "Yaşam"
     },
     {
       "id": "15",
@@ -146,9 +118,7 @@
       "author": "Selahattin",
       "date": "1 saat",
       "title": "Spor dünyasında büyük değişimler.",
-      "categoryName": "Spor",
-      "categorySlug": "spor",
-      "slug": "spor-dunyasinda-buyuk-degisimler"
+      "categoryName": "Spor"
     },
     {
       "id": "16",
@@ -156,9 +126,7 @@
       "author": "Selahattin",
       "date": "1 gün",
       "title": "Muzik dünyasında yeni bir trend.",
-      "categoryName": "Gündem",
-      "categorySlug": "gundem",
-      "slug": "muzik-dunyasinda-yeni-bir-trend"
+      "categoryName": "Gündem"
     },
     {
       "id": "17",
@@ -166,9 +134,7 @@
       "author": "Selahattin",
       "date": "1 gün",
       "title": "Yapay zeka ile ilgili yeni gelişmeler.",
-      "categoryName": "Bilim & Teknoloji",
-      "categorySlug": "bilim-teknoloji",
-      "slug": "yapay-zeka-ile-ilgili-yeni-gelismeler"
+      "categoryName": "Bilim & Teknoloji"
     },
     {
       "id": "18",
@@ -176,9 +142,7 @@
       "author": "Selahattin",
       "date": "1 gün",
       "title": "Ekonomik kriz uyarıları gelmeye devam ediyor.",
-      "categoryName": "Finans",
-      "categorySlug": "finans",
-      "slug": "ekonomik-kriz-uyarilari-gelmeye-devam-ediyor"
+      "categoryName": "Finans"
     },
     {
       "id": "19",
@@ -186,9 +150,7 @@
       "author": "Selahattin",
       "date": "1 gün",
       "title": "Sağlıklı yaşam ipuçları.",
-      "categoryName": "Yaşam",
-      "categorySlug": "yasam",
-      "slug": "saglikli-yasam-ipuclari"
+      "categoryName": "Yaşam"
     },
     {
       "id": "20",
@@ -196,9 +158,7 @@
       "author": "Selahattin",
       "date": "1 gün",
       "title": "Spor etkinliklerinde artış.",
-      "categoryName": "Spor",
-      "categorySlug": "spor",
-      "slug": "spor-etkinliklerinde-artis"
+      "categoryName": "Spor"
     },
     {
       "id": "21",
@@ -206,9 +166,7 @@
       "author": "Selahattin",
       "date": "1 gün",
       "title": "Küresel ısınma etkileri.",
-      "categoryName": "Gündem",
-      "categorySlug": "gundem",
-      "slug": "kuresel-isinma-etkileri"
+      "categoryName": "Gündem"
     },
     {
       "id": "22",
@@ -216,9 +174,7 @@
       "author": "Selahattin",
       "date": "1 gün",
       "title": "Bilim dünyasındaki yenilikler.",
-      "categoryName": "Bilim & Teknoloji",
-      "categorySlug": "bilim-teknoloji",
-      "slug": "bilim-dunyasindaki-yenilikler"
+      "categoryName": "Bilim & Teknoloji"
     },
     {
       "id": "23",
@@ -226,9 +182,7 @@
       "author": "Selahattin",
       "date": "1 gün",
       "title": "Hisse senedi yatırımları üzerine tavsiyeler.",
-      "categoryName": "Finans",
-      "categorySlug": "finans",
-      "slug": "hisse-senedi-yatirimlari-uzerine-tavsiyeler"
+      "categoryName": "Finans"
     },
     {
       "id": "24",
@@ -236,9 +190,7 @@
       "author": "Selahattin",
       "date": "1 gün",
       "title": "Yaz tatili için öneriler.",
-      "categoryName": "Yaşam",
-      "categorySlug": "yasam",
-      "slug": "yaz-tatili-icin-oneriler"
+      "categoryName": "Yaşam"
     },
     {
       "id": "25",
@@ -246,9 +198,7 @@
       "author": "Selahattin",
       "date": "1 gün",
       "title": "Yeni yıl kutlamaları için planlar.",
-      "categoryName": "Spor",
-      "categorySlug": "spor",
-      "slug": "yeni-yil-kutlamalari-icin-planlar"
+      "categoryName": "Spor"
     },
     {
       "id": "26",
@@ -256,9 +206,7 @@
       "author": "Selahattin",
       "date": "1 gün",
       "title": "Güncel çevre sorunları.",
-      "categoryName": "Gündem",
-      "categorySlug": "gundem",
-      "slug": "guncel-cevre-sorunlari"
+      "categoryName": "Gündem"
     },
     {
       "id": "27",
@@ -266,9 +214,7 @@
       "author": "Selahattin",
       "date": "1 gün",
       "title": "Yerli otomobil projesindeki gelişmeler.",
-      "categoryName": "Bilim & Teknoloji",
-      "categorySlug": "bilim-teknoloji",
-      "slug": "yerli-otomobil-projesindeki-gelismeler"
+      "categoryName": "Bilim & Teknoloji"
     },
     {
       "id": "28",
@@ -276,9 +222,7 @@
       "author": "Selahattin",
       "date": "1 gün",
       "title": "Yatırım dünyasında dikkat çeken trendler.",
-      "categoryName": "Finans",
-      "categorySlug": "finans",
-      "slug": "yatirim-dunyasinda-dikkat-ceken-trendler"
+      "categoryName": "Finans"
     },
     {
       "id": "29",
@@ -286,19 +230,16 @@
       "author": "Selahattin",
       "date": "1 gün",
       "title": "Doğal yaşam alanlarının korunması.",
-      "categoryName": "Yaşam",
-      "categorySlug": "yasam",
-      "slug": "dogal-yasam-alanlarinin-korunmasi"
+      "categoryName": "Yaşam"
     },
     {
-      "id": "30",
-      "image": "assets/img/test2.jpg",
-      "author": "Selahattin",
-      "date": "1 gün",
       "title": "Spor karşılaşmalarında heyecan dorukta.",
       "categoryName": "Spor",
-      "categorySlug": "spor",
-      "slug": "spor-karsilasmalari-nda-heyecan-dorukta"
+      "content": "<h1><strong>Danimarka&#39;daki mezarlıkta 50 iyi korunmuş Viking iskeleti bulundu</strong></h1><p><img src=\"https://static.bundle.app/news/pc-83585f126df141e960f68ca053e45288.jpg\">REKLAM</p><p>Danimarka&#39;da arkeologlar, yaklaşık 50 &quot;olağanüstü derecede iyi korunmuş&quot; iskeletin bulunduğu nadir bir Viking Çağı mezarlığı ortaya çıkardı.</p><p>Kazıyı yürüten ekibe göre, bu önemli keşif Viking dönemine dair yeni bilgiler sağlayabilir.</p><p><img src=\"https://static.euronews.com/website/images/icons/icon-cross-10x10-grey-6.svg\" alt=\"Close advertising\" height=\"10\" width=\"10\"></p><p>Kazıya altı ay boyunca liderlik eden arkeolog Michael Borre Lundo, &quot;Bu, çok heyecan verici bir bulgu çünkü bu kadar iyi korunmuş iskeletler bulduk,&quot; dedi. &quot;Genelde mezarlarda birkaç diş bulmak bile şanslı bir durumdur, ancak burada tüm iskeletlere sahibiz.&quot;</p><p>Danimarka’nın üçüncü büyük şehri Odense’nin kuzeydoğusundaki Aasum&#39;un eteklerinde yapılan keşif, kemiklerin korunmasına yardımcı olan tebeşir ve yüksek su seviyeleri gibi elverişli toprak koşullarına bağlandı. Bu alan, geçen yıl enerji hattı yenileme çalışmaları öncesinde yapılan rutin bir araştırma sırasında bulunmuştu.</p><p><img src=\"https://static.euronews.com/articles/stories/08/79/46/30/808x539_cmsv2_3154c325-e5df-5343-9ffa-3222c11adb13-8794630.jpg\" alt=\"Kemikler oldukça korunmuş bir formda bulunuyor.\">Kemikler oldukça korunmuş bir formda bulunuyor.AP</p><p>Kazıyı denetleyen Museum Odense uzmanları, mezarlık alanının, 793 ile 1066 yılları arasında süren Viking Çağı&#39;ndaki yaşama dair değerli ipuçları sunabileceğine inanıyor. DNA analizleri, akrabalık bağları, göç desenleri ve sosyal yapılar hakkında ayrıntılı yaşam öykülerini yeniden oluşturabilir.</p><p>Borre Lundø, &quot;Bu, bilimsel keşif için yepyeni bir araç kutusu açıyor,&quot; dedi. &quot;Umarım tüm iskeletler üzerinde DNA analizi yapabiliriz ve birbirleriyle akraba olup olmadıklarını, hatta nereden geldiklerini görebiliriz.&quot;</p><p>Viking Çağı, Avrupa genelinde büyük çaplı baskınlar ve ticaret faaliyetleriyle biliniyor. Hatta Vikingler Kuzey Amerika&#39;ya kadar ulaşmıştır. Ancak Borre Lundo, Aasum&#39;da bulunan iskeletlerin muhtemelen savaşçılardan ziyade bir çiftçi topluluğuna ait olduğunu düşünüyor. 2.000 metrekarelik (21.500 fit kare) alana yayılan bu sitede, erkek, kadın ve çocukların yanı sıra bazı kremasyon kalıntıları da bulunuyor.</p><p>Dikkat çekici bir mezarda, bir kadın bir vagon içinde gömülmüş ve Viking arabasının üst kısmı tabut olarak kullanılmıştı. Borre Lundo, bunun kadının &quot;toplumun üst kesiminden&quot; olduğunu göster</p>",
+      "image": "",
+      "auth": null,
+      "author": "Selahattin",
+      "id": "30"
     },
     {
       "id": "31",
@@ -306,54 +247,39 @@
       "author": "Selahattin",
       "title": "Şanlıurfa'da Atatürk Baraj Göleti'nde oluşan hortum görüntülendi",
       "content": "<p><img src=\"https://static.bundle.app/news/uxr5nqpu.fn0.jpg\"></p><p><span>Suudi Arabistan&#39;ın ulusal gününün 94. yıl dönümü dolayısıyla bir otelde düzenlenen resepsiyona, Milli Savunma Bakanı Yaşar Güler, Genelkurmay Başkanı Orgeneral Metin Gürak, Ankara Valisi Vasip Şahin, Diyanet İşleri Başkanı Ali Erbaş, Suudi Arabistan&#39;ın Ankara Büyükelçisi Fahad bin Assaad Abu Al-Nasr, yabancı misyon temsilcileri ve çok sayıda davetli katıldı.</span></p><p><span>İki ülkenin milli marşlarını okunmasının ardından etkinliğin açılışında konuşan Bakan Güler, dost ve kardeş ülke Suudi Arabistan&#39;ın Milli Günü&#39;nü kutladı ve Suudi Arabistan&#39;ın Orta Doğu&#39;nun kalbinde yer alan ve pek çok alanda büyük gelişim kaydeden önemli bir güç olduğunu söyledi.</span></p><p><span>Güler, sadece coğrafi sınırlarıyla değil, aynı zamanda bölgesel ve uluslararası siyasetteki etkisiyle de Suudi Arabistan&#39;ın kritik bir rol oynadığına işaret ederek, İslam dünyasının önde gelen ülkelerinden biri olarak kutsal topraklara ev sahipliği yapan Suudi Arabistan&#39;ın Türkiye için de çok özel bir yere sahip olduğunu ifade etti.</span></p><p><span>Güler, &quot;İki ülke tarihten gelen köklü bağları sayesinde pek çok konuda ortak değerleri paylaşmaktadır. İlişkilerimiz bu bağların bir tezahürü olarak güçlü işbirliği zemininde ve samimi bir iletişimle her geçen gün daha da ilerlemektedir.&quot; diye konuştu.</span></p><p><span>Ülke liderleri arasındaki samimi diyaloğun da ilişkilerin gelişimine büyük bir ivme kazandırdığına dikkati çeken Güler, son dönemde farklı seviyelerdeki karşılıklı ziyaret ve görüşmelerin, yakalanan ivmenin devam ettirilmesi bakımından ilişkilere müstesna katkılar sunduğunu kaydetti.</span></p><p><span>Güler, muhtelif alanlarda işbirliğini sürdürdüklerine ve özellikle ekonomik ilişkilerin ve ticaret hacminin gün geçtikçe yüksek seviyelere çıktığına işaret ederek, enerji, lojistik ve ulaştırma alanında yürütülen projelerin iki ülkenin de gücüne güç kattığını anlattı.</span></p><p><span>Milli Savunma Bakanlığı olarak savunma ve güvenlik alanında Suudi Arabistan&#39;la verimli icraatlar ve tecrübe paylaşımları yaptıklarını aktaran Güler, askeri eğitim faaliyetleriyle muhtelif tatbikatlarının bu alandaki dayanışmalarının en somut göstergesi olduğunu söyledi.</span></p><p><span>Güler, savunma sanayisi ve teknolojileri alanında geliştirilen ortak projeler ve imzalanan çeşitli antlaşmaların iki ülkenin refahına katkılar sağlarken ikili münasebetlerin geleceğine dair umutları da pekiştirdiğini ifade etti.</span></p><p><span>Tüm bu işbirliği faaliyetlerinin her iki milletin refahını artırma hedefi doğrultusunda büyük bir potansiyele sahip olduklarını ortaya koyduğunu vurgulayan Güler, bu yönüyle yeni ve daha büyük işbirliklerine de zemin hazırladığını dile getirdi.</span></p><p><span>Güler, esasında ilişkileri daha üst seviyelere taşımanın iki ülkenin çıkarlarına büyük katkı sağlamasının yanı sıra şu anki hassas gelişmeler dikkate alındığında bölgesel güvenlik ve barış açısından da bir gereklilik haline geldiğinin altını çizdi.</span></p><p><strong>&quot;Türkiye ve Suudi Arabistan, bölgede daha etkili inisiyatifler üstlenebilir&quot;</strong></p><p><span>Bugün Orta Doğu&#39;nun büyük bir zulme tanıklık ettiğini, bölgede barışa ve huzura ihtiyacın her zamankinden daha acil bir hal aldığını vurgulayan Güler, &quot;Türkiye ve Suudi Arabistan olarak ortak hedefler doğrultusunda dayanışmamızı ve birlikte çalışabilirliğimizi artırarak bölgemizde daha etkili inisiyatifler üstlenebiliriz. Bu çerçevede temel hedefimiz birbirimize duyduğumuz ve tarihi geçmişimizden aldığımız ilham ve motivasyonla ilişkilerimizi her alanda çok daha güçlü bir seviyeye ulaştırmaktır.&quot; diye konuştu.</span></p><p><span>Güler, Suudi Arabistan&#39;ın Ankara Büyükelçisi Abu Al-Nasr&#39;ın vazifesine başladığı günden itibaren iki ülke arasındaki dostluğun geliştirilmesi ve değerli projelerin hayata geçirilebilmesi için yüksek bir özveriyle çalıştığını belirterek, Abu Al-Nasr&#39;a teşekkürlerini sunduğunu ve ilişkilerin ilerletilmesine yönelik karşılıklı gayretlerini sürdürdüklerini ifade etti.</span></p><p><span>Suudi Arabistan&#39;ın Ankara Büyükelçisi Abu Al-Nasr da ülkesinin çabalarının, kuruluşundan bu yana yalnızca iç gelişimiyle sınırlı kalmadığına işaret ederek, aynı zamanda dost ve kardeş ülkelerle ilişkileri de güçlendirmeye çalıştıklarına dikkati çekti.</span></p><p><span>Abu Al-Nasr, Suudi Arabistan ile Türkiye arasındaki tarihi ilişkilerin iki ülke liderlerinin karşılıklı ziyaretleriyle taçlandığını ve üst düzey karşılıklı temaslarla devam ettiğini anlattı.</span></p><p><span>Temmuzda Suudi Arabistan&#39;dan bakan düzeyinde 4 yetkilinin Türkiye&#39;yi ziyaret ettiğini anımsatan Abu Al-Nasr, bu ziyaretlerin, iki ülke arasındaki işbirliğini çeşitli alanlarda güçlendiren olumlu sonuçlar verdiğini ve Suudi-Türk Koordinasyon Konseyi çerçevesinde ortak proje ve girişimlerin geliştirilerek hayata geçirilmesinin altını çizdiğini ifade etti.</span></p><p><span>Abu Al-Nasr, ülkesinin, 2030 vizyonu doğrultusunda sürdürülebilir kalkınmayı ulusal önceliklerinin en başına koyduğunu kaydederek, uluslararası kuruluşlardaki ve ittifaklardaki üyelikleriyle ülkeler arası ilişkilerde kalkınma sürecini yeniden canlandırmak, işbirliği ve anlayışı desteklemek için çalıştıklarını dile getirdi.</span></p><p><span>Büyükelçi Abu Al-Nasr, 2030&#39;da Expo Fuarı&#39;na ve 2034 Dünya Kupası&#39;na ev sahipliği yapma yolunda ilerlediklerini söyledi.</span></p><p><strong>&quot;Suudi Arabistan ile Türkiye bölgenin en büyük iki ekonomisi&quot;</strong></p><p><span>Ekim 2023&#39;te Türkiye Cumhuriyeti&#39;nin 100. yılını kutladıklarını anımsatan Abu Al-Nasr, &quot;Suudi Arabistan ile Türkiye&#39;nin, bölgenin en büyük iki ekonomisi ve G20 üyelikleri göz önünde bulundurulduğunda, sahip oldukları devasa potansiyeller, işbirliğini derinleştirmek, ortaklıkları artırmak, mevcut fırsatları değerlendirmek ve daha adil ve eşit bir dünyayı oluşturmak için altın bir fırsat sunmaktadır.&quot; dedi.</span></p><p><span>Abu Al-Nasr, bunun İslam dünyasında, bölgede ve uluslararası arenada her iki ülkenin yerini daha da güçlendireceğini vurgulayarak, iki ülke arasında siyasi koordinasyonun da söz konusu olduğuna değindi.</span></p><p><span>Büyükelçi Abu Al-Nasr, özellikle 11 Kasım 2023&#39;teki İslam İşbirliği Teşkilatı ve Arap Birliği Ortak Olağanüstü Zirvesi&#39;nin ardından oluşturulan Gazze Temas Grubu aracılığıyla Gazze konusunda sağlanan koordinasyonun buna örnek olduğuna işaret etti.</span></p><p><span>İki ülke arasındaki ticaret hacminin 2023&#39;te 6,8 milyar dolara ulaştığını aktaran Abu Al-Nasr, ilerleyen dönemde ikili ticaret düzeyini daha da artırmayı hedeflediklerini dile getirdi.</span></p><p><span>Abu Al-Nasr, 2023&#39;te Suudi Arabistan&#39;dan Türkiye&#39;ye gelen turist sayısının 800 bini aştığını kaydederek, Türk vatandaşlarına turizm ve umre ziyaretlerinde kolaylık sağlayan vize uygulamasını kısa süre önce başlattıklarını, İstanbul ve Ankara&#39;da havalimanlarında &quot;Mekke Yolu&quot; girişimiyle Türk hacı adaylarına da kolaylık sunulduğunu anlattı.</span></p><p><strong>&quot;Suudi Arabistan-Türkiye ilişkileri tarihi&quot;</strong></p><p><span>Resepsiyonun ardından AA muhabirine konuşan Abu Al-Nasr, bugün ülkesinin 94. Milli Günü&#39;nü kutladıklarını belirterek, &quot;Türkiye&#39;deki dostlarımız, kardeşlerimiz ve yetkililerimizden oluşan büyük bir kalabalığın bugün bizimle birlikte olmasından büyük mutluluk duyuyoruz. Hepinizin bildiği gibi, Suudi Arabistan-Türkiye ilişkilerinin elbette tarihi ve kökleri sağlam. Son dönemde bir ivme yakaladı.&quot; dedi.</span></p><p><span>Abu Al-Nasr, şubatta iki ülkeden çok sayıda bakanın ve yetkilinin katıldığı Türkiye-Suudi Arabistan İş ve Yatırım Forumu&#39;nu İstanbul&#39;da düzenlediklerini hatırlatarak, iki ülke arasında yatırım ve ticaret imkanları ve bunların nasıl geliştirilebileceğinin ele alındığını söyledi.</span></p><p><span>Son dönemde Suudi Arabistan ile Türkiye ilişkilerinin ivme kazanmasına işaret eden Abu Al-Nasr, siyasi, ekonomi ve kültürel etkileşim gibi her alanda güçlü bir işbirliği bulunduğuna ve bunun artarak devam etmesini dilediklerine dikkati çekti.</span></p>",
+      "categoryName": "Gündem"
+    },
+    {
+      "id": "f746",
+      "title": "ascascsacascas",
       "categoryName": "Gündem",
-      "categorySlug": "gundem",
-      "slug": "sanlıurfa-da-ataturk-baraj-goletinde-olusan-hortum-goruntulendi"
-    },
-    {
-      "id": "32",
-      "author": "Selahattin",
-      "image": "https://fotolifeakademi.com/uploads/2020/04/dusuk-isikta-fotograf-cekme.jpg",
-      "title": "Deneme",
-      "content": "<p><img src=\"https://fotolifeakademi.com/uploads/2020/04/dusuk-isikta-fotograf-cekme.jpg\"></p>",
-      "categoryName": "Bilim & Teknoloji",
-      "categorySlug": "bilim-teknoloji",
-      "slug": "deneme"
-    },
-    {
-      "categoryName": "Spor",
-      "title": "ASDASDASDASDASDASDA",
-      "content": "<p>createMoviecreateMoviecreateMoviecreateMoviecreateMoviecreateMoviecreateMoviecreateMovie createMoviecreateMoviecreateMovie</p>",
+      "content": "<p>ascascasvsafcasdasdasfas</p>",
       "image": "",
-      "author": "Selahattin",
-      "id": "c7af"
+      "date": "2024-10-16T14:11:48.377Z",
+      "auth": null,
+      "author": "Selahattin"
     }
   ],
   "categories": [
     {
       "id": "1",
-      "name": "Gündem",
-      "slug": "gundem"
+      "name": "Gündem"
     },
     {
       "id": "2",
-      "name": "Bilim & Teknoloji",
-      "slug": "bilim-teknoloji"
+      "name": "Bilim & Teknoloji"
     },
     {
       "id": "3",
-      "name": "Finans",
-      "slug": "finans"
+      "name": "Finans"
     },
     {
       "id": "4",
-      "name": "Yaşam",
-      "slug": "yasam"
+      "name": "Yaşam"
     },
     {
       "id": "5",
-      "name": "Spor",
-      "slug": "spor"
+      "name": "Spor"
     }
   ],
   "users": [

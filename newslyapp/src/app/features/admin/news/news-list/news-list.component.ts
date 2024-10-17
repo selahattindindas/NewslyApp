@@ -4,11 +4,12 @@ import { NewsList } from '../../../../shared/models/news/list-news';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TruncatePipe } from '../../../../shared/pipes/truncate.pipe';
+import { TimeAgoPipe } from '../../../../shared/pipes/time-ago.pipe';
 
 @Component({
   selector: 'app-news-list',
   standalone: true,
-  imports: [CommonModule, RouterLink, TruncatePipe],
+  imports: [CommonModule, RouterLink, TruncatePipe, TimeAgoPipe],
   templateUrl: './news-list.component.html',
   styleUrls: ['./news-list.component.scss']
 })
