@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { UserAuthService } from '../../../core/services/user.auth.service';
 import { AlertService } from '../../../shared/services/alert.service';
 import { AlertConfig, AlertType } from '../../../shared/models/alert-config';
+import { MessageText } from '../../../shared/utils/message';
 
 @Component({
   selector: 'app-login',
@@ -23,12 +24,11 @@ export class LoginComponent {
 
       this.userAuthService.login(email, password).then(response => {
         if (response.success) {
-          this.alertService.showAlert(new AlertConfig('Başarıyla Giriş Sağlandı', AlertType.Success));
+          this.alertService.showAlert(new AlertConfig(MessageText.LoginSuccess, AlertType.Success));
           this.router.navigate(['/admin']);
         } else {
-          this.alertService.showAlert(new AlertConfig('E-posta veya şifre yanlış', AlertType.Error));
+          this.alertService.showAlert(new AlertConfig(MessageText.LoginError, AlertType.Error));
         }
-
       });
     }
   }

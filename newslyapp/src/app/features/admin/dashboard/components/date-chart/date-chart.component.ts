@@ -95,12 +95,12 @@ export class DateChartComponent implements AfterViewInit {
     }));
     
     series.fills.template.setAll({
-      fillOpacity: 0.6,
+      fillOpacity: 0.3,
       visible: true
     });
 
     series.strokes.template.setAll({
-      strokeWidth: 3
+      strokeWidth: 2
     });
 
     series.data.processor = am5.DataProcessor.new(root, {
@@ -112,7 +112,7 @@ export class DateChartComponent implements AfterViewInit {
 
     series.bullets.push(function () {
       let circle = am5.Circle.new(root, {
-        radius: 4,
+        radius: 3,
         fill:am5.color(0x8584f6),
         stroke: series.get("fill"),
         strokeWidth: 2

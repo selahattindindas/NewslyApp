@@ -3,6 +3,7 @@
     <div class="form-group">
       <label class="form-control-label" for="category">Kategori</label>
       <select formControlName="categoryName">
+        <option value="">Seçiniz</option>
         <option *ngFor="let item of categories" [value]="item.name">{{item.name}}</option>
       </select>
     </div>

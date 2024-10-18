@@ -1,11 +1,13 @@
 import { Routes } from "@angular/router";
 import { AdminLayoutComponent } from "../../shared/layouts/admin-layout/admin-layout.component";
+import { authGuard } from "../../core/guards/auth.guard";
 
 export const AdminRoutes: Routes = [
     {
         path: '',
         component: AdminLayoutComponent,
         title: 'Newsly: Admin Panel Ana Sayfa',
+        canActivate: [authGuard],
         children: [
             {
                 path: '',

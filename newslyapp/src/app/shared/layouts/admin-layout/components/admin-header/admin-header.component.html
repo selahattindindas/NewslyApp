@@ -13,12 +13,21 @@
         <div class="pr-15px">
             <i class="fa-solid fa-bell text-gray pr-10px font-size-xl"></i>
         </div>
-        <div class="pr-25px">
+        <div class="pr-25px position-relative display-inline-block">
             <img 
                 class="height-auto cursor-pointer" 
                 src="assets/img/admin/admin-man.png" 
                 style="width: 50px;" 
-                alt="Kullanıcı Resmi">
+                alt="Kullanıcı Resmi"
+                (click)="toggleMenu()">
+                <ul *ngIf="isOpen" class="dropdown-menu">
+                    <li 
+                    class="dropdown-item display-flex align-items-center" 
+                        (click)="logout()">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Çıkış Yap
+                    </li>
+                </ul>
         </div>
     </div>
 </div>

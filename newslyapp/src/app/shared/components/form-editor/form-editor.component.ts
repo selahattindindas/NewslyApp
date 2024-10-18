@@ -30,7 +30,7 @@ export class FormEditorComponent<T> implements OnInit, OnChanges {
   constructor(private categoryService: CategoryService, private fb: FormBuilder) {
     this.formGroup = this.fb.group({
       title: new FormControl(null, [Validators.required, Validators.minLength(5)]),
-      categoryName: new FormControl(null),
+      categoryName: new FormControl(""),
       content: new FormControl(null, [Validators.required]),
       image: new FormControl(null),
       date: new FormControl(null),

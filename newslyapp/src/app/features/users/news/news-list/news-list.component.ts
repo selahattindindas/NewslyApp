@@ -42,15 +42,19 @@ export class NewsListComponent {
     this.spinnerService.setLoading(true);
     this.news = [];
     this.newsService.getNewsByCategoryName(this.categoryName).then(response => {
-      this.news = response;
-      this.setTitle(this.categoryName + ' Haberleri & Son Dakika Haberleri - Newsly');
-    })
-      .catch(() => {
+      if (response.length === 0) {
         this.router.navigate(['/not-found']);
-      })
-      .finally(() => {
-        this.spinnerService.setLoading(false);
-      });
+      } else {
+        this.news = response;
+        this.setTitle(this.categoryName + ' Haberleri & Son Dakika Haberleri - Newsly');
+      }
+    })
+    .catch(() => {
+      this.router.navigate(['/not-found']);
+    })
+    .finally(() => {
+      this.spinnerService.setLoading(false);
+    });
   }
 
   setTitle(title: string): void {

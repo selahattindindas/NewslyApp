@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
+import { loginGuard } from './core/guards/login.guard';
 
 
 export const routes: Routes = [
@@ -8,7 +9,8 @@ export const routes: Routes = [
     {
         path: 'admin/login',
         loadComponent: () => import('./features/auth/login/login.component').then(m => m.LoginComponent),
-        title: 'Newsly Admin Panel Giriş Sayfası'
+        title: 'Newsly Admin Panel Giriş Sayfası',
+        canActivate: [loginGuard],
     },
 
     { path: 'admin', loadChildren: () => import('./features/admin/admin.routes').then(m => m.AdminRoutes)},

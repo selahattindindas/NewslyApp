@@ -5,6 +5,9 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TruncatePipe } from '../../../../shared/pipes/truncate.pipe';
 import { TimeAgoPipe } from '../../../../shared/pipes/time-ago.pipe';
+import { AlertService } from '../../../../shared/services/alert.service';
+import { AlertConfig, AlertType } from '../../../../shared/models/alert-config';
+import { MessageText } from '../../../../shared/utils/message';
 
 @Component({
   selector: 'app-news-list',
@@ -20,7 +23,7 @@ export class NewsListComponent implements OnInit {
   currentPage = 1;
   totalPages!: number;
 
-  constructor(private newsService: NewsService) { }
+  constructor(private newsService: NewsService, private alertService: AlertService) { }
 
   ngOnInit(): void {
     this.getNews();
@@ -45,9 +48,14 @@ export class NewsListComponent implements OnInit {
   }
 
   deleteNews(id: number) {
-    this.newsService.deleteNews(id).then(() => {
-      this.getNews();
-    });
+    this.newsService.deleteNews(id).then(
+      (succes) => {
+        this.alertService.showAlert(new AlertConfig(MessageText.Success, AlertType.Success));
+        this.getNews();
+      },
+      (error) => {
+        this.alertService.showAlert(new AlertConfig(MessageText.ServerError, AlertType.Error));
+      });
   }
 
   getDisplayedPages(): number[] {

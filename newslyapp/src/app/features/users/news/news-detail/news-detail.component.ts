@@ -27,14 +27,24 @@ export class NewsDetailComponent implements OnInit {
     private titleService: Title,
     private spinnerService: SpinnerService,
   ) { }
-
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       const slug = params.get('titleSlugAndId');
+    
       if (slug) {
         const parts = slug.split('-p-');
-        this.newsId = parts.length > 1 ? Number(parts[1]) : 0;
+        if (parts.length < 2 || isNaN(Number(parts[1]))) {
+          this.router.navigate(['/not-found']);
+          return;
+        }
+  
+        this.newsId = Number(parts[1]);
+      } else {
+
+        this.router.navigate(['/not-found']);
+        return;
       }
+  
       if (isPlatformBrowser(this.platformId)) {
         this.getNews();
       }
@@ -45,16 +55,19 @@ export class NewsDetailComponent implements OnInit {
     this.spinnerService.setLoading(true);
     this.news = undefined;
     this.newsService.getNewsById(this.newsId).then(response => {
-      this.news = response;
-      this.setTitle(this.news.title);
+
+        this.news = response;
+        this.setTitle(this.news.title);
+      
     })
-      .catch(() => {
-        this.router.navigate(['/not-found']);
-      })
-      .finally(() => {
-        this.spinnerService.setLoading(false);
-      });
+    .catch(() => {
+      this.router.navigate(['/not-found']);
+    })
+    .finally(() => {
+      this.spinnerService.setLoading(false);
+    });
   };
+  
 
   setTitle(title: string): void {
     this.titleService.setTitle(title);
