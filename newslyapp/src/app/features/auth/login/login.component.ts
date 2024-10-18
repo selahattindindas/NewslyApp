@@ -15,14 +15,15 @@ import { MessageText } from '../../../shared/utils/message';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+  email: string = 'admin@gmail.com';
+  password: string = 'admin';
+
   constructor(private router: Router, private userAuthService: UserAuthService, private alertService: AlertService) { };
 
   onSubmit(form: NgForm) {
     if (form.valid) {
-      const email = form.value.email;
-      const password = form.value.password;
 
-      this.userAuthService.login(email, password).then(response => {
+      this.userAuthService.login(this.email, this.password).then(response => {
         if (response.success) {
           this.alertService.showAlert(new AlertConfig(MessageText.LoginSuccess, AlertType.Success));
           this.router.navigate(['/admin']);

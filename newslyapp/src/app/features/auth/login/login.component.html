@@ -5,17 +5,17 @@
             <h2 class="letter-spacing-2px font-size-3xl pt-15px">ADMİN PANEL</h2>
         </div>
         <div class="login-form">
-            <form class="width-full pr-30px pl-30px"  #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+            <form class="width-full pr-30px pl-30px" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
                 <div class="form-group">
                     <label class="form-control-label">E-Posta</label>
-                    <input autocomplete="off" type="text" id="email" name="email" ngModel required class="form-control">
+                    <input autocomplete="off" type="text" id="email" name="email" [(ngModel)]="email" required class="form-control">
                 </div>
                 <div class="form-group">
                     <label class="form-control-label">Şifre</label>
-                    <input autocomplete="off" type="password" id="password" name="password" ngModel required minlength="6" class="form-control">
+                    <input autocomplete="off" type="password" id="password" name="password" [(ngModel)]="password" required minlength="5" class="form-control">
                 </div>
                 <div style="float: right;">
-                    <button type="submit" class="btn btn-outline-primary">GİRİŞ</button>
+                    <button type="submit" class="btn btn-outline-primary" [disabled]="!loginForm.valid">GİRİŞ</button>
                 </div>
             </form>
         </div>
