@@ -1,26 +1,32 @@
 <div class="d-flex">
   <div class="news-detail">
-    <div class="theme-div padding-35px border-radius-8px">
-      <div class="d-flex align-items-center gray-span">
-        <span class="font-weight-semibold text-uppercase font-size-11px line-height-sm">{{news?.author}}</span>
-        <span class="ml-10px mr-10px font-size-11px font-weight-light">|</span>
-        <span class="font-size-9px font-weight-medium">5 Saat</span>
-        <span class="ml-10px mr-10px font-size-11px font-weight-light">|</span>
-        <span class=" font-weight-semibold letter-spacing-tight text-uppercase font-size-xs">
-          <a (click)="navigateToCategory()" class="cursor-pointer text-decoration-none text-red">{{news?.categoryName}}
-            Haberleri</a>
-        </span>
+    <section>
+      <div class="theme-div padding-35px border-radius-8px">
+        <div class="d-flex align-items-center gray-span">
+          <span class="font-weight-semibold text-uppercase font-size-11px line-height-sm">{{news?.author}}</span>
+          <span class="ml-10px mr-10px font-size-11px font-weight-light">|</span>
+          <span class="font-size-9px font-weight-medium">{{news?.date | timeAgo}}</span>
+          <span class="ml-10px mr-10px font-size-11px font-weight-light">|</span>
+          <span class=" font-weight-semibold letter-spacing-tight text-uppercase font-size-xs">
+            <a (click)="navigateToCategory()"
+              class="cursor-pointer text-decoration-none text-red">{{news?.categoryName}}
+              Haberleri</a>
+          </span>
+        </div>
+        <div class="pt-25px pb-25px font-weight-bolder ">
+          <h1 class="title font-size-32px letter-spacing-medium line-height-xxl">{{news?.title}}</h1>
+        </div>
+        <div class="content theme-text" [innerHTML]="news?.content">
+        </div>
       </div>
-      <div class="pt-25px pb-25px font-weight-bolder ">
-        <h1 class="title font-size-32px letter-spacing-medium line-height-xxl">{{news?.title}}</h1>
-      </div>
-      <div class="content theme-text" [innerHTML]="news?.content">
-      </div>
-    </div>
+    </section>
   </div>
+
   <div class="more">
-    <div class="more-news">
-      <app-more-news></app-more-news>
-    </div>
+    <aside>
+      <div class="more-news">
+        <app-more-news></app-more-news>
+      </div>
+    </aside>
   </div>
 </div>

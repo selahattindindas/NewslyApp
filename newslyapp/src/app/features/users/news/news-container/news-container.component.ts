@@ -7,7 +7,7 @@ import { NewsList } from '../../../../shared/models/news/list-news';
   standalone: true,
   imports: [CardComponent],
   templateUrl: './news-container.component.html',
-  styleUrl: './news-container.component.scss'
+  styleUrl: './news-container.component.scss',
 })
 export class NewsContainerComponent implements OnChanges, OnInit {
   @Input() news: NewsList[] = []; 

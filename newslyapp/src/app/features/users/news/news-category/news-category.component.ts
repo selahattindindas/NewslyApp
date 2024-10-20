@@ -6,7 +6,7 @@ import { ActivatedRoute, RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './news-category.component.html',
-  styleUrls: ['./news-category.component.scss']
+  styleUrls: ['./news-category.component.scss'],
 })
 export class NewsCategoryComponent {
   categoryName!: string;

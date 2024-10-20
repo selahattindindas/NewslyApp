@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { DragBarsComponent } from "./components/drag-bars/drag-bars.component";
 import { NewsList } from '../../../shared/models/news/list-news';
-import { NewsService } from '../../news.service';
-import { CategoryService } from '../../category.service';
+import { NewsService } from '../../../core/services/news.service';
 import { ListCategory } from '../../../shared/models/categories/list-category';
 import { DateChartComponent } from "./components/date-chart/date-chart.component";
 import { SmoothedLineComponent } from "./components/smoothed-line/smoothed-line.component";
+import { CategoryService } from '../../../core/services/category.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -20,11 +20,19 @@ export class DashboardComponent implements OnInit{
  constructor(private newsService: NewsService, private categoryService: CategoryService){};
 
  ngOnInit(): void {
-   this.newsService.getNews().then(data =>{
+  this.getCategory();
+  this.getNews();
+ }
+
+ async getCategory(){
+  await this.categoryService.getCategories().then(data =>{
+    this.categories = data;
+  })
+ }
+
+ async getNews(){
+  await this.newsService.getNews().then(data =>{
     this.news = data;
-    this.categoryService.getCategories().then(data =>{
-      this.categories = data;
-    })
-   });
+  })
  }
 }

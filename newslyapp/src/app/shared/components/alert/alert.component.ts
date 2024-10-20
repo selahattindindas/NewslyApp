@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './alert.component.html',
   standalone: true,
   imports:[CommonModule],
-  styleUrls: ['./alert.component.scss'] 
+  styleUrls: ['./alert.component.scss'],
 })
 export class AlertComponent implements OnInit {
   isVisible = false;

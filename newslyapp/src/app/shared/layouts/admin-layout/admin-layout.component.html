@@ -1,15 +1,23 @@
-<div class="d-flex admin-page">
-    <div class="sidebar-wrapper"  #sidenav [ngClass]="{'open': isSidebarOpen}">
-        <admin-sidebar [isSidebarOpen]="isSidebarOpen" (closeSideNav)="toggleSidebar()"></admin-sidebar>
-    </div>
+<div class="d-flex admin-page bg-indigo">
+    <nav>
+        <div class="sidebar-wrapper" #sidenav>
+            <admin-sidebar [isSidebarOpen]="isSidebarOpen"></admin-sidebar>
+        </div>
+    </nav>
+
     <div class="flex-grow-1 content">
-        <div class="mb-35px ">
-            <admin-header (toggleSidebar)="toggleSidebar()"></admin-header>
-        </div>
-        <div class="margin-auto width-full max-width-1024px">
+        <header>
             <div class="mb-35px">
-                <router-outlet></router-outlet>
+                <admin-header (toggleSidebar)="toggleSidebar()"></admin-header>
             </div>
-        </div>
+        </header>
+
+        <main>
+            <div class="margin-auto width-full max-width-1024px">
+                <div class="pb-35px">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </main>
     </div>
 </div>

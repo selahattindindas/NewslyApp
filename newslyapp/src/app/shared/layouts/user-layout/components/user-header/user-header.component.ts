@@ -30,7 +30,8 @@ export class UserHeaderComponent implements OnInit{
     }
   }
 
-  openSidenav() {
-    this.toggleSidebar.emit();
- }
+  onToggleSidebar(event: MouseEvent) {
+    event.stopPropagation();
+    this.toggleSidebar.emit(); 
+  }
 }

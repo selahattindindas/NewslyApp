@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { NewsService } from '../../../news.service';
+import { NewsService } from '../../../../core/services/news.service';
 import { SearchComponent } from '../../../../shared/components/search/search.component';
 import { NewsContainerComponent } from '../news-container/news-container.component';
 import { PopularNewsComponent } from '../popular-news/popular-news.component';
@@ -10,7 +9,7 @@ import { NewsList } from '../../../../shared/models/news/list-news';
 @Component({
   selector: 'app-filter-news',
   standalone: true,
-  imports: [NewsContainerComponent, CommonModule, PopularNewsComponent, SearchComponent],
+  imports: [NewsContainerComponent, PopularNewsComponent, SearchComponent],
   templateUrl: './filter-news.component.html',
   styleUrl: './filter-news.component.scss'
 })

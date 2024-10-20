@@ -1,11 +1,11 @@
-<div class="sidebar" [ngClass]="{'open': isSidebarOpen}" (click)="onClose()">
-    <div class="bg-panel" style="height: 100vh;">
-        <div class="height-auto margin-auto pt-40px" style="width: 110px;">
-            <img class="width-full height-auto cursor-pointer" src="assets/img/common/logo.png" routerLink="/">
-        </div>
-        <div class="mt-90px">
-            <ul class="m-0 p-0 list-style-none">
-                <div *ngFor="let category of categories">
+<div class="sidebar bg-panel height-100vh" [ngClass]="{'open': isSidebarOpen}" (click)="onClose()">
+    <div class="height-auto margin-auto pt-40px" style="width: 110px;">
+        <img class="width-full height-auto cursor-pointer" src="assets/img/common/logo.png" routerLink="/">
+    </div>
+    <div class="mt-90px">
+        <ul class="m-0 p-0 list-style-none">
+            @for(category of categories; track category.id){
+                <div>
                     <a class="text-decoration-none text-dark-gray font-weight-bold font-size-sm text-uppercase">
                         <li class="sidebar-category cursor-pointer pl-50px pt-25px pb-25px line-height-tight"
                             (click)="navigateToCategory(category)" routerLinkActive="active">
@@ -13,10 +13,10 @@
                         </li>
                     </a>
                 </div>
-            </ul>
-            <div class="mt-80px pl-50px">
-                <app-theme-switcher></app-theme-switcher>
-            </div>
+            }
+        </ul>
+        <div class="mt-80px pl-50px">
+            <app-theme-switcher></app-theme-switcher>
         </div>
     </div>
 </div>

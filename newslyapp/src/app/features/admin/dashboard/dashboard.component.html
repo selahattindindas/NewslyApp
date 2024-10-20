@@ -1,52 +1,60 @@
-<div class="dashboard-info">
-    <div class="d-flex align-items-center item-card border-radius-8px">
-        <div class="width-50 text-align-center">
-            <i class="fa-solid fa-chart-line icon"></i>
+<section>
+    <div class="dashboard-info">
+        <div class="d-flex align-items-center item-card border-radius-8px">
+            <div class="width-50 text-align-center">
+                <i class="fa-solid fa-chart-line icon"></i>
+            </div>
+            <div class="d-block text-align-center  width-50">
+                <p class="text-lavender font-size-xl mb-0">Haber</p>
+                <p class="text-white font-size-2xl font-weight-bold">{{news.length}}</p>
+            </div>
         </div>
-        <div class="d-block text-align-center  width-50">
-            <p class="text-lavender font-size-xl mb-0">Haber</p>
-            <p class="text-white font-size-2xl font-weight-bold">{{news.length}}</p>
+        <div class="d-flex align-items-center item-card border-radius-8px">
+            <div class="width-50 text-align-center">
+                <i class="fa-solid fa-chart-column icon"></i>
+            </div>
+            <div class="d-block text-align-center width-50">
+                <p class="text-lavender font-size-xl mb-0">Popüler Haber</p>
+                <p class="text-white font-size-2xl font-weight-bold">9</p>
+            </div>
+        </div>
+        <div class="d-flex align-items-center item-card border-radius-8px">
+            <div class="width-50 text-align-center">
+                <i class="fa-solid fa-chart-pie icon"></i>
+            </div>
+            <div class="d-block text-align-center width-50">
+                <p class="text-lavender font-size-xl mb-0">Kategori</p>
+                <p class="text-white font-size-2xl font-weight-bold">{{categories.length}}</p>
+            </div>
+        </div>
+        <div class="d-flex align-items-center item-card border-radius-8px">
+            <div class="width-50 text-align-center">
+                <i class="fa-solid fa-chart-area icon"></i>
+            </div>
+            <div class="d-block text-align-center width-50">
+                <p class="text-lavender font-size-xl mb-0">Aktif Kullanıcı</p>
+                <p class="text-white font-size-2xl font-weight-bold">324</p>
+            </div>
         </div>
     </div>
-    <div class="d-flex align-items-center item-card border-radius-8px">
-        <div class="width-50 text-align-center">
-            <i class="fa-solid fa-chart-column icon"></i>
+</section>
+
+<section>
+    <div class="d-flex width-full flex-column mb-15px" style="gap:15px;">
+        <div class="height-400px border-radius-8px width-50 card pl-10px pt-15px bg-dark-indigo">
+            <p class="text-lavender font-size-xl pb-15px">Aylık Aktivite Değişim Grafiği</p>
+            <app-drag-bars></app-drag-bars>
         </div>
-        <div class="d-block text-align-center width-50">
-            <p class="text-lavender font-size-xl mb-0">Popüler Haber</p>
-            <p class="text-white font-size-2xl font-weight-bold">9</p>
-        </div>
-    </div>
-    <div class="d-flex align-items-center item-card border-radius-8px">
-        <div class="width-50 text-align-center">
-            <i class="fa-solid fa-chart-pie icon"></i>
-        </div>
-        <div class="d-block text-align-center width-50">
-            <p class="text-lavender font-size-xl mb-0">Kategori</p>
-            <p class="text-white font-size-2xl font-weight-bold">{{categories.length}}</p>
+        <div class="height-400px border-radius-8px width-50 card pl-10px pt-15px bg-dark-indigo">
+            <p class="text-lavender font-size-xl pb-15px">Günlük Aktivite Değişim Grafiği</p>
+            <app-date-chart></app-date-chart>
         </div>
     </div>
-    <div class="d-flex align-items-center item-card border-radius-8px">
-        <div class="width-50 text-align-center">
-            <i class="fa-solid fa-chart-area icon"></i>
-        </div>
-        <div class="d-block text-align-center width-50">
-            <p class="text-lavender font-size-xl mb-0">Aktif Kullanıcı</p>
-            <p class="text-white font-size-2xl font-weight-bold">324</p>
-        </div>
+</section>
+
+<section>
+    <div class="width-full height-400px border-radius-8px pl-10px pt-15px bg-dark-indigo">
+        <p class="text-lavender font-size-xl pb-15px">Performans</p>
+        <app-smoothed-line></app-smoothed-line>
     </div>
-</div>
-<div class="d-flex width-full flex-column mb-15px" style="gap:15px;">
-    <div class="height-400px border-radius-8px width-50 card pl-10px pt-15px bg-dark-indigo" >
-        <p class="text-lavender font-size-xl pb-15px">Aylık Aktivite Değişim Grafiği</p>
-        <app-drag-bars></app-drag-bars>
-    </div>
-    <div class="height-400px border-radius-8px width-50 card pl-10px pt-15px bg-dark-indigo" >
-        <p class="text-lavender font-size-xl pb-15px">Günlük Aktivite Değişim Grafiği</p>
-        <app-date-chart></app-date-chart>
-    </div>
-</div>
-<div class="width-full height-400px border-radius-8px pl-10px pt-15px bg-dark-indigo" >
-    <p class="text-lavender font-size-xl pb-15px">Performans</p>
-    <app-smoothed-line></app-smoothed-line>
-</div>
+</section>

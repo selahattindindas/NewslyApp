@@ -1,16 +1,17 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { TruncatePipe } from '../../pipes/truncate.pipe';
 import { Router, RouterLink } from '@angular/router';
 import { StringHelper } from '../../utils/string-helper';
 import { NewsList } from '../../models/news/list-news';
+import { TimeAgoPipe } from '../../pipes/time-ago.pipe';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [CommonModule, TruncatePipe, RouterLink],
+  imports: [TruncatePipe, TimeAgoPipe, RouterLink],
   templateUrl: './card.component.html',
-  styleUrl: './card.component.scss'
+  styleUrl: './card.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
 export class CardComponent implements OnChanges {

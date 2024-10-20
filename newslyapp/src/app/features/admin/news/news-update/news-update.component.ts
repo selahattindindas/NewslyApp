@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormEditorComponent } from '../../../../shared/components/form-editor/form-editor.component';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NewsService } from '../../../news.service';
+import { NewsService } from '../../../../core/services/news.service';
 import { NewsList } from '../../../../shared/models/news/list-news';
 import { UpdateNews } from '../../../../shared/models/news/update-news';
 import { AlertService } from '../../../../shared/services/alert.service';

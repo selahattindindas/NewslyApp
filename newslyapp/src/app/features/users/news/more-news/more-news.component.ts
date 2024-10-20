@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../../../../shared/components/card/card.component';
-import { NewsService } from '../../../news.service';
+import { NewsService } from '../../../../core/services/news.service';
 import { NewsList } from '../../../../shared/models/news/list-news';
 
 @Component({

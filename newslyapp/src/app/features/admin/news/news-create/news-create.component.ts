@@ -1,8 +1,7 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormEditorComponent } from "../../../../shared/components/form-editor/form-editor.component";
 import { AddNews } from '../../../../shared/models/news/add-news';
-import { NewsService } from '../../../news.service';
+import { NewsService } from '../../../../core/services/news.service';
 import { AlertConfig, AlertType } from '../../../../shared/models/alert-config';
 import { AlertService } from '../../../../shared/services/alert.service';
 import { Router } from '@angular/router';
@@ -11,7 +10,7 @@ import { MessageText } from '../../../../shared/utils/message';
 @Component({
   selector: 'app-news-create',
   standalone: true,
-  imports: [CommonModule, FormEditorComponent],
+  imports: [FormEditorComponent],
   templateUrl: './news-create.component.html',
   styleUrls: ['./news-create.component.scss']
 })

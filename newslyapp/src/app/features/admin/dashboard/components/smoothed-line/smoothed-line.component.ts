@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Inject, PLATFORM_ID } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, Inject, PLATFORM_ID } from '@angular/core';
 import * as am5xy from "@amcharts/amcharts5/xy";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import * as am5 from '@amcharts/amcharts5';
@@ -10,7 +10,8 @@ import am5themes_Dark from "@amcharts/amcharts5/themes/Dark";
   standalone: true,
   imports: [],
   templateUrl: './smoothed-line.component.html',
-  styleUrl: './smoothed-line.component.scss'
+  styleUrl: './smoothed-line.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SmoothedLineComponent implements AfterViewInit {
 

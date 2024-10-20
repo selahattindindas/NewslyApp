@@ -1,11 +1,16 @@
-<div *ngIf="isVisible" class="alert position-fixed bottom-10px right-10px width-300px height-80px border-radius-5px d-flex align-items-center padding-10px" [ngClass]="{
+@if(isVisible){
+  <div class="alert position-fixed bottom-10px right-10px width-300px height-80px
+  border-radius-5px d-flex align-items-center padding-10px" 
+  [ngClass]="{
   'alert-success': type === AlertType.Success,
   'alert-danger': type === AlertType.Error,
   'alert-warning': type === AlertType.Warning,
   'alert-info': type === AlertType.Info,
   'slide-in': animationClass === 'slide-in',
   'slide-out': animationClass === 'slide-out'
-}" role="alert">
+  }" role="alert">
   <img *ngIf="icon" [src]="icon" class="mr-10px width-40px height-40px" />
   <span class="flex-1">{{ message }}</span>
 </div>
+}
+

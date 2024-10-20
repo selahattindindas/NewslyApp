@@ -1,15 +1,15 @@
-<div class="d-flex user-page">
-    <div class="sidebar-wrapper" #sidenav [ngClass]="{'open': isSidebarOpen}">
-        <user-sidebar [isSidebarOpen]="isSidebarOpen" (closeSideNav)="toggleSidebar()"></user-sidebar>
-    </div>
-    <div class="margin-auto width-full max-width-1024px">
-        <div class="flex-grow-1">
-            <div class="mb-35px header">
+<div class="user-page">
+    <div class="d-flex">
+        <nav class="sidebar-wrapper" #sidenav>
+            <user-sidebar [isSidebarOpen]="isSidebarOpen"></user-sidebar>
+        </nav>
+        <div class="margin-auto width-full max-width-1024px flex-grow-1">
+            <header class="mb-35px header">
                 <user-header (toggleSidebar)="toggleSidebar()"></user-header>
-            </div>
-            <div class="mb-35px content">
+            </header>
+            <main class="mb-35px content">
                 <router-outlet></router-outlet>
-            </div>
+            </main>
         </div>
     </div>
 </div>

@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClientService } from '../core/services/http-client.service';
-import { ListCategory } from '../shared/models/categories/list-category';
 import { firstValueFrom, Observable } from 'rxjs';
-import { AddCategory } from '../shared/models/categories/add-category';
-import { UpdateCategory } from '../shared/models/categories/update-category';
+import { HttpClientService } from './http-client.service';
+import { AddCategory } from '../../shared/models/categories/add-category';
+import { UpdateCategory } from '../../shared/models/categories/update-category';
+import { ListCategory } from '../../shared/models/categories/list-category';
 
 @Injectable({
   providedIn: 'root'

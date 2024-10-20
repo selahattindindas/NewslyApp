@@ -6,19 +6,22 @@
         </div>
 
         <div class="keen-slider" #sliderRef>   
-            <li class="width-full keen-slider__slide" *ngFor="let news of news">
-                <div class="margin-25px cursor-pointer slider-content" (click)="navigateToCategory(news)">
-                    <div class="width-full height-200px overflow-hidden">
-                        <img class="border-radius-6px width-full height-full object-fit-cover" [src]="news.image">
+            @for(news of news; track news.id){
+                <li class="width-full keen-slider__slide">
+                    <div class="margin-25px cursor-pointer slider-content" (click)="navigateToCategory(news)">
+                        <div class="width-full height-200px overflow-hidden">
+                            <img class="border-radius-6px width-full height-full object-fit-cover" [src]="news.image">
+                        </div>
+                        <div
+                            class="d-flex justify-content-between pt-20px letter-spacing-tight text-uppercase">
+                            <span class="color-gray font-weight-semibold font-size-xs">{{news.author}}</span>
+                            <span class="color-gray font-size-xxs font-weight-normal">{{news.date | timeAgo}}</span>
+                        </div>
+                        <p class="theme-text font-size-lg pt-20px pb-10px font-weight-bold">{{news.title | truncate}}</p>
                     </div>
-                    <div
-                        class="d-flex justify-content-between pt-20px letter-spacing-tight text-uppercase">
-                        <span class="color-gray font-weight-semibold font-size-xs">{{news.author}}</span>
-                        <span class="color-gray font-size-xxs font-weight-normal">{{news.date}}</span>
-                    </div>
-                    <p class="theme-text font-size-lg pt-20px pb-10px font-weight-bold">{{news.title | truncate}}</p>
-                </div>
-            </li>
+                </li>
+
+            }
         </div>
         <svg *ngIf="slider" [ngClass]="{
                 'arrow left-0': true,

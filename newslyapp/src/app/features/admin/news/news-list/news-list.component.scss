@@ -1,6 +1,17 @@
+$primary-color: #8584f6;
+$secondary-color: #c7cbd1;
+$border-color: #5e5b7b;
+$font-family: 'Inter', sans-serif;
+$tertiary-color: #9799b5;
+$border-radius: 10px;
+$border-radius2: 8px;
+$white-color: #fff;
+$blue-color: #4040a6;
+$font-size: 20px;
+
 .list-header{
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
 
     .custom-button {
         display: flex;
@@ -12,32 +23,32 @@
     
         &:hover {
             .icon-container {
-                background-color: #4040a6;
-                color: white;
+                background-color: $blue-color;
+                color: $white-color;
             }
     
             .button-text {
-                background-color: white;
-                color: #4040a6;
+                background-color: $white-color;
+                color: $blue-color;
             }
         }
     
         .icon-container {
-            background-color: white; 
-            border-top-left-radius: 8px;
-            border-bottom-left-radius: 8px; 
-            color: #4040a6; 
+            background-color: $white-color; 
+            border-top-left-radius:$border-radius2;
+            border-bottom-left-radius: $border-radius2; 
+            color: $blue-color; 
             text-align: center;
             padding: 10px;
-            font-size: 20px;
+            font-size: $font-size;
             transition: background-color 0.5s, color 0.5s;
         }
     
         .button-text {
-            background-color: #4040a6;
-            color: white; 
-            border-top-right-radius: 8px; 
-            border-bottom-right-radius: 8px; 
+            background-color: $blue-color;
+            color: $white-color; 
+            border-top-right-radius: $border-radius2; 
+            border-bottom-right-radius: $border-radius2; 
             text-align: center;
             padding: 14.5px 25px;
             font-weight: 800;
@@ -47,8 +58,8 @@
 }
 
 .list-body{
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
 
     .table-container{
         overflow-x: auto;
@@ -69,7 +80,7 @@
             }
         
             tbody > tr{
-                border-top: 1px solid #5e5b7b;
+                border-top: 1px solid $border-color;
             }
 
             td{
@@ -100,15 +111,15 @@
             display: inline-block;
             padding: 5px 10px; 
             margin: 0 5px; 
-            border: 1px solid #8584f6; 
+            border: 1px solid $primary-color; 
             color: #c7cbd1;
             border-radius: 5px; 
             cursor: pointer; 
             transition: background-color 0.3s; 
 
             &.active {
-                background-color: #8584f6; 
-                color: white; 
+                background-color: $primary-color; 
+                color: $white-color; 
             }
 
             &:hover {
@@ -119,8 +130,8 @@
 
     i {
         cursor: pointer;
-        font-size: 20px;
-        color: #ccc;
+        font-size: $font-size;
+        color: $secondary-color;
 
         &.disabled {
             opacity: 0.5; 

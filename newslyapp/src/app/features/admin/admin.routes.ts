@@ -13,6 +13,9 @@ export const AdminRoutes: Routes = [
                 path: '',
                 loadComponent: () => import('./dashboard/dashboard.component').then(m => m.DashboardComponent)
             },
+            { path: 'test',
+                loadComponent: () => import('./news/news-list/news-list.component').then(m => m.NewsListComponent)
+            },
             {
                 path: 'news',
                 title: 'Newsly: Admin Panel Haberler',

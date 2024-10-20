@@ -1,5 +1,5 @@
 <div class="height-97px d-flex align-items-center justify-content-between">
-    <div class="toggle-sidebar text-lavender disabled" (click)="openSidenav()">☰</div>
+    <div class="toggle-sidebar text-lavender disabled" (click)="onToggleSidebar($event)">☰</div>
     <div class="flex-grow-1 "></div> 
     <div class="d-flex align-items-center">
         <div class="pr-15px">
@@ -7,8 +7,7 @@
             <input 
                 class="border-none outline-none text-lavender width-80px height-20px pl-5px" 
                 style="background-color: transparent;" 
-                placeholder="Şimdi ara..." 
-                aria-label="Arama alanı">
+                placeholder="Şimdi ara...">
         </div>
         <div class="pr-15px">
             <i class="fa-solid fa-bell text-lavender pr-10px font-size-xl"></i>
@@ -20,14 +19,16 @@
                 style="width: 50px;" 
                 alt="Kullanıcı Resmi"
                 (click)="toggleMenu()">
-                <ul *ngIf="isOpen" class="dropdown-menu">
-                    <li 
-                    class="dropdown-item display-flex align-items-center" 
-                        (click)="logout()">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        Çıkış Yap
-                    </li>
-                </ul>
+                @if(isOpen){
+                    <ul class="dropdown-menu">
+                        <li 
+                        class="dropdown-item display-flex align-items-center" 
+                            (click)="logout()">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Çıkış Yap
+                        </li>
+                    </ul>
+                }
         </div>
     </div>
 </div>

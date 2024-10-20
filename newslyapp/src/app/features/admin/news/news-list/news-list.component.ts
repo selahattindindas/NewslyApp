@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NewsService } from '../../../news.service';
+import { NewsService } from '../../../../core/services/news.service';
 import { NewsList } from '../../../../shared/models/news/list-news';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -12,7 +12,7 @@ import { MessageText } from '../../../../shared/utils/message';
 @Component({
   selector: 'app-news-list',
   standalone: true,
-  imports: [CommonModule, RouterLink, TruncatePipe, TimeAgoPipe],
+  imports: [RouterLink, TruncatePipe, TimeAgoPipe],
   templateUrl: './news-list.component.html',
   styleUrls: ['./news-list.component.scss']
 })

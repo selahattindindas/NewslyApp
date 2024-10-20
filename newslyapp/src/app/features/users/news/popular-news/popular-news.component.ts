@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input  } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input  } from '@angular/core';
 import { TruncatePipe } from '../../../../shared/pipes/truncate.pipe';
 import { Router, RouterLink } from '@angular/router';
 import { StringHelper } from '../../../../shared/utils/string-helper';
@@ -8,9 +8,10 @@ import { NewsList } from '../../../../shared/models/news/list-news';
 @Component({
   selector: 'app-popular-news',
   standalone: true,
-  imports: [CommonModule, TruncatePipe, RouterLink],
+  imports: [TruncatePipe, RouterLink],
   templateUrl: './popular-news.component.html',
-  styleUrl: './popular-news.component.scss'
+  styleUrl: './popular-news.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PopularNewsComponent {
   @Input() news: NewsList[] = [];

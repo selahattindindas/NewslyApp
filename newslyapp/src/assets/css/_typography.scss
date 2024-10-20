@@ -120,6 +120,9 @@
 
 // Line Height Classes
 
+.line-height-xsm{
+  @include line-height(normal);
+}
 .line-height-sm {
   @include line-height(13px);
 }

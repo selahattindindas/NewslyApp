@@ -3,6 +3,7 @@ $secondary-color: #c7cbd1;
 $border-color: #5e5b7b;
 $font-family: 'Inter', sans-serif;
 $tertiary-color: #9799b5;
+$border-radius: 10px;
 
 .create-form {
   display: flex;
@@ -21,6 +22,18 @@ $tertiary-color: #9799b5;
 ::ng-deep .ql-toolbar.ql-snow,
 ::ng-deep .ql-container.ql-snow {
   border: 1px solid $border-color;
+}
+
+::ng-deep .ql-toolbar.ql-snow {
+  border: 1px solid $border-color;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+::ng-deep .ql-container.ql-snow {
+  border: 1px solid $border-color;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
 }
 
 ::ng-deep .ql-snow.ql-toolbar button:hover .ql-stroke {

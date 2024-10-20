@@ -4,8 +4,8 @@ import { ThemeSwitcherComponent } from '../../../../components/theme-switcher/th
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { StringHelper } from '../../../../utils/string-helper';
 import { UserFooterComponent } from "../user-footer/user-footer.component";
-import { CategoryService } from '../../../../../features/category.service';
 import { ListCategory } from '../../../../models/categories/list-category';
+import { CategoryService } from '../../../../../core/services/category.service';
 
 @Component({
   selector: 'user-sidebar',
@@ -38,7 +38,6 @@ export class UserSidebarComponent implements OnInit{
   navigateToCategory(category: ListCategory) {
     const slug = StringHelper.convertToSlug(category.name);
     this.router.navigate([`${slug}`]);
-    this.onClose();
   }
 
   onClose() {

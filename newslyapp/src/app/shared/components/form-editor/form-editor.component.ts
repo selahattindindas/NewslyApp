@@ -1,20 +1,20 @@
-import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { QuillModule, QuillModules } from 'ngx-quill';
+import { QuillModule } from 'ngx-quill';
 import { ListCategory } from '../../models/categories/list-category';
-import { CategoryService } from '../../../features/category.service';
 import Quill from 'quill';
 import { NewsList } from '../../models/news/list-news';
 import { quillModules, ToolbarModule } from './form-editor.module';
+import { CategoryService } from '../../../core/services/category.service';
 
 
 @Component({
   selector: 'app-form-editor',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, QuillModule],
+  imports: [ReactiveFormsModule, QuillModule],
   templateUrl: './form-editor.component.html',
-  styleUrl: './form-editor.component.scss'
+  styleUrl: './form-editor.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FormEditorComponent<T> implements OnInit, OnChanges {
   @Input() btnTitle = '';

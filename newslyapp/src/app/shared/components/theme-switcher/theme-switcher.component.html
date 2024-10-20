@@ -3,8 +3,14 @@
     <input class="width-0 height-0 opacity-0" type="checkbox" (change)="toggleTheme()" [checked]="isDarkTheme">
     <span class="slider inset-zero position-absolute cursor-pointer bg-light-gray border-radius-24px"></span>
   </label>
-  <div class="pl-10px" >
-    <span class="font-weight-bold font-size-sm line-height-tight text-dark-gray text-uppercase cursor-pointer" (click)="toggleTheme()" *ngIf="isDarkTheme">Koyu</span>
-    <span class="font-weight-bold font-size-sm line-height-tight text-dark-gray text-uppercase cursor-pointer" (click)="toggleTheme()" *ngIf="!isDarkTheme">Açık</span>
+  <div class="pl-10px">
+    @if(isDarkTheme){
+    <span class="font-weight-bold font-size-sm line-height-tight text-dark-gray text-uppercase cursor-pointer"
+      (click)="toggleTheme()">Koyu</span>
+    }
+    @if (!isDarkTheme) {
+    <span class="font-weight-bold font-size-sm line-height-tight text-dark-gray text-uppercase cursor-pointer"
+      (click)="toggleTheme()">Açık</span>
+    }
   </div>
 </div>

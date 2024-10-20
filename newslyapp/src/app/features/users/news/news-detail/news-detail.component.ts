@@ -5,13 +5,14 @@ import { StringHelper } from '../../../../shared/utils/string-helper';
 import { MoreNewsComponent } from '../more-news/more-news.component';
 import { Title } from '@angular/platform-browser';
 import { SpinnerService } from '../../../../shared/services/spinner.service';
-import { NewsService } from '../../../news.service';
+import { NewsService } from '../../../../core/services/news.service';
 import { NewsList } from '../../../../shared/models/news/list-news';
+import { TimeAgoPipe } from '../../../../shared/pipes/time-ago.pipe';
 
 @Component({
   selector: 'app-news-detail',
   standalone: true,
-  imports: [RouterLink, MoreNewsComponent,],
+  imports: [RouterLink, MoreNewsComponent, TimeAgoPipe],
   templateUrl: './news-detail.component.html',
   styleUrls: ['./news-detail.component.scss']
 })
@@ -27,6 +28,7 @@ export class NewsDetailComponent implements OnInit {
     private titleService: Title,
     private spinnerService: SpinnerService,
   ) { }
+
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       const slug = params.get('titleSlugAndId');
@@ -55,10 +57,8 @@ export class NewsDetailComponent implements OnInit {
     this.spinnerService.setLoading(true);
     this.news = undefined;
     this.newsService.getNewsById(this.newsId).then(response => {
-
         this.news = response;
         this.setTitle(this.news.title);
-      
     })
     .catch(() => {
       this.router.navigate(['/not-found']);

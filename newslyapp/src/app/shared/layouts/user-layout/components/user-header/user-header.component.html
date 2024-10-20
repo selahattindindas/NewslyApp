@@ -1,24 +1,29 @@
-<ng-container *ngIf="isDesktop">
-    <div [ngClass]="{'height-97px': isDesktop, 'height-60px': !isDesktop}" class="width-full d-flex align-items-center justify-content-between">
-        <div class="toggle-sidebar color-gray disabled" (click)="openSidenav()">☰</div>
-        <div>
-            <app-search></app-search>
+@if(isDesktop){
+    <ng-container>
+        <div [ngClass]="{'height-97px': isDesktop, 'height-60px': !isDesktop}" class="width-full d-flex align-items-center justify-content-between">
+            <div class="toggle-sidebar color-gray disabled"(click)="onToggleSidebar($event)">☰</div>
+            <div>
+                <app-search></app-search>
+            </div>
+            <div>
+                <app-location></app-location>
+            </div>
         </div>
-        <div>
-            <app-location></app-location>
-        </div>
-    </div>
-</ng-container>
+    </ng-container>
+}
 
-<ng-container *ngIf="!isDesktop">
-    <div [ngClass]="{'height-60px': !isDesktop, 'height-97px': isDesktop}" class="bg-black width-full d-flex align-items-center justify-content-between mb-35px">
-        <div class="toggle-sidebar text-off-white ml-20px" (click)="openSidenav()">☰</div>
-        <img src="assets/img/common/logo.png" width="80" height="auto">
-        <svg class="mr-20px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="search" routerLink="/search">
-            <g fill="none" fill-rule="evenodd" stroke="#c7cbd1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" transform="translate(2 2)">
-                <circle cx="9.767" cy="9.767" r="8.989"></circle>
-                <line x1="16.018" x2="19.542" y1="16.485" y2="20"></line>
-            </g>
-        </svg>
-    </div>
-</ng-container>
+@if(!isDesktop){
+    <ng-container>
+        <div [ngClass]="{'height-60px': !isDesktop, 'height-97px': isDesktop}" class="bg-black width-full d-flex align-items-center justify-content-between mb-35px">
+            <div class="toggle-sidebar text-off-white ml-20px" (click)="onToggleSidebar($event)">☰</div>
+            <img src="assets/img/common/logo.png" width="80" height="auto">
+            <svg class="mr-20px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="search" routerLink="/search">
+                <g fill="none" fill-rule="evenodd" stroke="#c7cbd1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" transform="translate(2 2)">
+                    <circle cx="9.767" cy="9.767" r="8.989"></circle>
+                    <line x1="16.018" x2="19.542" y1="16.485" y2="20"></line>
+                </g>
+            </svg>
+        </div>
+    </ng-container>
+}
+

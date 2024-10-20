@@ -1,57 +1,62 @@
-<div class="width-full">
-    <div style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); border-radius: 10px;">
-        <div class="d-flex justify-content-between align-items-center padding-20px list-header" style="background-color: #8584f6;">
-            <h1 class="text-white font-size-2xl font-size-md font-weight-medium">Haber <span class="font-weight-bold">İşlemleri</span></h1>
-            <div class="custom-button" [routerLink]="'create'">
-                <span class="icon-container">
-                    <i class="fa-solid fa-square-plus"></i>
+<section>
+    <div class="width-full">
+        <div style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); border-radius: 10px;">
+            <div class="d-flex justify-content-between align-items-center padding-20px list-header bg-admin-card">
+                <h1 class="text-white font-size-2xl font-size-md font-weight-medium">Haber <span
+                        class="font-weight-bold">İşlemleri</span></h1>
+                <div class="custom-button" [routerLink]="'create'">
+                    <span class="icon-container">
+                        <i class="fa-solid fa-square-plus"></i>
+                    </span>
+                    <p class="button-text">EKLE</p>
+                </div>
+            </div>
+            <div class="bg-indigo pl-20px pr-20px pt-20px list-body">
+                <div class="table-container">
+                    <table class="border-radius-15px padding-20px width-full">
+                        <thead>
+                            <tr class="text-lavender text-align-center">
+                                <th>Sıra</th>
+                                <th>Haber Başlığı</th>
+                                <th>Haber Yazarı</th>
+                                <th>Haber Kategorisi</th>
+                                <th>Haber Tarihi</th>
+                                <th>Haber İşlemleri</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (news of paginatedNews; track news.id; let i = $index, e = $even){
+                                <tr class="text-off-white font-size-sm text-align-center">
+                                    <td>{{ (currentPage - 1) * pageSize + i + 1 }}</td>
+                                    <td>{{ news.title | truncate:32 }}</td>
+                                    <td>{{ news.author }}</td>
+                                    <td>{{ news.categoryName }}</td>
+                                    <td>{{ news.date | timeAgo }}</td>
+                                    <td class="text-align-center">
+                                        <i class="fa-solid fa-gear font-size-xl pr-5px cursor-pointer"
+                                            [routerLink]="['edit', news.id]"></i>
+                                        <i class="fa-solid fa-ban font-size-xl pl-5px cursor-pointer"
+                                            (click)="deleteNews(news.id)"></i>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <i class="fa-solid fa-arrow-left" (click)="changePage(currentPage - 1)"
+                [class.disabled]="currentPage === 1"></i>
+            <div class="page-numbers">
+                @for(page of getDisplayedPages(); track page){
+                    <span [class.active]="page === currentPage" (click)="changePage(page)">
+                    {{ page }}
                 </span>
-                <p class="button-text">EKLE</p>
+                }
             </div>
-        </div>
-        <div class="bg-indigo pl-20px pr-20px pt-20px list-body" style="box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
-            <div class="table-container">
-                <table class="border-radius-15px padding-20px width-full">
-                    <thead>
-                        <tr class="text-lavender text-align-center">
-                            <th>Sıra</th>
-                            <th>Haber Başlığı</th>
-                            <th>Haber Yazarı</th>
-                            <th>Haber Kategorisi</th>
-                            <th>Haber Tarihi</th>
-                            <th>Haber İşlemleri</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="text-off-white font-size-sm text-align-center" *ngFor="let news of paginatedNews; let i = index">
-                            <td>{{ (currentPage - 1) * pageSize + i + 1 }}</td>
-                            <td>{{ news.title | truncate:32 }}</td>
-                            <td>{{ news.author }}</td>
-                            <td>{{ news.categoryName }}</td>
-                            <td>{{ news.date | timeAgo }}</td>
-                            <td class="text-align-center">
-                                <i class="fa-solid fa-gear font-size-xl pr-5px cursor-pointer" [routerLink]="['edit', news.id]"></i>
-                                <i class="fa-solid fa-ban font-size-xl pl-5px cursor-pointer" (click)="deleteNews(news.id)"></i>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
+            <i class="fa-solid fa-arrow-right" (click)="changePage(currentPage + 1)"
+                [class.disabled]="currentPage === totalPages"></i>
         </div>
     </div>
-    <div class="pagination">
-        <i class="fa-solid fa-arrow-left" (click)="changePage(currentPage - 1)" [class.disabled]="currentPage === 1"></i>
-        <div class="page-numbers">
-            <span 
-                *ngFor="let page of getDisplayedPages()"
-                [class.active]="page === currentPage"
-                (click)="changePage(page)">
-                {{ page }}
-            </span>
-        </div>
-        <i class="fa-solid fa-arrow-right" (click)="changePage(currentPage + 1)" [class.disabled]="currentPage === totalPages"></i>
-    </div>
-    
-    
-</div>
+</section>

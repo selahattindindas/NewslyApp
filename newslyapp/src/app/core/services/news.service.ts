@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { firstValueFrom, Observable } from 'rxjs';
-import { HttpClientService } from '../core/services/http-client.service';
-import { AddNews } from '../shared/models/news/add-news';
-import { NewsList } from '../shared/models/news/list-news';
-import { UpdateNews } from '../shared/models/news/update-news';
+import { HttpClientService } from './http-client.service';
+import { AddNews } from '../../shared/models/news/add-news';
+import { NewsList } from '../../shared/models/news/list-news';
+import { UpdateNews } from '../../shared/models/news/update-news';
 
 @Injectable({
   providedIn: 'root'

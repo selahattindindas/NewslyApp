@@ -7,14 +7,14 @@ import { HttpClientService } from './http-client.service';
   providedIn: 'root'
 })
 export class LocationService {
-
-  private readonly nominatimUrl = 'https://nominatim.openstreetmap.org/reverse?format=jsonv2';
+  private readonly nominatimUrl = 'https://api.openweathermap.org/data/2.5/weather';
+  apiKey = "68f100ded66db92df7d7257e953ced82";
 
   constructor(private httpClientService: HttpClientService) {}
 
   async getCityFromCoordinates(latitude: number, longitude: number): Promise<CityResponse> {
     const observable : Observable<CityResponse> =  this.httpClientService.get({
-      fullEndPoint: `${this.nominatimUrl}&lat=${latitude}&lon=${longitude}`
+      fullEndPoint: `${this.nominatimUrl}?lat=${latitude}&lon=${longitude}&appid=${this.apiKey}`
     });
     return await firstValueFrom(observable);
   }

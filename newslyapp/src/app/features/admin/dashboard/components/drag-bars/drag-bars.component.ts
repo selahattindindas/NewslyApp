@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Inject, PLATFORM_ID } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, Inject, PLATFORM_ID } from '@angular/core';
 import * as am5 from '@amcharts/amcharts5';
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 import * as am5xy from "@amcharts/amcharts5/xy";
@@ -10,7 +10,8 @@ import am5themes_Dark from "@amcharts/amcharts5/themes/Dark";
   standalone: true,
   imports: [],
   templateUrl: './drag-bars.component.html',
-  styleUrl: './drag-bars.component.scss'
+  styleUrl: './drag-bars.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DragBarsComponent implements AfterViewInit {  
   constructor(@Inject(PLATFORM_ID) private platformId: Object){}

@@ -1,18 +1,26 @@
 <div class="d-flex">
     <div class="card">
-        <div class="position-relative mb-20px">
-            <app-search [showSvg]="false" [inputClass]="'input-style bg-input2'" [buttonClass]="'search-btn'" [searchDivClass]="'search-div'"></app-search>
-        </div>
-        <p *ngIf="searchTerm" class="theme-text pl-30px font-weight-medium line-height-tight font-size-13px text-italic"><strong class="theme-text">{{
-                searchTerm }}</strong> ile ilgili sonuçlar</p>
-        <hr class="mt-20px mb-20px" style="border: 0.1px solid #DCDCDC;">
-        <app-news-container [news]="filteredNews"></app-news-container>
-    </div>
-    <div class="popular">
-        <div style="float: right;">
-            <div class="max-width-270px">
-                <app-popular-news [news]="news"></app-popular-news>
+        <section>
+            <div class="position-relative mb-20px">
+                <app-search [showSvg]="false" [inputClass]="'input-style bg-input2'" [buttonClass]="'search-btn'"
+                    [searchDivClass]="'search-div'"></app-search>
             </div>
-        </div>
+            @if(searchTerm){
+                <p class="theme-text pl-30px font-weight-medium line-height-tight font-size-13px text-italic">
+                    <strong class="theme-text">{{searchTerm }}</strong> ile ilgili sonuçlar</p>
+            }
+            <hr class="mt-20px mb-20px" style="border: 0.1px solid #DCDCDC;">
+            <app-news-container [news]="filteredNews"></app-news-container>
+        </section>
+    </div>
+
+    <div class="popular">
+        <aside>
+            <div style="float: right;">
+                <div class="max-width-270px">
+                    <app-popular-news [news]="news"></app-popular-news>
+                </div>
+            </div>
+        </aside>
     </div>
 </div>

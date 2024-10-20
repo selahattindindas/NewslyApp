@@ -1,10 +1,13 @@
 import { Routes } from '@angular/router';
-import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { loginGuard } from './core/guards/login.guard';
 
 
 export const routes: Routes = [
-    { path: 'not-found', component: NotFoundComponent, title: "Sayfa Bulunamadı!"},
+    { 
+        path: 'not-found', 
+        loadComponent: () => import('./shared/components/not-found/not-found.component').then(m => m.NotFoundComponent),
+        title: "Sayfa Bulunamadı!"
+    },
 
     {
         path: 'admin/login',
@@ -13,9 +16,19 @@ export const routes: Routes = [
         canActivate: [loginGuard],
     },
 
-    { path: 'admin', loadChildren: () => import('./features/admin/admin.routes').then(m => m.AdminRoutes)},
+    { 
+        path: 'admin', 
+        loadChildren: () => import('./features/admin/admin.routes').then(m => m.AdminRoutes)
+    },
     
-    { path: '', loadChildren: () => import('./features/users/user.routes').then(m => m.UserRoutes)}, 
+    { 
+        path: '', 
+        loadChildren: () => import('./features/users/user.routes').then(m => m.UserRoutes)
+    }, 
 
-    { path: '**', component: NotFoundComponent, title: "Sayfa Bulunamadı!" },
+    { 
+        path: '**', 
+        loadComponent: () => import('./shared/components/not-found/not-found.component').then(m => m.NotFoundComponent),
+        title: "Sayfa Bulunamadı!" 
+    },
 ];

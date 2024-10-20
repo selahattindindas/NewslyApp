@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { SearchComponent } from "../../../../components/search/search.component";
 import { CommonModule } from '@angular/common';
@@ -8,7 +8,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [RouterLink, RouterLinkActive, SearchComponent, CommonModule],
   templateUrl: './admin-sidebar.component.html',
-  styleUrl: './admin-sidebar.component.scss'
+  styleUrl: './admin-sidebar.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AdminSidebarComponent {
   @Output() closeSideNav = new EventEmitter<void>();
@@ -17,5 +18,4 @@ export class AdminSidebarComponent {
   onClose() {
     this.closeSideNav.emit();
   }
-
 }
