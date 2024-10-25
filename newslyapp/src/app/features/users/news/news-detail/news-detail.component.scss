@@ -1,15 +1,28 @@
 ::ng-deep .news-detail .content img {
     border-radius: 8px;
     width: 100%;
+    max-height: 350px;
     object-fit: cover;
 }
 
 ::ng-deep .news-detail .content p {
     font-size: 17px;
-    line-height: 34px;
     font-weight: 400;
+}
+
+::ng-deep .news-detail .content h3,
+::ng-deep .news-detail .content p{
+    line-height: 34px;
     letter-spacing: -.005em;
     margin-bottom: 1rem;
+}
+
+::ng-deep .news-detail .content ul{
+    list-style: none;
+    
+    li{
+        padding-bottom: 5px;
+    }
 }
 
 .news-detail {

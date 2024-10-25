@@ -1,8 +1,7 @@
 @if(city){
   <div class="d-flex align-items-center cursor-pointer">
-    <img [src]="icon" style="width: 30px; height: auto;">
-    <p class="theme-text ml-5px line-height-xsm font-size-11px font-weight-bold letter-spacing-spaced text-uppercase">{{
-    city }} {{temperature}}°C
-    </p>
+    <img class="width-30px" [src]="icon">
+    <p class="theme-text ml-5px line-height-xsm font-size-11px font-weight-bold letter-spacing-spaced text-uppercase">{{city}}</p>
+    <p class="theme-text ml-5px line-height-xsm font-size-11px font-weight-bold letter-spacing-spaced text-uppercase">{{temperature}}°C</p>
   </div>
 }

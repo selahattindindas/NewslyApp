@@ -32,9 +32,9 @@ export class FormEditorComponent<T> implements OnInit, OnChanges {
       title: new FormControl(null, [Validators.required, Validators.minLength(5)]),
       categoryName: new FormControl(""),
       content: new FormControl(null, [Validators.required]),
-      image: new FormControl(null),
+      image: new FormControl(""),
       date: new FormControl(null),
-      auth: new FormControl(null),
+      author: new FormControl(null),
     });
   }
 
@@ -73,7 +73,7 @@ export class FormEditorComponent<T> implements OnInit, OnChanges {
 
     const formattedData = {
       ...formData,
-      image: this.extractImageFromContent(formData.image),
+      image: this.extractImageFromContent(formData.content),
       content: this.removeEmptyParagraphs(formData.content),
       date : new Date(),
       author: 'Selahattin'

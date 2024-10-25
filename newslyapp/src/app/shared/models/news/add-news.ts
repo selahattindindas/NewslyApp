@@ -2,6 +2,7 @@ export interface AddNews {
     image: string;
     title: string;
     content: string;
-    categoryId: number;
+    date: string;
+    categoryName: string;
     author: string;
   }

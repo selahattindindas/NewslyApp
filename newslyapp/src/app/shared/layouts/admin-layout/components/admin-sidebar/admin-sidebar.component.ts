@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { SearchComponent } from "../../../../components/search/search.component";
 import { CommonModule } from '@angular/common';
+import { MENU_ITEMS } from './menu-data';
 
 @Component({
   selector: 'admin-sidebar',
@@ -14,6 +15,7 @@ import { CommonModule } from '@angular/common';
 export class AdminSidebarComponent {
   @Output() closeSideNav = new EventEmitter<void>();
   @Input() isSidebarOpen: boolean = false;
+  menuItems = MENU_ITEMS;
   
   onClose() {
     this.closeSideNav.emit();

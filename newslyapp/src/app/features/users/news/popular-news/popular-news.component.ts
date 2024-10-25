@@ -18,6 +18,15 @@ export class PopularNewsComponent {
 
   constructor(private router: Router){}
   
+  ngOnChanges() {
+    this.news = this.getRandomNews(this.news, 5);
+  }
+
+  getRandomNews(newsArray: NewsList[], count: number): NewsList[] {
+    const shuffled = [...newsArray].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count);
+  }
+
   navigateToCategory(news: NewsList) {
     const categorySlug = StringHelper.convertToSlug(news.categoryName);
     const newsSlug = StringHelper.convertToSlug(news.title, news.id);
